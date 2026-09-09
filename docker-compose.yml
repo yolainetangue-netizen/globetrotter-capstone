@@ -1,0 +1,97 @@
+version: "3.9"
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: gt-rabbitmq
+    ports:
+      - "5672:5672"     # port AMQP (utilise par les services)
+      - "15672:15672"   # interface web d'administration (login: guest/guest)
+    healthcheck:
+      test: ["CMD", "rabbitmqctl", "status"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  user-service:
+    build: ./user-service
+    container_name: gt-user-service
+    environment:
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY:-globetrotter-phase2-secret}
+      - PORT=5001
+    ports:
+      - "5001:5001"
+    volumes:
+      - ./user-service/data.json:/app/data.json
+
+  recommendation-service:
+    build: ./recommendation-service
+    container_name: gt-recommendation-service
+    environment:
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY:-globetrotter-phase2-secret}
+      - USER_SERVICE_URL=http://user-service:5001
+      - PORT=5003
+    ports:
+      - "5003:5003"
+    volumes:
+      - ./recommendation-service/data.json:/app/data.json
+    depends_on:
+      - user-service
+
+  itinerary-service:
+    build: ./itinerary-service
+    container_name: gt-itinerary-service
+    environment:
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY:-globetrotter-phase2-secret}
+      - RECOMMENDATION_SERVICE_URL=http://recommendation-service:5003
+      - RABBITMQ_HOST=rabbitmq
+      - PORT=5002
+    ports:
+      - "5002:5002"
+    volumes:
+      - ./itinerary-service/data.json:/app/data.json
+    depends_on:
+      - recommendation-service
+      - rabbitmq
+
+
+  event-consumer:
+    build: ./event-consumer
+    container_name: gt-event-consumer
+    environment:
+      - RABBITMQ_HOST=rabbitmq
+    volumes:
+      - ./event-consumer:/app
+    depends_on:
+      - rabbitmq
+
+  api-gateway:
+    build: ./api-gateway
+    container_name: gt-api-gateway
+    environment:
+      - USER_SERVICE_URL=http://user-service:5001
+      - ITINERARY_SERVICE_URL=http://itinerary-service:5002
+      - RECOMMENDATION_SERVICE_URL=http://recommendation-service:5003
+      - CHAT_SERVICE_URL=http://chat-service:5004
+      - PORT=5000
+    ports:
+      - "5000:5000"
+    depends_on:
+      - user-service
+      - itinerary-service
+      - recommendation-service
+
+  frontend:
+    build: ./frontend
+    container_name: gt-frontend
+    environment:
+      - API_GATEWAY_URL=http://api-gateway:5000
+      - CHAT_SOCKET_URL=http://localhost:5004
+      - PEXELS_API_KEY=${PEXELS_API_KEY:-}
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID:-}
+      - PORT=8080
+    ports:
+      - "8080:8080"
+    depends_on:
+      - api-gateway
+      - chat-service

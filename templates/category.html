@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="page-title">Catégorie - Kribi Tour</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  {% include '_navbar.html' %}
+
+  <section id="category-hero" class="text-white py-5">
+    <div class="container py-3">
+      <a href="/kribi-page" class="text-white-50 text-decoration-none small">&larr; Toutes les catégories</a>
+      <h1 class="display-6 fw-bold mt-2 mb-2" id="category-title">Catégorie</h1>
+      <p class="mb-0" id="category-count" style="opacity:.9;">Chargement...</p>
+    </div>
+  </section>
+
+  <main class="container my-4">
+    <div class="row g-3 mb-4">
+      <div class="col-md-6">
+        <input type="text" id="search-q" class="form-control" placeholder="Rechercher dans cette catégorie..." />
+      </div>
+    </div>
+    <div id="category-grid" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+      <p class="hint">Chargement des destinations...</p>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <script>
+    const CATEGORY_NAME = {{ category_name | tojson }};
+    const grid = document.getElementById("category-grid");
+    const meta = categoryMeta(CATEGORY_NAME);
+
+    document.getElementById("page-title").textContent = `${CATEGORY_NAME} - Kribi Tour`;
+    document.getElementById("category-title").textContent = `${meta.icon} ${CATEGORY_NAME}`;
+    document.getElementById("category-hero").style.background =
+      `linear-gradient(135deg, var(--violet) 0%, var(--orange-deep) 100%)`;
+
+    function destinationCardHTML(d) {
+      const m = categoryMeta(d.category);
+      let media;
+      if (d.local_image) {
+        media = `<img src="${d.local_image}" alt="${d.name}" loading="lazy" />`;
+      } else {
+        const query = (d.image_query || `${d.name} ${d.city} Cameroun`).replace(/"/g, "");
+        const fallbackQuery = (d.image_query_fallback || "").replace(/"/g, "");
+        media = `<div class="placeholder-media photo-slot ${m.cls}" data-photo-query="${query}" data-photo-fallback="${fallbackQuery}"><span>${m.icon}</span></div>`;
+      }
+      const favActive = isFavorite(d.id) ? "active" : "";
+
+      return `
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0 card-hover position-relative">
+            <button class="btn-favorite ${favActive}" data-fav-id="${d.id}" aria-label="Ajouter aux favoris" onclick="event.preventDefault(); toggleFavorite(${d.id}); this.classList.toggle('active');">♥</button>
+            <a href="/destination/${d.id}" class="text-decoration-none text-reset">
+              <div class="gt-media">${media}</div>
+              <div class="card-body">
+                <div class="d-flex flex-wrap gap-2 mb-2">
+                  <span class="badge ${m.badge}">${m.icon} ${d.category || ""}</span>
+                </div>
+                <h3 class="h6 mb-1">${d.name}</h3>
+                <p class="small mb-2">${d.description}</p>
+                <div>${(d.tags || []).map((t) => `<span class="badge bg-light text-dark border me-1">${t}</span>`).join("")}</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      `;
+    }
+
+    async function loadCategory() {
+      const q = document.getElementById("search-q").value.trim();
+      const params = new URLSearchParams({ category: CATEGORY_NAME });
+      if (q) params.append("q", q);
+
+      const { ok, data } = await apiRequest(`/destinations?${params.toString()}`);
+      if (!ok) {
+        grid.innerHTML = "<p class='hint'>Impossible de charger cette catégorie.</p>";
+        return;
+      }
+      document.getElementById("category-count").textContent =
+        `${data.length} lieu${data.length > 1 ? "x" : ""} à Kribi`;
+
+      if (data.length === 0) {
+        grid.innerHTML = "<p class='hint'>Aucun lieu dans cette catégorie pour le moment.</p>";
+        return;
+      }
+      const sorted = [...data].sort((a, b) => a.name.localeCompare(b.name, "fr"));
+      grid.innerHTML = sorted.map(destinationCardHTML).join("");
+      hydratePhotos(grid);
+    }
+
+    document.getElementById("search-q").addEventListener("input", () => {
+      clearTimeout(window._searchDebounce);
+      window._searchDebounce = setTimeout(loadCategory, 300);
+    });
+
+    loadCategory();
+  </script>
+</body>
+</html>

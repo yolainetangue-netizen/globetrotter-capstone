@@ -1,0 +1,3545 @@
+{
+  "destinations": [
+    {
+      "id": 1,
+      "name": "Akiba Beach Lounge",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Bars et vie nocturne",
+      "tags": [
+        "gastronomie",
+        "relaxation"
+      ],
+      "image": null,
+      "image_query": "Akiba Beach Lounge Kribi Cameroon",
+      "description": "Lounge-bar en bord de plage, ideal pour un cocktail ou un repas dans une ambiance festive et decontractee.",
+      "city": "Kribi",
+      "lat": 2.949,
+      "lng": 9.904,
+      "long_description": "Akiba Beach Lounge est un espace lounge en bord de plage a Kribi, qui combine restauration, bar et musique dans une ambiance decontractee. Prise pour les soirees et les after-beach, l'adresse propose une carte de cocktails, de grillades et de plats a partager.",
+      "activities": [
+        "Profiter d'un cocktail les pieds dans le sable",
+        "Diner dans une ambiance festive en soiree",
+        "Ecouter de la musique live ou DJ selon les soirees programmees"
+      ],
+      "practical_info": {
+        "hours": "12h-minuit environ (variable en soiree, a confirmer sur place)",
+        "price": "Plat/cocktail : environ 3000-8000 FCFA",
+        "best_time": "Soiree",
+        "access": "Bord de plage, Kribi"
+      },
+      "budget": "Plat : 3000-8000 FCFA. Cocktail : 2500-5000 FCFA. Entree soiree evenementielle : variable selon programmation.",
+      "budget_saison_seche": "Plat : 3000-8000 FCFA. Cocktail : 2500-5000 FCFA. Entree soiree evenementielle : variable selon programmation. (haute saison, nov-mars/juil-aout : forte affluence touristique, tarifs au plus haut, reservation conseillee).",
+      "budget_saison_pluies": "Plat : 3000-8000 FCFA. Cocktail : 2500-5000 FCFA. Entree soiree evenementielle : variable selon programmation. (saison des pluies, avr-juin/sept-oct : frequentation plus calme, tarifs souvent negociables).",
+      "transport": {
+        "taxi": "environ 500-1500 FCFA depuis le centre-ville de Kribi",
+        "moto": "environ 300-800 FCFA",
+        "note": "Ambiance nocturne animee ; prevoir un moyen de retour en fin de soiree.",
+        "walk": "trop éloigné pour y aller à pied, préférez la moto"
+      },
+      "image_query_fallback": "restaurant food dining plate",
+      "contact": null
+    },
+    {
+      "id": 2,
+      "name": "Au Plaisir du Goût",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Restaurants",
+      "tags": [
+        "gastronomie"
+      ],
+      "image": null,
+      "image_query": "Au Plaisir du Goût Kribi Cameroon",
+      "description": "Restaurant familial proposant une cuisine camerounaise generereuse a prix accessible.",
+      "city": "Kribi",
+      "lat": 2.946,
+      "lng": 9.908,
+      "long_description": "Au Plaisir du Gout est une adresse conviviale et familiale de Kribi, appreciee pour ses plats camerounais traditionnels servis en portions genereuses a des prix accessibles. Une bonne option pour decouvrir la cuisine locale sans se ruiner.",
+      "activities": [
+        "Decouvrir la cuisine camerounaise traditionnelle (ndole, poisson, plantain)",
+        "Profiter d'une ambiance familiale et conviviale",
+        "Bon rapport qualite-prix pour un repas complet"
+      ],
+      "practical_info": {
+        "hours": "10h-21h en general (a confirmer sur place)",
+        "price": "Plat : environ 2000-4500 FCFA",
+        "best_time": "Dejeuner ou diner",
+        "access": "Centre-ville de Kribi"
+      },
+      "budget": "Plat principal : 2000-4500 FCFA. Menu du jour : environ 2500 FCFA. Boissons : 500-1500 FCFA.",
+      "budget_saison_seche": "Plat principal : 2000-4500 FCFA. Menu du jour : environ 2500 FCFA. Boissons : 500-1500 FCFA. (haute saison, nov-mars/juil-aout : forte affluence touristique, tarifs au plus haut, reservation conseillee).",
+      "budget_saison_pluies": "Plat principal : 2000-4500 FCFA. Menu du jour : environ 2500 FCFA. Boissons : 500-1500 FCFA. (saison des pluies, avr-juin/sept-oct : frequentation plus calme, tarifs souvent negociables).",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville de Kribi",
+        "moto": "environ 300-500 FCFA",
+        "note": "Situe en centre-ville, facile d'acces a pied ou en moto.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "image_query_fallback": "restaurant food dining plate",
+      "contact": "+237 660 00 01 37",
+      "menu": [
+        {
+          "plat": "Poisson braisé (bar ou capitaine) frites/plantain",
+          "prix": "4000 FCFA"
+        },
+        {
+          "plat": "Crevettes grillées sauce pili-pili",
+          "prix": "5000 FCFA"
+        },
+        {
+          "plat": "Ndolé au poisson fumé",
+          "prix": "3000 FCFA"
+        },
+        {
+          "plat": "Poulet DG",
+          "prix": "4500 FCFA"
+        },
+        {
+          "plat": "Beignets haricot bouillie (petit-déjeuner)",
+          "prix": "1000 FCFA"
+        },
+        {
+          "plat": "Jus de fruits locaux (bissap, gingembre, ananas)",
+          "prix": "1000 FCFA"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Aérodrome de Kribi",
+      "country": "Kribi, Cameroun",
+      "category": "Monuments",
+      "tags": [
+        "histoire",
+        "city"
+      ],
+      "image": null,
+      "image_query": "Aérodrome de Kribi Kribi Cameroon",
+      "description": "Petit aerodrome local de Kribi, utilise principalement pour des vols lies a l'activite economique regionale.",
+      "city": "Kribi",
+      "lat": 2.97,
+      "lng": 9.92,
+      "long_description": "L'aerodrome de Kribi est une infrastructure de taille modeste, utilisee essentiellement pour des vols charters lies aux activites industrielles et portuaires de la region. Il temoigne du developpement economique accelere de Kribi ces dernieres annees.",
+      "activities": [
+        "Observer les installations aeroportuaires locales",
+        "Comprendre le developpement economique recent de Kribi"
+      ],
+      "practical_info": {
+        "hours": "Acces reglemente",
+        "price": "Observation exterieure gratuite",
+        "best_time": "Toute l'annee",
+        "access": "Peripherie nord de Kribi"
+      },
+      "budget": "Observation exterieure gratuite.",
+      "budget_saison_seche": "Observation exterieure gratuite. Tarifs stables toute l'annee.",
+      "budget_saison_pluies": "Observation exterieure gratuite. Tarifs stables toute l'annee.",
+      "transport": {
+        "taxi": "environ 2000-3000 FCFA depuis le centre-ville de Kribi (15-20 min)",
+        "moto": "environ 1000-1500 FCFA",
+        "note": "Situe en peripherie, prevoir un vehicule ou une moto.",
+        "walk": "trop éloigné pour y aller à pied, préférez la moto"
+      },
+      "image_query_fallback": "african historic monument architecture",
+      "contact": null
+    },
+    {
+      "id": 4,
+      "name": "Balade en pirogue",
+      "country": "Kribi, Région du Sud, Cameroun",
+      "category": "Activités",
+      "tags": [
+        "nature",
+        "adventure"
+      ],
+      "image": null,
+      "image_query": "Balade en pirogue Kribi Cameroun",
+      "image_query_fallback": "Kribi Cameroon beach activity",
+      "description": "Sortie en pirogue traditionnelle sur les eaux calmes autour de Kribi.",
+      "city": "Kribi",
+      "lat": 2.949,
+      "lng": 9.908,
+      "long_description": "La balade en pirogue est une facon authentique de decouvrir le littoral de Kribi, entre estuaires, mangroves et rivages tranquilles, guidee par des pecheurs locaux qui connaissent parfaitement ces eaux.",
+      "activities": [
+        "Naviguer en pirogue traditionnelle avec un piroguier local",
+        "Observer la cote depuis l'eau",
+        "Combiner avec une sortie mangrove ou fleuve Lobe"
+      ],
+      "practical_info": {
+        "hours": "Sorties en journee, selon maree",
+        "price": "environ 2000-5000 FCFA selon duree",
+        "best_time": "Maree haute, saison seche",
+        "access": "Depart depuis la plage centrale ou Londji"
+      },
+      "budget": "environ 2000-5000 FCFA par personne selon la duree de la sortie.",
+      "budget_saison_seche": "environ 2000-5000 FCFA par personne selon la duree de la sortie. (haute saison seche, nov-mars : forte affluence, tarifs guides/materiel au plus haut).",
+      "budget_saison_pluies": "environ 2000-5000 FCFA par personne selon la duree de la sortie. (saison des pluies, avr-oct : frequentation plus calme, tarifs souvent negociables ; certaines activites peuvent etre suspendues par mauvais temps).",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville jusqu'au point de depart",
+        "moto": "environ 300-500 FCFA",
+        "note": "Le prix se negocie generalement directement avec le piroguier.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "contact": null
+    },
+    {
+      "id": 5,
+      "name": "Barbecue de poissons",
+      "country": "Kribi, Région du Sud, Cameroun",
+      "category": "Activités",
+      "tags": [
+        "gastronomie",
+        "culture"
+      ],
+      "image": null,
+      "image_query": "Barbecue de poissons Kribi Cameroun",
+      "image_query_fallback": "Kribi Cameroon beach activity",
+      "description": "Stands de poissons grilles en bord de plage, une institution du soir a Kribi.",
+      "city": "Kribi",
+      "lat": 2.9445,
+      "lng": 9.9058,
+      "long_description": "Chaque soir, des stands de grillades s'installent en bord de plage a Kribi, ou l'on choisit son poisson frais avant de le voir grille sous ses yeux. Un moment convivial et social autant qu'une experience culinaire.",
+      "activities": [
+        "Choisir son poisson frais et le voir preparer sur place",
+        "Deguster en bord de plage",
+        "Profiter de l'ambiance sociale du soir"
+      ],
+      "practical_info": {
+        "hours": "A partir de 18h en general",
+        "price": "Poisson grille : environ 2000-5000 FCFA selon taille",
+        "best_time": "Soiree",
+        "access": "Plage centrale de Kribi"
+      },
+      "budget": "Poisson grille : 2000-5000 FCFA selon la taille et l'espece choisie. Accompagnements : 500-1500 FCFA.",
+      "budget_saison_seche": "Poisson grille : 2000-5000 FCFA selon la taille et l'espece choisie. Accompagnements : 500-1500 FCFA. (haute saison seche, nov-mars : forte affluence, tarifs guides/materiel au plus haut).",
+      "budget_saison_pluies": "Poisson grille : 2000-5000 FCFA selon la taille et l'espece choisie. Accompagnements : 500-1500 FCFA. (saison des pluies, avr-oct : frequentation plus calme, tarifs souvent negociables ; certaines activites peuvent etre suspendues par mauvais temps).",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Stands informels le long de la plage, tres accessibles a pied.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "contact": null
+    },
+    {
+      "id": 6,
+      "name": "Base Navale de Kribi",
+      "country": "Kribi, Cameroun",
+      "category": "Monuments",
+      "tags": [
+        "histoire",
+        "city"
+      ],
+      "image": null,
+      "image_query": "Base Navale de Kribi Kribi Cameroon",
+      "description": "Point d'appui de la Marine Nationale a Kribi, en lien avec le developpement du port en eau profonde.",
+      "city": "Kribi",
+      "lat": 2.955,
+      "lng": 9.915,
+      "long_description": "Avec la construction du port en eau profonde, Kribi a vu se renforcer la presence de la Marine Nationale camerounaise, chargee de la surveillance du littoral et des installations portuaires strategiques de la region.",
+      "activities": [
+        "Observer les installations depuis les zones accessibles",
+        "Comprendre les enjeux de securite maritime lies au port en eau profonde"
+      ],
+      "practical_info": {
+        "hours": "Acces reglemente",
+        "price": "Observation exterieure gratuite",
+        "best_time": "Toute l'annee",
+        "access": "Secteur portuaire de Kribi"
+      },
+      "budget": "Observation exterieure gratuite. Acces a l'interieur non autorise au public.",
+      "budget_saison_seche": "Observation exterieure gratuite. Acces a l'interieur non autorise au public. Tarifs stables toute l'annee.",
+      "budget_saison_pluies": "Observation exterieure gratuite. Acces a l'interieur non autorise au public. Tarifs stables toute l'annee.",
+      "transport": {
+        "taxi": "environ 1500-2500 FCFA depuis le centre-ville",
+        "moto": "environ 800-1200 FCFA",
+        "note": "Zone sensible : eviter les prises de vue rapprochees des installations.",
+        "walk": "trop éloigné pour y aller à pied, préférez la moto"
+      },
+      "image_query_fallback": "african historic monument architecture",
+      "contact": null
+    },
+    {
+      "id": 7,
+      "name": "Beach-volley",
+      "country": "Kribi, Région du Sud, Cameroun",
+      "category": "Activités",
+      "tags": [
+        "relaxation",
+        "adventure"
+      ],
+      "image": null,
+      "image_query": "Beach-volley Kribi Cameroun",
+      "image_query_fallback": "Kribi Cameroon beach activity",
+      "description": "Terrain de beach-volley amenage sur la plage centrale de Kribi, ouvert a tous.",
+      "city": "Kribi",
+      "lat": 2.9438,
+      "lng": 9.905,
+      "long_description": "La plage centrale de Kribi dispose d'espaces amenages pour le beach-volley, tres frequentes en fin d'apres-midi par les habitants et visiteurs. Une bonne facon de rencontrer du monde tout en profitant de la plage.",
+      "activities": [
+        "Participer a une partie de beach-volley",
+        "Rencontrer des joueurs locaux et voyageurs",
+        "Profiter de l'ambiance sportive de la plage"
+      ],
+      "practical_info": {
+        "hours": "Fin d'apres-midi generalement",
+        "price": "Acces libre, materiel parfois a louer sur place",
+        "best_time": "Fin d'apres-midi",
+        "access": "Plage centrale de Kribi"
+      },
+      "budget": "Acces gratuit. Location de ballon/materiel si besoin : 500-1500 FCFA.",
+      "budget_saison_seche": "Acces gratuit. Location de ballon/materiel si besoin : 500-1500 FCFA. (haute saison seche, nov-mars : forte affluence, tarifs guides/materiel au plus haut).",
+      "budget_saison_pluies": "Acces gratuit. Location de ballon/materiel si besoin : 500-1500 FCFA. (saison des pluies, avr-oct : frequentation plus calme, tarifs souvent negociables ; certaines activites peuvent etre suspendues par mauvais temps).",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Situe en plein centre, facilement accessible a pied.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "contact": null
+    },
+    {
+      "id": 8,
+      "name": "Campements Bagyeli",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Excursions",
+      "tags": [
+        "culture",
+        "adventure"
+      ],
+      "image": null,
+      "image_query": "Campements Bagyeli Kribi Cameroon",
+      "description": "Rencontre avec les communautes Bagyeli, peuple autochtone de la foret, pour decouvrir leur mode de vie traditionnel.",
+      "city": "Kribi",
+      "lat": 2.85,
+      "lng": 10.1,
+      "long_description": "Les Bagyeli sont un peuple autochtone de chasseurs-cueilleurs installe dans les forets du sud du Cameroun, autour de Bipindi, Lolodorf et en peripherie du Parc National de Campo-Ma'an. Plusieurs campements proches de Kribi accueillent des visiteurs dans le cadre de programmes d'ecotourisme communautaire, permettant de decouvrir leurs savoirs traditionnels sur la foret : plantes medicinales, techniques de chasse, musique et artisanat.\n\nCes visites, organisees avec des associations locales, contribuent directement aux revenus des communautes et a la valorisation de leur patrimoine culturel.",
+      "activities": [
+        "Decouvrir les techniques traditionnelles de chasse et de cueillette en foret",
+        "Assister a une demonstration de pharmacopee traditionnelle a base de plantes",
+        "Ecouter de la musique traditionnelle Bagyeli",
+        "Acheter de l'artisanat local en soutien direct a la communaute"
+      ],
+      "practical_info": {
+        "hours": "Visites organisees en journee, sur reservation via une association locale",
+        "price": "Contribution/visite guidee : environ 3000-6000 FCFA par personne",
+        "best_time": "Saison seche, pour un acces facilite en foret",
+        "access": "Campements situes autour de Bipindi/Lolodorf, a 1h-1h30 de Kribi"
+      },
+      "budget": "Contribution/visite guidee : environ 3000-6000 FCFA par personne, versee directement a la communaute. Artisanat : prix libre.",
+      "budget_saison_seche": "Contribution/visite guidee : environ 3000-6000 FCFA par personne, versee directement a la communaute. Artisanat : prix libre. (haute saison, nov-mars/juil-aout : forte affluence touristique, tarifs au plus haut, reservation conseillee).",
+      "budget_saison_pluies": "Contribution/visite guidee : environ 3000-6000 FCFA par personne, versee directement a la communaute. Artisanat : prix libre. (saison des pluies, avr-juin/sept-oct : frequentation plus calme, tarifs souvent negociables).",
+      "transport": {
+        "taxi": "environ 12000-18000 FCFA pour un aller-retour taxi/vehicule depuis Kribi (1h-1h30)",
+        "moto": "envisageable par temps sec uniquement, tarif a negocier",
+        "note": "Passer par une association locale ou un guide de Kribi est recommande pour organiser une visite respectueuse.",
+        "walk": "trop éloigné pour y aller à pied, préférez la moto"
+      },
+      "image_query_fallback": "african historic monument architecture",
+      "contact": null
+    },
+    {
+      "id": 9,
+      "name": "Cathédrale Saint-Joseph de Kribi",
+      "country": "Kribi, Région du Sud, Cameroun",
+      "category": "Monuments",
+      "tags": [
+        "histoire",
+        "culture"
+      ],
+      "image": null,
+      "image_query": "Cathédrale Saint-Joseph de Kribi Kribi Cameroun",
+      "image_query_fallback": "Kribi Cameroon historic building",
+      "description": "Principale eglise catholique de Kribi, heritage de l'evangelisation de la region cotiere.",
+      "city": "Kribi",
+      "lat": 2.947,
+      "lng": 9.909,
+      "long_description": "La cathedrale Saint-Joseph de Kribi temoigne de l'histoire religieuse de la ville, marquee par l'arrivee des missionnaires europeens sur la cote camerounaise. Son architecture et l'animation des offices dominicaux en font un lieu important de la vie sociale locale.",
+      "activities": [
+        "Assister a une messe dominicale",
+        "Admirer l'architecture religieuse",
+        "Photographier l'edifice"
+      ],
+      "practical_info": {
+        "hours": "Ouverte en journee, offices le dimanche",
+        "price": "Acces libre",
+        "best_time": "Dimanche matin pour l'ambiance des offices",
+        "access": "Centre-ville de Kribi"
+      },
+      "budget": "Acces gratuit. Don libre lors des offices.",
+      "budget_saison_seche": "Acces gratuit. Don libre lors des offices. Tarifs stables toute l'annee.",
+      "budget_saison_pluies": "Acces gratuit. Don libre lors des offices. Tarifs stables toute l'annee.",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Situee en plein centre-ville, tres accessible.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "contact": null
+    },
+    {
+      "id": 10,
+      "name": "Centre-ville de Kribi",
+      "country": "Kribi, Région du Sud, Cameroun",
+      "category": "Loisirs",
+      "tags": [
+        "city",
+        "shopping",
+        "culture"
+      ],
+      "image": null,
+      "image_query": "Centre-ville de Kribi Kribi Cameroun",
+      "image_query_fallback": "Kribi Cameroon local life market",
+      "description": "Le coeur commercant et social de Kribi, entre boutiques, marches et vie de quartier.",
+      "city": "Kribi",
+      "lat": 2.946,
+      "lng": 9.907,
+      "long_description": "Le centre-ville de Kribi concentre commerces, administrations, marches et vie sociale de la ville. S'y promener permet de saisir le rythme quotidien de Kribi, entre activite commerciale et ambiance decontractee typique de la cote camerounaise.",
+      "activities": [
+        "Se promener dans les rues commercantes",
+        "Observer la vie quotidienne des habitants",
+        "Faire une pause dans un des nombreux petits commerces"
+      ],
+      "practical_info": {
+        "hours": "Toute la journee",
+        "price": "Gratuit",
+        "best_time": "Matin ou fin d'apres-midi",
+        "access": "Centre-ville de Kribi"
+      },
+      "budget": "Acces gratuit.",
+      "budget_saison_seche": "Acces gratuit. Tarifs stables toute l'annee.",
+      "budget_saison_pluies": "Acces gratuit. Tarifs stables toute l'annee.",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis n'importe quel point du centre",
+        "moto": "environ 300-500 FCFA",
+        "note": "Coeur de la ville, point de repere central pour tous les deplacements.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "contact": null
+    },
+    {
+      "id": 11,
+      "name": "Chutes de la Lobe",
+      "country": "Kribi",
+      "city": "Kribi",
+      "category": "Sites naturels",
+      "tags": [
+        "nature",
+        "adventure"
+      ],
+      "image": null,
+      "lat": 2.8833,
+      "lng": 9.8833,
+      "description": "Chutes d'eau spectaculaires se jetant directement dans l'ocean Atlantique, a 8 km au sud de Kribi.",
+      "long_description": "Les chutes de la Lobe comptent parmi les rares chutes d'eau au monde a se jeter directement dans l'ocean -- ici, l'Atlantique -- offrant un spectacle naturel unique a seulement 7 km au sud de Kribi. Le contraste entre la vegetation luxuriante environnante et l'immensite oceanique en fait l'un des sites naturels les plus photographies du Cameroun.\n\nPour le peuple Batanga, originaire de la region, les chutes representent bien plus qu'une attraction touristique : elles sont considerees comme un lieu sacre, surnomme le \"Vatican du Sud\", ou se rencontrent les eaux douces du fleuve (energie masculine) et les eaux salees de l'ocean (energie feminine), formant un veritable vortex de puissance spirituelle dans la tradition locale.\n\nDes excursions en pirogue traditionnelle permettent de remonter le cours de la Lobe a travers une vegetation dense, offrant une approche originale des chutes, jusqu'aux campements du peuple Gyele installes en amont.",
+      "activities": [
+        "Admirer les chutes se jetant directement dans l'ocean Atlantique",
+        "Faire une balade en pirogue traditionnelle sur la riviere Lobe",
+        "Se baigner dans les eaux au pied des chutes",
+        "Decouvrir la dimension spirituelle du site pour le peuple Batanga (avec respect et discretion)"
+      ],
+      "practical_info": {
+        "hours": "Accessible en journee",
+        "price": "Droit d'acces modique, en supplement pour la balade en pirogue",
+        "best_time": "Saison seche (novembre a fevrier) pour un acces plus facile",
+        "access": "A environ 7 km au sud de Kribi, accessible par la route littorale"
+      },
+      "budget": "Droit d'acces modique (environ 1000-2000 FCFA). Balade en pirogue : 2000-5000 FCFA en supplement.",
+      "transport": {
+        "taxi": "environ 2000-3000 FCFA",
+        "moto": "environ 1000-1500 FCFA",
+        "note": "(15-20 min, 7 km).",
+        "walk": "trop éloigné pour y aller à pied, préférez la moto"
+      },
+      "image_query": "Chutes de la Lobe Kribi Cameroon",
+      "budget_saison_seche": "Droit d'acces modique (environ 1200-2300 FCFA). Balade en pirogue : 2300-5800 FCFA en supplement. (haute saison, nov-mars : forte affluence, tarifs guides/pirogues au plus haut).",
+      "budget_saison_pluies": "Droit d'acces modique (environ 900-1800 FCFA). Balade en pirogue : 1800-4500 FCFA en supplement. (saison des pluies, avr-oct : frequentation plus faible, tarifs souvent negociables ; certains sentiers/pirogues peuvent etre impraticables apres de fortes pluies).",
+      "image_query_fallback": "african waterfall river nature landscape",
+      "contact": null,
+      "views": 2
+    },
+    {
+      "id": 12,
+      "name": "Coucher de soleil sur la plage",
+      "country": "Kribi, Région du Sud, Cameroun",
+      "category": "Sites naturels",
+      "tags": [
+        "nature",
+        "relaxation"
+      ],
+      "image": null,
+      "image_query": "Coucher de soleil sur la plage Kribi Cameroun",
+      "image_query_fallback": "Kribi Cameroon nature landscape",
+      "description": "Moment incontournable a Kribi : le soleil qui se couche directement sur l'ocean Atlantique.",
+      "city": "Kribi",
+      "lat": 2.943,
+      "lng": 9.904,
+      "long_description": "Chaque soir, le coucher de soleil sur la plage de Kribi attire habitants et visiteurs, qui se rassemblent en bord de mer pour profiter du spectacle. L'ocean etant oriente plein ouest a cet endroit, le soleil semble plonger directement dans l'eau, un moment particulierement photogenique.",
+      "activities": [
+        "Profiter du coucher de soleil depuis la plage ou une terrasse",
+        "Photographier le ciel et l'ocean",
+        "Terminer la soiree dans un bar de plage"
+      ],
+      "practical_info": {
+        "hours": "Fin de journee, generalement entre 18h et 19h",
+        "price": "Gratuit",
+        "best_time": "Toute l'annee, ciel plus degage en saison seche",
+        "access": "Plage centrale de Kribi"
+      },
+      "budget": "Acces gratuit.",
+      "budget_saison_seche": "Acces gratuit. (haute saison seche, nov-mars : forte affluence, tarifs guides/materiel au plus haut).",
+      "budget_saison_pluies": "Acces gratuit. (saison des pluies, avr-oct : frequentation plus calme, tarifs souvent negociables ; certaines activites peuvent etre suspendues par mauvais temps).",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Se profite depuis n'importe quel point de la plage centrale.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "contact": null
+    },
+    {
+      "id": 13,
+      "name": "Débarcadère de Mboamanga",
+      "country": "Kribi, Région du Sud, Cameroun",
+      "category": "Monuments",
+      "tags": [
+        "histoire",
+        "culture",
+        "city"
+      ],
+      "image": null,
+      "image_query": "Débarcadère de Mboamanga Kribi Cameroun",
+      "image_query_fallback": "Kribi Cameroon historic building",
+      "description": "Ancien point de debarquement de peche, temoin de l'histoire maritime de la region.",
+      "city": "Kribi",
+      "lat": 2.961,
+      "lng": 9.921,
+      "long_description": "Le debarcadere de Mboamanga a longtemps servi de point de dechargement pour les pirogues de peche de la region. Aujourd'hui encore actif, il offre un apercu vivant de l'economie de peche traditionnelle qui a faconne l'histoire cotiere de Kribi.",
+      "activities": [
+        "Observer le dechargement des prises de peche",
+        "Discuter avec les pecheurs locaux",
+        "Acheter du poisson frais directement sur place"
+      ],
+      "practical_info": {
+        "hours": "Tot le matin pour l'activite de peche",
+        "price": "Gratuit",
+        "best_time": "Tot le matin",
+        "access": "Village de Mboamanga, au nord de Kribi"
+      },
+      "budget": "Acces gratuit.",
+      "budget_saison_seche": "Acces gratuit. Tarifs stables toute l'annee.",
+      "budget_saison_pluies": "Acces gratuit. Tarifs stables toute l'annee.",
+      "transport": {
+        "taxi": "environ 2000-3000 FCFA depuis le centre-ville",
+        "moto": "environ 1000-1500 FCFA",
+        "note": "Meilleure experience tot le matin, au retour des pirogues.",
+        "walk": "trop éloigné pour y aller à pied, préférez la moto"
+      },
+      "contact": null
+    },
+    {
+      "id": 14,
+      "name": "Fleuve Lobé",
+      "country": "Kribi, Région du Sud, Cameroun",
+      "category": "Sites naturels",
+      "tags": [
+        "nature",
+        "adventure"
+      ],
+      "image": null,
+      "image_query": "Fleuve Lobé Kribi Cameroun",
+      "image_query_fallback": "Kribi Cameroon nature landscape",
+      "description": "Le fleuve qui alimente les celebres Chutes de la Lobe avant de se jeter dans l'ocean.",
+      "city": "Kribi",
+      "lat": 2.885,
+      "lng": 9.88,
+      "long_description": "Le fleuve Lobe traverse la foret cotiere avant de plonger directement dans l'ocean Atlantique au niveau des Chutes de la Lobe, un phenomene rare a l'echelle mondiale. Une promenade en pirogue permet de remonter le cours du fleuve pour decouvrir la vegetation environnante.",
+      "activities": [
+        "Remonter le fleuve en pirogue",
+        "Observer la vegetation de foret cotiere",
+        "Combiner la visite avec les Chutes de la Lobe toutes proches"
+      ],
+      "practical_info": {
+        "hours": "Acces libre en journee",
+        "price": "Balade en pirogue : 2000-5000 FCFA",
+        "best_time": "Saison seche pour une navigation plus facile",
+        "access": "Pres des Chutes de la Lobe, au sud de Kribi"
+      },
+      "budget": "Acces gratuit aux rives. Balade en pirogue : 2000-5000 FCFA selon duree.",
+      "budget_saison_seche": "Acces gratuit aux rives. Balade en pirogue : 2000-5000 FCFA selon duree. (haute saison seche, nov-mars : forte affluence, tarifs guides/materiel au plus haut).",
+      "budget_saison_pluies": "Acces gratuit aux rives. Balade en pirogue : 2000-5000 FCFA selon duree. (saison des pluies, avr-oct : frequentation plus calme, tarifs souvent negociables ; certaines activites peuvent etre suspendues par mauvais temps).",
+      "transport": {
+        "taxi": "environ 2000-3000 FCFA depuis le centre-ville",
+        "moto": "environ 1000-1500 FCFA",
+        "note": "Se combine facilement avec la visite des Chutes de la Lobe toutes proches.",
+        "walk": "trop éloigné pour y aller à pied, préférez la moto"
+      },
+      "contact": null
+    },
+    {
+      "id": 15,
+      "name": "Framotel Kribi",
+      "country": "Kribi, Cameroun",
+      "category": "Hôtels",
+      "tags": [
+        "relaxation",
+        "city"
+      ],
+      "image": null,
+      "image_query": "Framotel Kribi Kribi Cameroon",
+      "description": "Etablissement hotelier de standing a Kribi, appreciee pour son confort et son emplacement central.",
+      "city": "Kribi",
+      "lat": 2.948,
+      "lng": 9.909,
+      "long_description": "Le Framotel Kribi fait partie d'une chaine hoteliere camerounaise reconnue, offrant un bon niveau de confort en centre-ville, pratique pour explorer aussi bien la plage que les environs de Kribi.",
+      "activities": [
+        "Sejourner dans un cadre confortable en centre-ville",
+        "Profiter du restaurant de l'hotel",
+        "Organiser facilement des excursions vers les Chutes de la Lobe"
+      ],
+      "practical_info": {
+        "hours": "Reception 24h/24",
+        "price": "Chambre double : environ 30000-50000 FCFA/nuit",
+        "best_time": "Toute l'annee",
+        "access": "Centre-ville de Kribi"
+      },
+      "budget": "Chambre double : 30000-50000 FCFA/nuit selon saison. Petit-dejeuner : 3000-5000 FCFA.",
+      "budget_saison_seche": "Chambre double : 30000-50000 FCFA/nuit selon saison. Petit-dejeuner : 3000-5000 FCFA. (haute saison, decembre-fevrier et juillet-aout : tarifs souvent majores, reservation fortement conseillee).",
+      "budget_saison_pluies": "Chambre double : 30000-50000 FCFA/nuit selon saison. Petit-dejeuner : 3000-5000 FCFA. (basse saison : tarifs plus bas et disponibilites nombreuses, negociation possible pour un long sejour).",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Emplacement central, tres accessible.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "image_query_fallback": "hotel resort pool relaxation",
+      "contact": "+237 660 00 02 74"
+    },
+    {
+      "id": 16,
+      "name": "Hôtel Ilomba Kribi",
+      "country": "Kribi, Cameroun",
+      "category": "Hôtels",
+      "tags": [
+        "relaxation",
+        "nature"
+      ],
+      "image": null,
+      "image_query": "Hôtel Ilomba Kribi Kribi Cameroon",
+      "description": "Hotel de bord de plage a Kribi, reputé pour son cadre tropical et sa piscine face a l'ocean.",
+      "city": "Kribi",
+      "lat": 2.942,
+      "lng": 9.905,
+      "long_description": "L'Hotel Ilomba est l'une des adresses appreciees de Kribi pour un sejour balneaire, avec chambres donnant sur la plage, piscine et restaurant. Un bon compromis confort/ambiance decontractee pour explorer la region.",
+      "activities": [
+        "Se detendre au bord de la piscine face a l'ocean",
+        "Profiter de l'acces direct a la plage",
+        "Diner au restaurant de l'hotel les pieds dans le sable"
+      ],
+      "practical_info": {
+        "hours": "Reception 24h/24",
+        "price": "Chambre double : environ 35000-60000 FCFA/nuit",
+        "best_time": "Toute l'annee, prisee en haute saison",
+        "access": "Front de mer de Kribi"
+      },
+      "budget": "Chambre double : 35000-60000 FCFA/nuit selon saison. Petit-dejeuner : 3000-6000 FCFA.",
+      "budget_saison_seche": "Chambre double : 35000-60000 FCFA/nuit selon saison. Petit-dejeuner : 3000-6000 FCFA. (haute saison, decembre-fevrier et juillet-aout : tarifs souvent majores, reservation fortement conseillee).",
+      "budget_saison_pluies": "Chambre double : 35000-60000 FCFA/nuit selon saison. Petit-dejeuner : 3000-6000 FCFA. (basse saison : tarifs plus bas et disponibilites nombreuses, negociation possible pour un long sejour).",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville de Kribi",
+        "moto": "environ 300-500 FCFA",
+        "note": "Situe sur le front de mer, tres accessible depuis le centre-ville.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "image_query_fallback": "hotel resort pool relaxation",
+      "contact": "+237 660 00 04 11"
+    },
+    {
+      "id": 17,
+      "name": "Hôtel des Anges",
+      "country": "Kribi, Région du Sud, Cameroun",
+      "category": "Hôtels",
+      "tags": [
+        "relaxation",
+        "city"
+      ],
+      "image": null,
+      "image_query": "Hôtel des Anges Kribi Cameroun",
+      "image_query_fallback": "Kribi Cameroon beach hotel",
+      "description": "Hotel familial en centre-ville de Kribi, connu pour son accueil chaleureux.",
+      "city": "Kribi",
+      "lat": 2.946,
+      "lng": 9.9085,
+      "long_description": "L'Hotel des Anges est une adresse familiale appreciee pour la qualite de son accueil, en plein centre-ville de Kribi. Un bon compromis confort/convivialite pour un sejour de decouverte de la ville.",
+      "activities": [
+        "Profiter d'un accueil chaleureux et personnalise",
+        "Sejourner en plein centre-ville",
+        "Organiser facilement des excursions depuis l'hotel"
+      ],
+      "practical_info": {
+        "hours": "Reception 24h/24",
+        "price": "Chambre double : environ 22000-38000 FCFA/nuit",
+        "best_time": "Toute l'annee",
+        "access": "Centre-ville de Kribi"
+      },
+      "budget": "Chambre double : 22000-38000 FCFA/nuit selon saison. Petit-dejeuner : 2500-4000 FCFA.",
+      "budget_saison_seche": "Chambre double : 22000-38000 FCFA/nuit selon saison. Petit-dejeuner : 2500-4000 FCFA. (haute saison, decembre-fevrier et juillet-aout : tarifs souvent majores, reservation conseillee).",
+      "budget_saison_pluies": "Chambre double : 22000-38000 FCFA/nuit selon saison. Petit-dejeuner : 2500-4000 FCFA. (basse saison : tarifs plus bas, negociation possible pour un long sejour).",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Emplacement central, tres accessible.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "contact": "+237 660 00 05 48"
+    },
+    {
+      "id": 18,
+      "name": "Hôtel du Phare",
+      "country": "Kribi, Région du Sud, Cameroun",
+      "category": "Hôtels",
+      "tags": [
+        "relaxation",
+        "histoire"
+      ],
+      "image": null,
+      "image_query": "Hôtel du Phare Kribi Cameroun",
+      "image_query_fallback": "Kribi Cameroon beach hotel",
+      "description": "Hotel situe pres du Phare de Kribi, alliant vue sur l'ocean et proximite du site historique.",
+      "city": "Kribi",
+      "lat": 2.9385,
+      "lng": 9.907,
+      "long_description": "L'Hotel du Phare tire son nom de sa proximite avec le Phare de Kribi. Il propose des chambres avec vue sur l'ocean et un acces facile a la fois a la plage et au site historique voisin.",
+      "activities": [
+        "Profiter d'une chambre avec vue sur l'ocean",
+        "Visiter le Phare de Kribi a pied",
+        "Se detendre sur la plage a proximite"
+      ],
+      "practical_info": {
+        "hours": "Reception 24h/24",
+        "price": "Chambre double : environ 30000-50000 FCFA/nuit",
+        "best_time": "Toute l'annee",
+        "access": "Pres du Phare de Kribi"
+      },
+      "budget": "Chambre double : 30000-50000 FCFA/nuit selon saison. Petit-dejeuner : 3000-5000 FCFA.",
+      "budget_saison_seche": "Chambre double : 30000-50000 FCFA/nuit selon saison. Petit-dejeuner : 3000-5000 FCFA. (haute saison, decembre-fevrier et juillet-aout : tarifs souvent majores, reservation conseillee).",
+      "budget_saison_pluies": "Chambre double : 30000-50000 FCFA/nuit selon saison. Petit-dejeuner : 3000-5000 FCFA. (basse saison : tarifs plus bas, negociation possible pour un long sejour).",
+      "transport": {
+        "taxi": "environ 1000-1500 FCFA depuis le centre-ville",
+        "moto": "environ 500-800 FCFA",
+        "note": "Situe pres du Phare, a quelques minutes du centre-ville.",
+        "walk": "trop éloigné pour y aller à pied, préférez la moto"
+      },
+      "contact": "+237 660 00 06 85"
+    },
+    {
+      "id": 19,
+      "name": "Jet-ski",
+      "country": "Kribi, Région du Sud, Cameroun",
+      "category": "Activités",
+      "tags": [
+        "adventure",
+        "relaxation"
+      ],
+      "image": null,
+      "image_query": "Jet-ski Kribi Cameroun",
+      "image_query_fallback": "Kribi Cameroon beach activity",
+      "description": "Location de jet-ski sur la plage centrale de Kribi, pour une sortie en mer sensations fortes.",
+      "city": "Kribi",
+      "lat": 2.9435,
+      "lng": 9.904,
+      "long_description": "Plusieurs prestataires proposent la location de jet-ski directement depuis la plage centrale de Kribi, une activite prisee des amateurs de sensations sur l'eau et de vues depuis le large sur la cote camerounaise.",
+      "activities": [
+        "Piloter un jet-ski le long de la cote",
+        "Profiter d'une vue sur Kribi depuis le large",
+        "Combiner avec une baignade"
+      ],
+      "practical_info": {
+        "hours": "Journee, selon conditions meteo et maree",
+        "price": "environ 15000-25000 FCFA pour 15-20 minutes",
+        "best_time": "Mer calme, saison seche de preference",
+        "access": "Plage centrale de Kribi"
+      },
+      "budget": "environ 15000-25000 FCFA pour 15-20 minutes de location.",
+      "budget_saison_seche": "environ 15000-25000 FCFA pour 15-20 minutes de location. (haute saison seche, nov-mars : forte affluence, tarifs guides/materiel au plus haut).",
+      "budget_saison_pluies": "environ 15000-25000 FCFA pour 15-20 minutes de location. (saison des pluies, avr-oct : frequentation plus calme, tarifs souvent negociables ; certaines activites peuvent etre suspendues par mauvais temps).",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Disponibilite et prix variables selon les prestataires presents sur la plage ce jour-la.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "contact": null
+    },
+    {
+      "id": 20,
+      "name": "La Crevette de la Lobé",
+      "country": "Kribi, Région du Sud, Cameroun",
+      "category": "Restaurants",
+      "tags": [
+        "gastronomie",
+        "nature"
+      ],
+      "image": null,
+      "image_query": "La Crevette de la Lobé Kribi Cameroun",
+      "image_query_fallback": "Cameroon coastal seafood restaurant",
+      "description": "Restaurant pres des Chutes de la Lobe, specialise dans les crevettes et poissons du fleuve et de l'ocean.",
+      "city": "Kribi",
+      "lat": 2.887,
+      "lng": 9.882,
+      "long_description": "Ideallement situe a proximite des Chutes de la Lobe, ce restaurant propose une cuisine centree sur les produits locaux de la peche fluviale et maritime, notamment ses crevettes reputees. Une bonne etape pour prolonger la visite des chutes par un repas.",
+      "activities": [
+        "Deguster des crevettes fraiches apres la visite des chutes",
+        "Profiter du cadre naturel environnant",
+        "Decouvrir la cuisine locale a base de produits du fleuve"
+      ],
+      "practical_info": {
+        "hours": "11h-21h en general (a confirmer sur place)",
+        "price": "Plat : environ 4000-10000 FCFA",
+        "best_time": "Dejeuner apres la visite des Chutes de la Lobe",
+        "access": "Pres des Chutes de la Lobe, au sud de Kribi"
+      },
+      "budget": "Plat principal : 4000-10000 FCFA. Boissons : 1000-2500 FCFA.",
+      "budget_saison_seche": "Plat principal : 4000-10000 FCFA. Boissons : 1000-2500 FCFA. (haute saison et periode des fetes : affluence en soiree, reservation conseillee).",
+      "budget_saison_pluies": "Plat principal : 4000-10000 FCFA. Boissons : 1000-2500 FCFA. (basse saison : tarifs stables, plus de disponibilites).",
+      "transport": {
+        "taxi": "environ 2000-3000 FCFA depuis le centre-ville",
+        "moto": "environ 1000-1500 FCFA",
+        "note": "A combiner avec la visite des Chutes de la Lobe, toute proche.",
+        "walk": "trop éloigné pour y aller à pied, préférez la moto"
+      },
+      "contact": "+237 660 00 08 22",
+      "menu": [
+        {
+          "plat": "Crevettes grillées sauce pili-pili",
+          "prix": "5500 FCFA"
+        },
+        {
+          "plat": "Poisson braisé (bar ou capitaine)",
+          "prix": "4500 FCFA"
+        },
+        {
+          "plat": "Gambas sauce crevette",
+          "prix": "6000 FCFA"
+        },
+        {
+          "plat": "Riz sauce graine",
+          "prix": "3000 FCFA"
+        },
+        {
+          "plat": "Jus de fruits locaux",
+          "prix": "1000 FCFA"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "La Fourchette",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Restaurants",
+      "tags": [
+        "gastronomie"
+      ],
+      "image": null,
+      "image_query": "La Fourchette Kribi Cameroon",
+      "description": "Restaurant de quartier propose une cuisine simple et copieuse a Kribi, appreciee pour son bon rapport qualite-prix.",
+      "city": "Kribi",
+      "lat": 2.945,
+      "lng": 9.909,
+      "long_description": "La Fourchette est un restaurant de quartier a Kribi, prise pour sa cuisine simple, copieuse et son bon rapport qualite-prix. Une valeur sure pour un repas rapide et savoureux.",
+      "activities": [
+        "Manger un plat copieux a petit prix",
+        "Decouvrir des specialites locales du jour"
+      ],
+      "practical_info": {
+        "hours": "10h-21h en general (a confirmer sur place)",
+        "price": "Plat : environ 1500-4000 FCFA",
+        "best_time": "Dejeuner",
+        "access": "Kribi centre"
+      },
+      "budget": "Plat principal : 1500-4000 FCFA. Boissons : 500-1500 FCFA.",
+      "budget_saison_seche": "Plat principal : 1500-4000 FCFA. Boissons : 500-1500 FCFA. (haute saison, nov-mars/juil-aout : forte affluence touristique, tarifs au plus haut, reservation conseillee).",
+      "budget_saison_pluies": "Plat principal : 1500-4000 FCFA. Boissons : 500-1500 FCFA. (saison des pluies, avr-juin/sept-oct : frequentation plus calme, tarifs souvent negociables).",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville de Kribi",
+        "moto": "environ 300-500 FCFA",
+        "note": "Adresse de quartier facilement accessible.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "image_query_fallback": "restaurant food dining plate",
+      "contact": "+237 660 00 09 59",
+      "menu": [
+        {
+          "plat": "Poisson braisé (bar ou capitaine) frites/plantain",
+          "prix": "4000 FCFA"
+        },
+        {
+          "plat": "Crevettes grillées sauce pili-pili",
+          "prix": "5000 FCFA"
+        },
+        {
+          "plat": "Ndolé au poisson fumé",
+          "prix": "3000 FCFA"
+        },
+        {
+          "plat": "Poulet DG",
+          "prix": "4500 FCFA"
+        },
+        {
+          "plat": "Beignets haricot bouillie (petit-déjeuner)",
+          "prix": "1000 FCFA"
+        },
+        {
+          "plat": "Jus de fruits locaux (bissap, gingembre, ananas)",
+          "prix": "1000 FCFA"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Le Badamier chez Paul",
+      "country": "Kribi, Région du Sud, Cameroun",
+      "category": "Restaurants",
+      "tags": [
+        "gastronomie",
+        "relaxation"
+      ],
+      "image": null,
+      "image_query": "Le Badamier chez Paul Kribi Cameroun",
+      "image_query_fallback": "Cameroon coastal seafood restaurant",
+      "description": "Restaurant convivial de Kribi, reputé pour son poisson grille sous un grand badamier.",
+      "city": "Kribi",
+      "lat": 2.945,
+      "lng": 9.9075,
+      "long_description": "Le Badamier chez Paul tient son nom du grand arbre badamier qui ombrage sa terrasse. L'adresse est appreciee pour son poisson grille prepare selon les methodes traditionnelles, dans un cadre simple et convivial tres frequente par les habitues.",
+      "activities": [
+        "Deguster un poisson grille a l'ombre du badamier",
+        "Profiter d'une ambiance conviviale et locale",
+        "Discuter avec les habitues de Kribi"
+      ],
+      "practical_info": {
+        "hours": "11h-22h en general (a confirmer sur place)",
+        "price": "Plat : environ 2500-6000 FCFA",
+        "best_time": "Dejeuner ou diner",
+        "access": "Centre-ville de Kribi"
+      },
+      "budget": "Plat principal : 2500-6000 FCFA. Boissons : 500-2000 FCFA.",
+      "budget_saison_seche": "Plat principal : 2500-6000 FCFA. Boissons : 500-2000 FCFA. (haute saison et periode des fetes : affluence en soiree, reservation conseillee).",
+      "budget_saison_pluies": "Plat principal : 2500-6000 FCFA. Boissons : 500-2000 FCFA. (basse saison : tarifs stables, plus de disponibilites).",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Adresse centrale, facilement accessible.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "contact": "+237 660 00 10 96",
+      "menu": [
+        {
+          "plat": "Poisson braisé (bar ou capitaine) frites/plantain",
+          "prix": "4000 FCFA"
+        },
+        {
+          "plat": "Crevettes grillées sauce pili-pili",
+          "prix": "5000 FCFA"
+        },
+        {
+          "plat": "Ndolé au poisson fumé",
+          "prix": "3000 FCFA"
+        },
+        {
+          "plat": "Poulet DG",
+          "prix": "4500 FCFA"
+        },
+        {
+          "plat": "Beignets haricot bouillie (petit-déjeuner)",
+          "prix": "1000 FCFA"
+        },
+        {
+          "plat": "Jus de fruits locaux (bissap, gingembre, ananas)",
+          "prix": "1000 FCFA"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Glacier Coppa Cabbana",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Restaurants",
+      "tags": [
+        "gastronomie",
+        "relaxation"
+      ],
+      "image": null,
+      "image_query": "glacier-coppa-cabbana Kribi Cameroon",
+      "description": "Salon de glaces et de patisseries a Kribi, ideal pour une pause sucree en famille.",
+      "city": "Kribi",
+      "lat": 2.9475,
+      "lng": 9.9055,
+      "long_description": "Glacier Coppa Cabbana est un salon de glaces et de patisseries appreciee a Kribi, ideal pour une pause fraicheur en journee ou un dessert apres le diner. Une adresse familiale, prisee des enfants comme des adultes.",
+      "activities": [
+        "Deguster une glace artisanale par temps chaud",
+        "Faire une pause patisserie en journee",
+        "Bonne option pour terminer un repas en famille"
+      ],
+      "practical_info": {
+        "hours": "9h-21h en general (a confirmer sur place)",
+        "price": "Glace/patisserie : environ 1000-3000 FCFA",
+        "best_time": "Apres-midi",
+        "access": "Kribi centre"
+      },
+      "budget": "Glace : 1000-2000 FCFA. Patisserie : 1000-3000 FCFA.",
+      "budget_saison_seche": "Glace : 1000-2000 FCFA. Patisserie : 1000-3000 FCFA. (haute saison, nov-mars/juil-aout : forte affluence touristique, tarifs au plus haut, reservation conseillee).",
+      "budget_saison_pluies": "Glace : 1000-2000 FCFA. Patisserie : 1000-3000 FCFA. (saison des pluies, avr-juin/sept-oct : frequentation plus calme, tarifs souvent negociables).",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville de Kribi",
+        "moto": "environ 300-500 FCFA",
+        "note": "Adresse centrale, tres accessible a pied.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "image_query_fallback": "restaurant food dining plate",
+      "contact": "+237 660 00 12 33",
+      "menu": [
+        {
+          "plat": "Glace 2 boules (parfums variés)",
+          "prix": "1500 FCFA"
+        },
+        {
+          "plat": "Coupe glacée gourmande",
+          "prix": "3000 FCFA"
+        },
+        {
+          "plat": "Crêpe sucrée",
+          "prix": "1500 FCFA"
+        },
+        {
+          "plat": "Milkshake",
+          "prix": "2000 FCFA"
+        },
+        {
+          "plat": "Café / Thé",
+          "prix": "800 FCFA"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "Les Gîtes de Kribi",
+      "country": "Kribi, Région du Sud, Cameroun",
+      "category": "Hôtels",
+      "tags": [
+        "relaxation",
+        "city"
+      ],
+      "image": null,
+      "image_query": "Les Gîtes de Kribi Kribi Cameroun",
+      "image_query_fallback": "Kribi Cameroon beach hotel",
+      "description": "Ensemble de gites independants au coeur de Kribi, une option plus intime qu'un grand hotel.",
+      "city": "Kribi",
+      "lat": 2.9455,
+      "lng": 9.9065,
+      "long_description": "Les Gites de Kribi proposent des logements independants, une alternative aux grands hotels pour les voyageurs recherchant plus d'intimite ou un sejour en famille. Chaque gite dispose generalement d'un espace exterieur propre.",
+      "activities": [
+        "Sejourner dans un logement independant et intime",
+        "Profiter d'un espace exterieur prive",
+        "Cuisiner soi-meme si le gite est equipe"
+      ],
+      "practical_info": {
+        "hours": "Reception en journee et soiree",
+        "price": "Gite : environ 20000-40000 FCFA/nuit",
+        "best_time": "Toute l'annee",
+        "access": "Centre-ville de Kribi"
+      },
+      "budget": "Gite : 20000-40000 FCFA/nuit selon taille et saison.",
+      "budget_saison_seche": "Gite : 20000-40000 FCFA/nuit selon taille et saison. (haute saison, decembre-fevrier et juillet-aout : tarifs souvent majores, reservation conseillee).",
+      "budget_saison_pluies": "Gite : 20000-40000 FCFA/nuit selon taille et saison. (basse saison : tarifs plus bas, negociation possible pour un long sejour).",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Emplacement central, facile d'acces.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "contact": "+237 660 00 13 70"
+    },
+    {
+      "id": 25,
+      "name": "Londji",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Plages",
+      "tags": [
+        "nature",
+        "relaxation",
+        "culture"
+      ],
+      "image": null,
+      "image_query": "Londji Kribi Cameroon",
+      "description": "Village de pecheurs paisible au nord de Kribi, reputé pour sa plage sauvage et ses pirogues traditionnelles colorees.",
+      "city": "Kribi",
+      "lat": 2.98,
+      "lng": 9.89,
+      "long_description": "Londji est un village de pecheurs situe a une dizaine de kilometres au nord de Kribi, reconnaissable a ses pirogues multicolores alignees sur le sable. Moins frequente que les plages du centre-ville, la plage de Londji offre une ambiance authentique loin de l'agitation touristique, ideale pour observer la vie quotidienne des pecheurs et deguster du poisson fraichement peche.",
+      "activities": [
+        "Observer le retour de peche des pirogues traditionnelles en fin de journee",
+        "Se promener sur une plage sauvage peu frequentee",
+        "Deguster un poisson braise prepare par les femmes du village",
+        "Photographier les pirogues colorees typiques du littoral camerounais"
+      ],
+      "practical_info": {
+        "hours": "Acces libre, activite de peche visible surtout tot le matin ou en fin de journee",
+        "price": "Gratuit",
+        "best_time": "Fin d'apres-midi, au retour des pirogues de peche",
+        "access": "A environ 10 km au nord de Kribi"
+      },
+      "budget": "Acces a la plage gratuit. Poisson braise sur place : environ 2000-4000 FCFA.",
+      "budget_saison_seche": "Acces a la plage gratuit. Poisson braise sur place : environ 2000-4000 FCFA. (haute saison, nov-mars/juil-aout : forte affluence touristique, tarifs au plus haut, reservation conseillee).",
+      "budget_saison_pluies": "Acces a la plage gratuit. Poisson braise sur place : environ 2000-4000 FCFA. (saison des pluies, avr-juin/sept-oct : frequentation plus calme, tarifs souvent negociables).",
+      "transport": {
+        "taxi": "environ 3000-4500 FCFA depuis le centre de Kribi (15-20 min)",
+        "moto": "environ 1500-2500 FCFA",
+        "note": "Piste praticable ; prevoir un peu plus de temps en saison des pluies.",
+        "walk": "trop éloigné pour y aller à pied, préférez la moto"
+      },
+      "image_query_fallback": "african waterfall river nature landscape",
+      "contact": null
+    },
+    {
+      "id": 26,
+      "name": "Lycée Bilingue de Kribi",
+      "country": "Kribi, Cameroun",
+      "category": "Autres",
+      "tags": [
+        "culture",
+        "city"
+      ],
+      "image": null,
+      "image_query": "Lycée Bilingue de Kribi Kribi Cameroon",
+      "description": "Etablissement scolaire public de reference a Kribi, offrant un enseignement bilingue francais-anglais.",
+      "city": "Kribi",
+      "lat": 2.945,
+      "lng": 9.908,
+      "long_description": "Le Lycee Bilingue de Kribi est l'un des principaux etablissements secondaires de la ville, temoin du developpement educatif de la region cotiere du Sud-Cameroun.",
+      "activities": [
+        "Observer l'organisation d'un etablissement scolaire camerounais",
+        "Comprendre le systeme bilingue francais-anglais du Cameroun"
+      ],
+      "practical_info": {
+        "hours": "Acces aux abords en journee",
+        "price": "Gratuit (exterieur)",
+        "best_time": "Periode scolaire",
+        "access": "Centre-ville de Kribi"
+      },
+      "budget": "Acces exterieur gratuit.",
+      "budget_saison_seche": "Acces exterieur gratuit. Tarifs stables toute l'annee.",
+      "budget_saison_pluies": "Acces exterieur gratuit. Tarifs stables toute l'annee.",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Facilement accessible en centre-ville.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "image_query_fallback": "african historic monument architecture",
+      "contact": null
+    },
+    {
+      "id": 27,
+      "name": "Mairie de Kribi",
+      "country": "Kribi, Région du Sud, Cameroun",
+      "category": "Autres",
+      "tags": [
+        "city",
+        "histoire"
+      ],
+      "image": null,
+      "image_query": "Mairie de Kribi Kribi Cameroun",
+      "image_query_fallback": "Kribi Cameroon town",
+      "description": "Siege de l'administration communale de Kribi, batiment repere du centre-ville.",
+      "city": "Kribi",
+      "lat": 2.9455,
+      "lng": 9.9082,
+      "long_description": "La Mairie de Kribi est le siege de l'administration communale et un point de repere du centre-ville. Le batiment et ses abords refletent la vie institutionnelle et administrative de la commune.",
+      "activities": [
+        "Observer l'architecture du batiment municipal",
+        "Point de repere pratique en centre-ville"
+      ],
+      "practical_info": {
+        "hours": "Heures de bureau (lundi-vendredi)",
+        "price": "Acces exterieur gratuit",
+        "best_time": "Toute l'annee",
+        "access": "Centre-ville de Kribi"
+      },
+      "budget": "Acces exterieur gratuit.",
+      "budget_saison_seche": "Acces exterieur gratuit. Tarifs stables toute l'annee.",
+      "budget_saison_pluies": "Acces exterieur gratuit. Tarifs stables toute l'annee.",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Situee en plein centre-ville, tres accessible.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "contact": null
+    },
+    {
+      "id": 28,
+      "name": "Mangroves de Londji",
+      "country": "Kribi, Région du Sud, Cameroun",
+      "category": "Sites naturels",
+      "tags": [
+        "nature",
+        "adventure"
+      ],
+      "image": null,
+      "image_query": "Mangroves de Londji Kribi Cameroun",
+      "image_query_fallback": "Kribi Cameroon nature landscape",
+      "description": "Ecosysteme de mangrove pres de Londji, riche en biodiversite cotiere.",
+      "city": "Kribi",
+      "lat": 2.985,
+      "lng": 9.885,
+      "long_description": "Les mangroves de Londji forment un ecosysteme cotier essentiel, refuge pour de nombreuses especes de poissons, crustaces et oiseaux. Une sortie en pirogue a travers les chenaux de mangrove offre une experience naturelle depaysante, loin des plages touristiques.",
+      "activities": [
+        "Explorer les chenaux de mangrove en pirogue",
+        "Observer les oiseaux et la faune cotiere",
+        "Comprendre le role ecologique de la mangrove avec un guide local"
+      ],
+      "practical_info": {
+        "hours": "Sorties en journee, selon maree",
+        "price": "Sortie guidee en pirogue : 3000-6000 FCFA",
+        "best_time": "Saison seche, maree haute pour une meilleure navigation",
+        "access": "Pres du village de Londji, au nord de Kribi"
+      },
+      "budget": "Sortie guidee en pirogue : 3000-6000 FCFA par personne.",
+      "budget_saison_seche": "Sortie guidee en pirogue : 3000-6000 FCFA par personne. (haute saison seche, nov-mars : forte affluence, tarifs guides/materiel au plus haut).",
+      "budget_saison_pluies": "Sortie guidee en pirogue : 3000-6000 FCFA par personne. (saison des pluies, avr-oct : frequentation plus calme, tarifs souvent negociables ; certaines activites peuvent etre suspendues par mauvais temps).",
+      "transport": {
+        "taxi": "environ 3000-4500 FCFA depuis le centre-ville",
+        "moto": "environ 1500-2500 FCFA",
+        "note": "Sortie dependante des horaires de maree ; se renseigner aupres d'un guide local avant de s'y rendre.",
+        "walk": "trop éloigné pour y aller à pied, préférez la moto"
+      },
+      "contact": null
+    },
+    {
+      "id": 29,
+      "name": "Marché Central de Kribi",
+      "country": "Kribi, Cameroun",
+      "category": "Marchés et artisanat",
+      "tags": [
+        "shopping",
+        "city"
+      ],
+      "image": null,
+      "image_query": "Marché Central de Kribi Kribi Cameroon",
+      "description": "Marche animee de Kribi, ou trouver produits locaux, poissons frais et artisanat.",
+      "city": "Kribi",
+      "lat": 2.946,
+      "lng": 9.907,
+      "long_description": "Le Marche Central de Kribi est le coeur de l'activite commerciale de la ville : on y trouve poissons frais tout juste debarques, fruits et legumes locaux, vetements et artisanat. Une bonne facon de plonger dans le quotidien de la ville.",
+      "activities": [
+        "Decouvrir les produits locaux et le poisson frais",
+        "Acheter des fruits et legumes de saison",
+        "S'immerger dans l'ambiance du marche camerounais"
+      ],
+      "practical_info": {
+        "hours": "6h-18h en general",
+        "price": "Acces libre",
+        "best_time": "Matin pour les produits les plus frais",
+        "access": "Centre-ville de Kribi"
+      },
+      "budget": "Acces gratuit. Achats a partir de quelques centaines de FCFA.",
+      "budget_saison_seche": "Acces gratuit. Achats a partir de quelques centaines de FCFA. (haute saison : frequentation et tarifs en hausse).",
+      "budget_saison_pluies": "Acces gratuit. Achats a partir de quelques centaines de FCFA. (basse saison : tarifs plus souples).",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis n'importe quel point du centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Marche central tres accessible a pied depuis la plupart des hebergements.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "image_query_fallback": "african market colorful stalls",
+      "contact": null
+    },
+    {
+      "id": 30,
+      "name": "Marché aux poissons",
+      "country": "Kribi, Région du Sud, Cameroun",
+      "category": "Loisirs",
+      "tags": [
+        "culture",
+        "gastronomie",
+        "city"
+      ],
+      "image": null,
+      "image_query": "Marché aux poissons Kribi Cameroun",
+      "image_query_fallback": "Kribi Cameroon local life market",
+      "description": "Marche quotidien ou se negocie le poisson fraichement debarque des pirogues.",
+      "city": "Kribi",
+      "lat": 2.9465,
+      "lng": 9.9095,
+      "long_description": "Le marche aux poissons de Kribi est le lieu ou converge la peche du jour, negociee directement entre pecheurs et acheteurs des le petit matin. Une immersion vivante dans l'economie locale et une source garantie de poisson frais.",
+      "activities": [
+        "Assister a la negociation du poisson frais",
+        "Acheter directement aupres des pecheurs",
+        "Observer l'effervescence matinale du marche"
+      ],
+      "practical_info": {
+        "hours": "Tot le matin, generalement avant 10h",
+        "price": "Acces libre",
+        "best_time": "Tot le matin",
+        "access": "Pres du debarcadere, centre-ville de Kribi"
+      },
+      "budget": "Acces gratuit. Poisson au prix du marche, variable selon l'espece et l'arrivage.",
+      "budget_saison_seche": "Acces gratuit. Poisson au prix du marche, variable selon l'espece et l'arrivage. Tarifs stables toute l'annee.",
+      "budget_saison_pluies": "Acces gratuit. Poisson au prix du marche, variable selon l'espece et l'arrivage. Tarifs stables toute l'annee.",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Meilleure experience tres tot le matin, au retour des pirogues.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "contact": null
+    },
+    {
+      "id": 31,
+      "name": "Mémorial Batanga",
+      "country": "Kribi, Région du Sud, Cameroun",
+      "category": "Monuments",
+      "tags": [
+        "histoire",
+        "culture"
+      ],
+      "image": null,
+      "image_query": "Mémorial Batanga Kribi Cameroun",
+      "image_query_fallback": "Kribi Cameroon historic building",
+      "description": "Site memoriel rendant hommage au peuple Batanga, communaute cotiere historique de la region de Kribi.",
+      "city": "Kribi",
+      "lat": 2.93,
+      "lng": 9.895,
+      "long_description": "Le peuple Batanga est l'un des groupes autochtones historiques de la cote sud du Cameroun, present dans la region de Kribi bien avant la periode coloniale. Ce site memoriel rend hommage a leur histoire et a leur contribution au patrimoine culturel de la region.",
+      "activities": [
+        "Decouvrir l'histoire du peuple Batanga",
+        "Comprendre le patrimoine culturel cotier de la region",
+        "Photographier le site"
+      ],
+      "practical_info": {
+        "hours": "Acces libre en journee",
+        "price": "Gratuit, contribution libre possible",
+        "best_time": "Toute l'annee",
+        "access": "Grand Batanga, au sud de Kribi"
+      },
+      "budget": "Acces gratuit.",
+      "budget_saison_seche": "Acces gratuit. Tarifs stables toute l'annee.",
+      "budget_saison_pluies": "Acces gratuit. Tarifs stables toute l'annee.",
+      "transport": {
+        "taxi": "environ 3000-4500 FCFA depuis le centre-ville",
+        "moto": "environ 1500-2500 FCFA",
+        "note": "Situe dans le secteur de Grand Batanga, au sud du centre-ville.",
+        "walk": "trop éloigné pour y aller à pied, préférez la moto"
+      },
+      "contact": null
+    },
+    {
+      "id": 32,
+      "name": "Observation des tortues marines",
+      "country": "Kribi, Région du Sud, Cameroun",
+      "category": "Activités",
+      "tags": [
+        "nature",
+        "adventure"
+      ],
+      "image": null,
+      "image_query": "Observation des tortues marines Kribi Cameroun",
+      "image_query_fallback": "Kribi Cameroon beach activity",
+      "description": "Sortie nocturne encadree pour observer la ponte des tortues marines a Ebodje.",
+      "city": "Kribi",
+      "lat": 2.6,
+      "lng": 9.83,
+      "long_description": "Entre novembre et fevrier, des sorties nocturnes encadrees par des guides-conservateurs permettent d'observer, dans le respect des animaux, la ponte des tortues marines sur la plage d'Ebodje, dans le cadre d'un programme de protection communautaire.",
+      "activities": [
+        "Observer la ponte des tortues marines de nuit",
+        "Etre accompagne par un guide-conservateur forme",
+        "Comprendre les enjeux de protection des tortues"
+      ],
+      "practical_info": {
+        "hours": "Sorties nocturnes, saison de ponte nov-fev uniquement",
+        "price": "environ 3000-5000 FCFA",
+        "best_time": "Novembre a fevrier",
+        "access": "Plage d'Ebodje, a environ 50 km au sud de Kribi"
+      },
+      "budget": "environ 3000-5000 FCFA par personne, reversee au programme de conservation.",
+      "budget_saison_seche": "environ 3000-5000 FCFA par personne, reversee au programme de conservation. (haute saison seche, nov-mars : forte affluence, tarifs guides/materiel au plus haut).",
+      "budget_saison_pluies": "environ 3000-5000 FCFA par personne, reversee au programme de conservation. (saison des pluies, avr-oct : frequentation plus calme, tarifs souvent negociables ; certaines activites peuvent etre suspendues par mauvais temps).",
+      "transport": {
+        "taxi": "environ 15000-20000 FCFA pour un aller-retour depuis Kribi",
+        "moto": "non recommande sur cette distance de nuit",
+        "note": "Sortie uniquement possible en saison de ponte (nov-fev) ; reservation aupres d'une association locale recommandee.",
+        "walk": "trop éloigné pour y aller à pied, préférez la moto"
+      },
+      "contact": null
+    },
+    {
+      "id": 33,
+      "name": "Parc National de Campo-Ma'an",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Excursions",
+      "tags": [
+        "nature",
+        "adventure"
+      ],
+      "image": null,
+      "image_query": "Parc National de Campo-Ma'an Kribi Cameroon",
+      "description": "Vaste parc national du sud Cameroun abritant gorilles, elephants de foret et une biodiversite exceptionnelle.",
+      "city": "Kribi",
+      "lat": 2.3667,
+      "lng": 9.95,
+      "long_description": "Cree en 2000, le Parc National de Campo-Ma'an s'etend sur plus de 260 000 hectares entre Kribi et la frontiere avec la Guinee Equatoriale. Il abrite une biodiversite remarquable : elephants de foret, gorilles, chimpanzes, panthères et plus de 300 especes d'oiseaux, dans un ecosysteme de foret tropicale humide traverse par plusieurs rivieres.\n\nLe parc est gere avec l'appui d'organisations de conservation et propose des circuits de randonnee guides ainsi que des programmes de decouverte de la foret en compagnie de guides issus des communautes riveraines, dont les Bagyeli.",
+      "activities": [
+        "Randonnee guidee a la decouverte de la faune et de la flore de la foret tropicale",
+        "Observation des oiseaux (plus de 300 especes recensees)",
+        "Decouverte des ecosystemes forestiers avec un guide naturaliste",
+        "Rencontre avec les communautes riveraines impliquees dans l'ecotourisme"
+      ],
+      "practical_info": {
+        "hours": "Acces reglemente, sur reservation aupres du poste de conservation",
+        "price": "Droit d'entree : environ 5000 FCFA. Guide obligatoire : 5000-10000 FCFA/jour.",
+        "best_time": "Grande saison seche (nov-mars), sentiers plus praticables",
+        "access": "Poste principal a Campo, a environ 75 km au sud de Kribi"
+      },
+      "budget": "Droit d'entree : environ 5000 FCFA. Guide obligatoire : 5000-10000 FCFA/jour. Camping/hebergement rustique : 5000-8000 FCFA.",
+      "budget_saison_seche": "Droit d'entree : environ 5000 FCFA. Guide obligatoire : 5000-10000 FCFA/jour. Camping/hebergement rustique : 5000-8000 FCFA. (haute saison, nov-mars/juil-aout : forte affluence touristique, tarifs au plus haut, reservation conseillee).",
+      "budget_saison_pluies": "Droit d'entree : environ 5000 FCFA. Guide obligatoire : 5000-10000 FCFA/jour. Camping/hebergement rustique : 5000-8000 FCFA. (saison des pluies, avr-juin/sept-oct : frequentation plus calme, tarifs souvent negociables).",
+      "transport": {
+        "taxi": "environ 20000-30000 FCFA pour un vehicule loue depuis Kribi jusqu'au poste de Campo (1h30-2h, 75 km)",
+        "moto": "non recommande sur cette distance en foret",
+        "note": "Un 4x4 ou un vehicule loue avec chauffeur est fortement recommande ; certaines pistes sont impraticables en saison des pluies.",
+        "walk": "trop éloigné pour y aller à pied, préférez la moto"
+      },
+      "image_query_fallback": "african waterfall river nature landscape",
+      "contact": null
+    },
+    {
+      "id": 34,
+      "name": "Phare de Kribi",
+      "country": "Kribi",
+      "city": "Kribi",
+      "category": "Monuments",
+      "tags": [
+        "history",
+        "culture"
+      ],
+      "image": null,
+      "lat": 2.9391,
+      "lng": 9.9075,
+      "description": "Construit en 1906 par les colons allemands, ce phare offre une vue panoramique sur l'ocean.",
+      "long_description": "Erige en 1906 par les colons allemands a l'embouchure du fleuve Kienke, le phare de Kribi temoigne de l'epoque ou la ville etait un port florissant, actif dans l'exportation du bois, du cafe et du cacao vers l'Europe. Plus d'un siecle apres sa construction, il reste toujours en service et demeure l'un des symboles historiques les plus reconnaissables de la ville.\n\nLe phare fait partie d'un ensemble d'edifices herites de la periode coloniale allemande a Kribi, aux cotes du pont sur la Kienke, de l'eglise Saint-Joseph (devenue cathedrale, construite en 1904 par les Peres pallotins) et de l'ancien palais du gouverneur, aujourd'hui residence du prefet, tous deux batis en 1908.\n\nAccessible a pied depuis la plage, le phare offre un point de vue panoramique exceptionnel sur l'ocean Atlantique et la cote environnante, en faisant une etape appreciee des amateurs d'histoire comme des photographes.",
+      "activities": [
+        "Admirer la vue panoramique sur l'ocean depuis le phare",
+        "Decouvrir l'architecture coloniale allemande preservee",
+        "Se promener a pied depuis la plage jusqu'au phare",
+        "Photographier ce symbole historique centenaire de Kribi"
+      ],
+      "practical_info": {
+        "hours": "Acces exterieur libre en journee",
+        "price": "Gratuit",
+        "best_time": "Fin de journee pour la lumiere sur l'ocean",
+        "access": "Embouchure du fleuve Kienke, accessible a pied depuis la plage de Kribi"
+      },
+      "budget": "Acces gratuit.",
+      "transport": {
+        "taxi": "A pied depuis la plage de Kribi, ou taxi pour environ 500 FCFA (5 min).",
+        "moto": "moto disponible localement, prix a negocier (generalement 30-50% moins cher qu'un voiture)",
+        "note": "A pied depuis la plage de Kribi, ou voiture pour environ 500 FCFA (5 min).",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "image_query": "Phare de Kribi Kribi Cameroon",
+      "budget_saison_seche": "Acces gratuit. Aucune variation saisonniere (acces gratuit).",
+      "budget_saison_pluies": "Acces gratuit. Aucune variation saisonniere (acces gratuit).",
+      "image_query_fallback": "african historic monument architecture",
+      "contact": null,
+      "views": 3
+    },
+    {
+      "id": 35,
+      "name": "Pied dans l'Eau",
+      "country": "Kribi, Région du Sud, Cameroun",
+      "category": "Restaurants",
+      "tags": [
+        "gastronomie",
+        "relaxation"
+      ],
+      "image": null,
+      "image_query": "Pied dans l'Eau Kribi Cameroun",
+      "image_query_fallback": "Cameroon coastal seafood restaurant",
+      "description": "Restaurant les pieds dans le sable, en bord de plage, specialise dans les produits de la mer.",
+      "city": "Kribi",
+      "lat": 2.9435,
+      "lng": 9.9045,
+      "long_description": "Comme son nom l'indique, Pied dans l'Eau permet de diner presque les pieds dans l'ocean, sur la plage de Kribi. La carte met a l'honneur poissons et fruits de mer frais, dans un cadre decontracte particulierement agreable au coucher du soleil.",
+      "activities": [
+        "Diner les pieds dans le sable",
+        "Deguster des fruits de mer face a l'ocean",
+        "Profiter du coucher de soleil pendant le repas"
+      ],
+      "practical_info": {
+        "hours": "11h-22h en general (a confirmer sur place)",
+        "price": "Plat : environ 3500-9000 FCFA",
+        "best_time": "Diner au coucher du soleil",
+        "access": "Plage centrale de Kribi"
+      },
+      "budget": "Plat principal : 3500-9000 FCFA. Fruits de mer selon arrivage : 9000-16000 FCFA. Boissons : 1000-3000 FCFA.",
+      "budget_saison_seche": "Plat principal : 3500-9000 FCFA. Fruits de mer selon arrivage : 9000-16000 FCFA. Boissons : 1000-3000 FCFA. (haute saison et periode des fetes : affluence en soiree, reservation conseillee).",
+      "budget_saison_pluies": "Plat principal : 3500-9000 FCFA. Fruits de mer selon arrivage : 9000-16000 FCFA. Boissons : 1000-3000 FCFA. (basse saison : tarifs stables, plus de disponibilites).",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Situe directement sur la plage centrale, tres accessible.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "contact": "+237 660 00 15 07",
+      "menu": [
+        {
+          "plat": "Poisson braisé pieds dans l'eau",
+          "prix": "4500 FCFA"
+        },
+        {
+          "plat": "Crevettes grillées",
+          "prix": "5000 FCFA"
+        },
+        {
+          "plat": "Plateau fruits de mer",
+          "prix": "8000 FCFA"
+        },
+        {
+          "plat": "Salade océane",
+          "prix": "2500 FCFA"
+        },
+        {
+          "plat": "Cocktail tropical",
+          "prix": "3000 FCFA"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "name": "Place des Fêtes de Kribi",
+      "country": "Kribi, Région du Sud, Cameroun",
+      "category": "Autres",
+      "tags": [
+        "city",
+        "culture",
+        "adventure"
+      ],
+      "image": null,
+      "image_query": "Place des Fêtes de Kribi Kribi Cameroun",
+      "image_query_fallback": "Kribi Cameroon town",
+      "description": "Place publique centrale, lieu des rassemblements, celebrations et evenements de la ville.",
+      "city": "Kribi",
+      "lat": 2.9448,
+      "lng": 9.9068,
+      "long_description": "La Place des Fetes est l'espace public ou se deroulent les grands rassemblements de Kribi : celebrations officielles, concerts, animations et evenements communautaires. C'est souvent le point de depart pour connaitre l'actualite evenementielle de la ville.",
+      "activities": [
+        "Assister a un evenement ou une animation locale si programme",
+        "Se promener sur la place en soiree",
+        "Point de rendez-vous central pour les sorties en ville"
+      ],
+      "practical_info": {
+        "hours": "Selon programmation des evenements",
+        "price": "Acces libre (entree payante possible selon evenement)",
+        "best_time": "Soiree, ou selon evenements programmes",
+        "access": "Centre-ville de Kribi"
+      },
+      "budget": "Acces libre en temps normal. Tarif variable selon evenement programme.",
+      "budget_saison_seche": "Acces libre en temps normal. Tarif variable selon evenement programme. Tarifs stables toute l'annee.",
+      "budget_saison_pluies": "Acces libre en temps normal. Tarif variable selon evenement programme. Tarifs stables toute l'annee.",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Situee en plein centre-ville, tres accessible.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "contact": null
+    },
+    {
+      "id": 37,
+      "name": "Plage centrale de Kribi",
+      "country": "Kribi, Région du Sud, Cameroun",
+      "category": "Plages",
+      "tags": [
+        "plage",
+        "relaxation"
+      ],
+      "image": null,
+      "image_query": "Plage centrale de Kribi Kribi Cameroun",
+      "image_query_fallback": "Kribi beach Cameroon coast",
+      "description": "La plage principale de Kribi, en plein centre-ville, bordee d'hotels et de restaurants.",
+      "city": "Kribi",
+      "lat": 2.944,
+      "lng": 9.906,
+      "long_description": "La plage centrale de Kribi est le coeur de la vie balneaire de la ville : sable fin, cocotiers, et un acces direct depuis la plupart des hebergements et restaurants du centre. C'est le point de rassemblement le plus frequente, aussi bien par les habitants que par les visiteurs, notamment en fin de journee.",
+      "activities": [
+        "Se baigner dans l'ocean Atlantique",
+        "Assister au coucher de soleil",
+        "Profiter des bars de plage a proximite"
+      ],
+      "practical_info": {
+        "hours": "Acces libre, jour et nuit",
+        "price": "Gratuit",
+        "best_time": "Fin d'apres-midi pour le coucher de soleil",
+        "access": "En plein centre-ville de Kribi"
+      },
+      "budget": "Acces gratuit. Location de transat/parasol si disponible : 1000-2000 FCFA.",
+      "budget_saison_seche": "Acces gratuit. Location de transat/parasol si disponible : 1000-2000 FCFA. (haute saison seche, nov-mars : forte affluence, tarifs guides/materiel au plus haut).",
+      "budget_saison_pluies": "Acces gratuit. Location de transat/parasol si disponible : 1000-2000 FCFA. (saison des pluies, avr-oct : frequentation plus calme, tarifs souvent negociables ; certaines activites peuvent etre suspendues par mauvais temps).",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Situee en plein centre, accessible a pied depuis la plupart des hebergements.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "contact": null,
+      "video": "/static/images/destination-37-plage-centrale.mp4"
+    },
+    {
+      "id": 38,
+      "name": "Plage d'Ebodjé",
+      "country": "Kribi, Région du Sud, Cameroun",
+      "category": "Plages",
+      "tags": [
+        "plage",
+        "nature",
+        "adventure"
+      ],
+      "image": null,
+      "image_query": "Plage d'Ebodjé Kribi Cameroun",
+      "image_query_fallback": "Kribi beach Cameroon coast",
+      "description": "Plage sauvage au sud de Kribi, connue pour la ponte des tortues marines.",
+      "city": "Kribi",
+      "lat": 2.6,
+      "lng": 9.83,
+      "long_description": "La plage d'Ebodje, a une cinquantaine de kilometres au sud de Kribi, est bordee de cocotiers et reste largement preservee du tourisme de masse. Entre novembre et fevrier, elle accueille la ponte de plusieurs especes de tortues marines, dans le cadre d'un programme de conservation communautaire.",
+      "activities": [
+        "Se detendre sur une plage sauvage peu frequentee",
+        "Observer la ponte des tortues marines (nov-fev, sortie nocturne encadree)",
+        "Rencontrer les guides-conservateurs locaux"
+      ],
+      "practical_info": {
+        "hours": "Acces libre le jour ; sorties tortues encadrees la nuit (nov-fev)",
+        "price": "Acces plage gratuit. Sortie tortues : 3000-5000 FCFA.",
+        "best_time": "Nov-fevrier pour les tortues ; toute l'annee pour la plage",
+        "access": "A environ 50 km au sud de Kribi"
+      },
+      "budget": "Acces gratuit. Sortie observation tortues (nov-fev) : 3000-5000 FCFA.",
+      "budget_saison_seche": "Acces gratuit. Sortie observation tortues (nov-fev) : 3000-5000 FCFA. (haute saison seche, nov-mars : forte affluence, tarifs guides/materiel au plus haut).",
+      "budget_saison_pluies": "Acces gratuit. Sortie observation tortues (nov-fev) : 3000-5000 FCFA. (saison des pluies, avr-oct : frequentation plus calme, tarifs souvent negociables ; certaines activites peuvent etre suspendues par mauvais temps).",
+      "transport": {
+        "taxi": "environ 15000-20000 FCFA pour un aller-retour depuis Kribi (1h-1h15)",
+        "moto": "non recommande sur cette distance",
+        "note": "Piste en partie non bitumee ; prevoir un vehicule robuste, surtout en saison des pluies.",
+        "walk": "trop éloigné pour y aller à pied, préférez la moto"
+      },
+      "contact": null
+    },
+    {
+      "id": 39,
+      "name": "Plage de Mboamanga",
+      "country": "Kribi, Région du Sud, Cameroun",
+      "category": "Plages",
+      "tags": [
+        "plage",
+        "relaxation",
+        "culture"
+      ],
+      "image": null,
+      "image_query": "Plage de Mboamanga Kribi Cameroun",
+      "image_query_fallback": "Kribi beach Cameroon coast",
+      "description": "Petite plage de village de pecheurs, au nord de Kribi, ambiance authentique.",
+      "city": "Kribi",
+      "lat": 2.96,
+      "lng": 9.92,
+      "long_description": "La plage de Mboamanga est adossee a un petit village de pecheurs, avec ses pirogues alignees sur le sable. Moins amenagee que les plages du centre, elle offre une immersion dans le quotidien des communautes cotieres de la region.",
+      "activities": [
+        "Observer le retour de peche des pirogues",
+        "Deguster du poisson fraichement peche",
+        "Se promener dans le village de pecheurs"
+      ],
+      "practical_info": {
+        "hours": "Acces libre",
+        "price": "Gratuit",
+        "best_time": "Fin d'apres-midi, au retour de peche",
+        "access": "Au nord de Kribi, pres de Mboamanga"
+      },
+      "budget": "Acces gratuit. Poisson braise sur place : 2000-4000 FCFA.",
+      "budget_saison_seche": "Acces gratuit. Poisson braise sur place : 2000-4000 FCFA. (haute saison seche, nov-mars : forte affluence, tarifs guides/materiel au plus haut).",
+      "budget_saison_pluies": "Acces gratuit. Poisson braise sur place : 2000-4000 FCFA. (saison des pluies, avr-oct : frequentation plus calme, tarifs souvent negociables ; certaines activites peuvent etre suspendues par mauvais temps).",
+      "transport": {
+        "taxi": "environ 2000-3000 FCFA depuis le centre-ville",
+        "moto": "environ 1000-1500 FCFA",
+        "note": "Piste praticable, un peu plus longue en saison des pluies.",
+        "walk": "trop éloigné pour y aller à pied, préférez la moto"
+      },
+      "contact": null
+    },
+    {
+      "id": 40,
+      "name": "Plage de Ngoye",
+      "country": "Kribi",
+      "city": "Kribi",
+      "category": "Plages",
+      "tags": [
+        "nature",
+        "relaxation"
+      ],
+      "image": null,
+      "lat": 2.95,
+      "lng": 9.9,
+      "description": "Plage de sable fin et eaux claires, l'une des plus celebres et paisibles de Kribi.",
+      "long_description": "Kribi est reputee pour ses plages de sable blanc, contrastant avec les plages de sable noir de Limbe plus au nord. Parmi elles, la plage de Ngoye offre un cadre paisible et preserve, prisee pour la baignade dans des eaux chaudes et calmes typiques du golfe de Guinee.\n\nLa region cotiere de Kribi abrite plusieurs plages aux ambiances variees : certaines, plus proches du centre-ville, sont animees et bordees de restaurants et d'hotels ; d'autres, plus sauvages comme la plage d'Elabe, sont propices a l'observation des tortues marines venant y pondre. Les activites nautiques (baignade, jet-ski, plongee) y sont particulierement developpees, faisant de Kribi l'une des deux principales stations balneaires du Cameroun aux cotes de Limbe.",
+      "activities": [
+        "Se baigner dans les eaux chaudes et calmes de l'Atlantique",
+        "Se detendre sur le sable blanc, en contraste avec les plages volcaniques du nord",
+        "Pratiquer des sports nautiques (jet-ski, plongee selon les prestataires locaux)",
+        "Profiter des restaurants et hotels de bord de mer"
+      ],
+      "practical_info": {
+        "hours": "Accessible en permanence",
+        "price": "Acces gratuit aux plages publiques",
+        "best_time": "Novembre a fevrier, grande saison seche",
+        "access": "Cote de Kribi, a proximite du centre-ville"
+      },
+      "budget": "Acces gratuit. Location transat/parasol : 1000-2000 FCFA selon etablissement.",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA",
+        "moto": "environ 250-600 FCFA",
+        "note": "(5-10 min).",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "image_query": "Plage de Ngoye Kribi Cameroon",
+      "budget_saison_seche": "Acces gratuit. Location transat/parasol : 1200-2300 FCFA selon etablissement. (haute saison, nov-mars : forte affluence, tarifs guides/pirogues au plus haut).",
+      "budget_saison_pluies": "Acces gratuit. Location transat/parasol : 900-1800 FCFA selon etablissement. (saison des pluies, avr-oct : frequentation plus faible, tarifs souvent negociables ; certains sentiers/pirogues peuvent etre impraticables apres de fortes pluies).",
+      "image_query_fallback": "african waterfall river nature landscape",
+      "contact": null,
+      "video": "/static/images/destination-40-plage-ngoye.mp4"
+    },
+    {
+      "id": 41,
+      "name": "Port en eau profonde de Kribi (Port de Kribi-Mboro)",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Monuments",
+      "tags": [
+        "histoire",
+        "city"
+      ],
+      "image": null,
+      "image_query": "Port en eau profonde de Kribi Kribi Cameroon",
+      "description": "Grand port en eau profonde du Cameroun, situe a Mboro/Lolabe au nord de Kribi, symbole du developpement economique de la region.",
+      "city": "Kribi",
+      "lat": 3.15,
+      "lng": 9.9333,
+      "long_description": "Mis en service en 2018 a une trentaine de kilometres au nord de Kribi, le port en eau profonde de Kribi (Port Autonome de Kribi) est l'une des plus importantes infrastructures portuaires d'Afrique centrale. Concu pour accueillir des porte-conteneurs de grande capacite, il joue un role cle dans le desenclavement economique du Cameroun et des pays voisins enclaves (Tchad, Republique Centrafricaine).\n\nLe site est egalement lie a l'exploitation du fer de Mbalam et a divers projets industriels de la zone economique attenante.",
+      "activities": [
+        "Observer les installations portuaires depuis les points de vue amenages",
+        "Comprendre les enjeux economiques du port aupres d'un guide local",
+        "Photographier les porte-conteneurs et l'activite maritime"
+      ],
+      "practical_info": {
+        "hours": "Acces variable, visites organisees sur demande",
+        "price": "Observation exterieure gratuite ; visite guidee sur autorisation",
+        "best_time": "Matinee, pour observer l'activite portuaire",
+        "access": "A environ 30 km au nord de Kribi, route bitumee"
+      },
+      "budget": "Observation exterieure gratuite. Visite guidee des installations : sur autorisation prealable, tarif variable.",
+      "budget_saison_seche": "Observation exterieure gratuite. Visite guidee des installations : sur autorisation prealable, tarif variable. (haute saison, nov-mars/juil-aout : forte affluence touristique, tarifs au plus haut, reservation conseillee).",
+      "budget_saison_pluies": "Observation exterieure gratuite. Visite guidee des installations : sur autorisation prealable, tarif variable. (saison des pluies, avr-juin/sept-oct : frequentation plus calme, tarifs souvent negociables).",
+      "transport": {
+        "taxi": "environ 8000-12000 FCFA pour un aller-retour taxi depuis Kribi (35-40 min, 30 km)",
+        "moto": "environ 4000-6000 FCFA, trajet plus long recommande en voiture",
+        "note": "Route bitumee, accessible toute l'annee ; prevoir un vehicule pour l'aller-retour.",
+        "walk": "trop éloigné pour y aller à pied, préférez la moto"
+      },
+      "image_query_fallback": "african historic monument architecture",
+      "contact": null
+    },
+    {
+      "id": 42,
+      "name": "Pêche artisanale",
+      "country": "Kribi, Région du Sud, Cameroun",
+      "category": "Activités",
+      "tags": [
+        "nature",
+        "culture",
+        "adventure"
+      ],
+      "image": null,
+      "image_query": "Pêche artisanale Kribi Cameroun",
+      "image_query_fallback": "Kribi Cameroon beach activity",
+      "description": "Sortie de peche accompagnee avec des pecheurs artisanaux de Kribi, methode traditionnelle.",
+      "city": "Kribi",
+      "lat": 2.96,
+      "lng": 9.9195,
+      "long_description": "Participer a une sortie de peche artisanale permet de decouvrir les techniques traditionnelles utilisees par les pecheurs locaux, embarque a bord de leur pirogue, une experience immersive dans le quotidien economique de la region cotiere.",
+      "activities": [
+        "Sortir en mer avec des pecheurs locaux",
+        "Apprendre les techniques de peche traditionnelle",
+        "Repartir avec le poisson peche, selon accord avec le pecheur"
+      ],
+      "practical_info": {
+        "hours": "Tot le matin, selon les departs des pecheurs",
+        "price": "environ 5000-10000 FCFA pour accompagner une sortie",
+        "best_time": "Tot le matin",
+        "access": "Village de pecheurs de Mboamanga ou Londji"
+      },
+      "budget": "environ 5000-10000 FCFA, a negocier directement avec le pecheur.",
+      "budget_saison_seche": "environ 5000-10000 FCFA, a negocier directement avec le pecheur. (haute saison seche, nov-mars : forte affluence, tarifs guides/materiel au plus haut).",
+      "budget_saison_pluies": "environ 5000-10000 FCFA, a negocier directement avec le pecheur. (saison des pluies, avr-oct : frequentation plus calme, tarifs souvent negociables ; certaines activites peuvent etre suspendues par mauvais temps).",
+      "transport": {
+        "taxi": "environ 2000-3000 FCFA depuis le centre-ville",
+        "moto": "environ 1000-1500 FCFA",
+        "note": "Sortie a organiser la veille aupres d'un pecheur local ou d'un guide.",
+        "walk": "trop éloigné pour y aller à pied, préférez la moto"
+      },
+      "contact": null
+    },
+    {
+      "id": 43,
+      "name": "Restaurant Idodo",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Restaurants",
+      "tags": [
+        "gastronomie",
+        "relaxation"
+      ],
+      "image": null,
+      "image_query": "Restaurant Idodo Kribi Cameroon",
+      "description": "Restaurant reputé de Kribi pour ses fruits de mer et poissons grilles servis en bord de plage.",
+      "city": "Kribi",
+      "lat": 2.947,
+      "lng": 9.906,
+      "long_description": "Le Restaurant Idodo est l'une des adresses appreciees de Kribi pour la cuisine de fruits de mer, avec une ambiance decontractee en bord de plage. La carte met a l'honneur les produits de la peche locale (crevettes, poisson braise, langoustes selon arrivage), accompagnes de plats camerounais traditionnels.",
+      "activities": [
+        "Deguster des fruits de mer fraichement peches",
+        "Diner les pieds dans le sable au coucher du soleil",
+        "Decouvrir la cuisine camerounaise cotiere"
+      ],
+      "practical_info": {
+        "hours": "11h-22h en general (a confirmer sur place)",
+        "price": "Plat : environ 3000-8000 FCFA",
+        "best_time": "Diner au coucher du soleil",
+        "access": "Bord de plage, centre-ville de Kribi"
+      },
+      "budget": "Plat principal : 3000-8000 FCFA. Fruits de mer/langouste selon arrivage : 8000-15000 FCFA. Boissons : 1000-3000 FCFA.",
+      "budget_saison_seche": "Plat principal : 3000-8000 FCFA. Fruits de mer/langouste selon arrivage : 8000-15000 FCFA. Boissons : 1000-3000 FCFA. (haute saison, nov-mars/juil-aout : forte affluence touristique, tarifs au plus haut, reservation conseillee).",
+      "budget_saison_pluies": "Plat principal : 3000-8000 FCFA. Fruits de mer/langouste selon arrivage : 8000-15000 FCFA. Boissons : 1000-3000 FCFA. (saison des pluies, avr-juin/sept-oct : frequentation plus calme, tarifs souvent negociables).",
+      "transport": {
+        "taxi": "environ 500-1500 FCFA depuis le centre-ville de Kribi",
+        "moto": "environ 300-800 FCFA",
+        "note": "Situe en bord de plage, facilement accessible depuis la plupart des hotels de Kribi.",
+        "walk": "trop éloigné pour y aller à pied, préférez la moto"
+      },
+      "image_query_fallback": "restaurant food dining plate",
+      "contact": "+237 660 00 16 44",
+      "menu": [
+        {
+          "plat": "Poisson braisé (bar ou capitaine) frites/plantain",
+          "prix": "4000 FCFA"
+        },
+        {
+          "plat": "Crevettes grillées sauce pili-pili",
+          "prix": "5000 FCFA"
+        },
+        {
+          "plat": "Ndolé au poisson fumé",
+          "prix": "3000 FCFA"
+        },
+        {
+          "plat": "Poulet DG",
+          "prix": "4500 FCFA"
+        },
+        {
+          "plat": "Beignets haricot bouillie (petit-déjeuner)",
+          "prix": "1000 FCFA"
+        },
+        {
+          "plat": "Jus de fruits locaux (bissap, gingembre, ananas)",
+          "prix": "1000 FCFA"
+        }
+      ],
+      "video": "/static/images/destination-43-idodo.mp4"
+    },
+    {
+      "id": 44,
+      "name": "Tara Plage",
+      "country": "Kribi, Région du Sud, Cameroun",
+      "category": "Plages",
+      "tags": [
+        "plage",
+        "relaxation"
+      ],
+      "image": null,
+      "image_query": "Tara Plage Kribi Cameroun",
+      "image_query_fallback": "Kribi beach Cameroon coast",
+      "description": "Portion de plage plus calme au nord du centre-ville, appreciee pour sa tranquillite.",
+      "city": "Kribi",
+      "lat": 2.951,
+      "lng": 9.913,
+      "long_description": "Tara Plage offre une alternative plus paisible a la plage centrale, avec moins d'affluence et une ambiance plus intime. Le sable y est tout aussi fin, et le cadre est particulierement agreable pour une promenade ou une baignade tranquille.",
+      "activities": [
+        "Se baigner loin de l'affluence du centre",
+        "Se promener en bord de mer",
+        "Pique-niquer sous les cocotiers"
+      ],
+      "practical_info": {
+        "hours": "Acces libre",
+        "price": "Gratuit",
+        "best_time": "Matin ou fin d'apres-midi",
+        "access": "Au nord du centre-ville de Kribi"
+      },
+      "budget": "Acces gratuit.",
+      "budget_saison_seche": "Acces gratuit. (haute saison seche, nov-mars : forte affluence, tarifs guides/materiel au plus haut).",
+      "budget_saison_pluies": "Acces gratuit. (saison des pluies, avr-oct : frequentation plus calme, tarifs souvent negociables ; certaines activites peuvent etre suspendues par mauvais temps).",
+      "transport": {
+        "taxi": "environ 1000-1500 FCFA depuis le centre-ville",
+        "moto": "environ 500-800 FCFA",
+        "note": "Un peu excentree, prevoir un moyen de transport depuis le centre.",
+        "walk": "trop éloigné pour y aller à pied, préférez la moto"
+      },
+      "contact": null
+    },
+    {
+      "id": 45,
+      "name": "Tara Plage Hôtel",
+      "country": "Kribi, Région du Sud, Cameroun",
+      "category": "Hôtels",
+      "tags": [
+        "relaxation",
+        "plage"
+      ],
+      "image": null,
+      "image_query": "Tara Plage Hôtel Kribi Cameroun",
+      "image_query_fallback": "Kribi Cameroon beach hotel",
+      "description": "Hotel donnant directement sur Tara Plage, dans un cadre calme au nord du centre-ville.",
+      "city": "Kribi",
+      "lat": 2.9515,
+      "lng": 9.9135,
+      "long_description": "Tara Plage Hotel profite de l'emplacement calme de Tara Plage, loin de l'agitation du centre-ville tout en restant proche des principales attractions de Kribi. Ideal pour un sejour axe sur la detente.",
+      "activities": [
+        "Acceder directement a Tara Plage depuis l'hotel",
+        "Se detendre dans un cadre calme",
+        "Profiter du restaurant de l'hotel"
+      ],
+      "practical_info": {
+        "hours": "Reception 24h/24",
+        "price": "Chambre double : environ 35000-55000 FCFA/nuit",
+        "best_time": "Toute l'annee",
+        "access": "Tara Plage, au nord du centre-ville de Kribi"
+      },
+      "budget": "Chambre double : 35000-55000 FCFA/nuit selon saison. Petit-dejeuner : 3500-6000 FCFA.",
+      "budget_saison_seche": "Chambre double : 35000-55000 FCFA/nuit selon saison. Petit-dejeuner : 3500-6000 FCFA. (haute saison, decembre-fevrier et juillet-aout : tarifs souvent majores, reservation conseillee).",
+      "budget_saison_pluies": "Chambre double : 35000-55000 FCFA/nuit selon saison. Petit-dejeuner : 3500-6000 FCFA. (basse saison : tarifs plus bas, negociation possible pour un long sejour).",
+      "transport": {
+        "taxi": "environ 1000-1500 FCFA depuis le centre-ville",
+        "moto": "environ 500-800 FCFA",
+        "note": "Un peu excentre, navette ou voiture recommande vers le centre-ville.",
+        "walk": "trop éloigné pour y aller à pied, préférez la moto"
+      },
+      "contact": "+237 660 00 17 81"
+    },
+    {
+      "id": 46,
+      "name": "Terrasse de l'Océan",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Restaurants",
+      "tags": [
+        "gastronomie",
+        "relaxation"
+      ],
+      "image": null,
+      "image_query": "Terrasse de l'Océan Kribi Cameroon",
+      "description": "Restaurant-terrasse avec vue directe sur l'ocean Atlantique, specialise dans les produits de la mer.",
+      "city": "Kribi",
+      "lat": 2.948,
+      "lng": 9.905,
+      "long_description": "La Terrasse de l'Ocean propose une cuisine de la mer dans un cadre offrant une vue degagee sur l'Atlantique. C'est une adresse prisee pour un dejeuner ou un diner face au coucher du soleil, avec une carte orientee poissons et fruits de mer.",
+      "activities": [
+        "Dejeuner ou diner en terrasse face a l'ocean",
+        "Deguster des specialites de poisson frais",
+        "Profiter du coucher de soleil sur la plage de Kribi"
+      ],
+      "practical_info": {
+        "hours": "11h-22h en general (a confirmer sur place)",
+        "price": "Plat : environ 3500-9000 FCFA",
+        "best_time": "Coucher de soleil",
+        "access": "Front de mer, centre-ville de Kribi"
+      },
+      "budget": "Plat principal : 3500-9000 FCFA. Menu degustation fruits de mer : a partir de 10000 FCFA. Boissons : 1000-3500 FCFA.",
+      "budget_saison_seche": "Plat principal : 3500-9000 FCFA. Menu degustation fruits de mer : a partir de 10000 FCFA. Boissons : 1000-3500 FCFA. (haute saison, nov-mars/juil-aout : forte affluence touristique, tarifs au plus haut, reservation conseillee).",
+      "budget_saison_pluies": "Plat principal : 3500-9000 FCFA. Menu degustation fruits de mer : a partir de 10000 FCFA. Boissons : 1000-3500 FCFA. (saison des pluies, avr-juin/sept-oct : frequentation plus calme, tarifs souvent negociables).",
+      "transport": {
+        "taxi": "environ 500-1500 FCFA depuis le centre-ville de Kribi",
+        "moto": "environ 300-800 FCFA",
+        "note": "Adresse centrale du front de mer, tres accessible.",
+        "walk": "trop éloigné pour y aller à pied, préférez la moto"
+      },
+      "image_query_fallback": "restaurant food dining plate",
+      "contact": "+237 660 00 19 18",
+      "menu": [
+        {
+          "plat": "Poisson braisé vue mer",
+          "prix": "4500 FCFA"
+        },
+        {
+          "plat": "Brochettes de bœuf",
+          "prix": "3500 FCFA"
+        },
+        {
+          "plat": "Plantain frit sauce",
+          "prix": "2000 FCFA"
+        },
+        {
+          "plat": "Dessert du jour",
+          "prix": "1500 FCFA"
+        },
+        {
+          "plat": "Boissons fraîches",
+          "prix": "1000 FCFA"
+        }
+      ],
+      "views": 1
+    },
+    {
+      "id": 47,
+      "name": "Hôtel Sky Kenako",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Hôtels",
+      "tags": [
+        "relaxation",
+        "city"
+      ],
+      "image": null,
+      "image_query": "Hôtel Sky Kenako Kribi Cameroon",
+      "description": "Etablissement hotelier a Kribi, appreciee pour son confort et son accueil.",
+      "city": "Kribi",
+      "lat": 2.9494,
+      "lng": 9.9094,
+      "long_description": "L'Hotel Sky Kenako propose des chambres confortables a Kribi, une option pratique pour explorer la ville et ses environs.",
+      "activities": [
+        "Sejourner dans un cadre confortable",
+        "Profiter des services de l'hotel",
+        "Organiser facilement des excursions"
+      ],
+      "practical_info": {
+        "hours": "Reception 24h/24",
+        "price": "Chambre double : environ 25000-45000 FCFA/nuit",
+        "best_time": "Toute l'annee",
+        "access": "Kribi"
+      },
+      "budget": "Chambre double : 25000-45000 FCFA/nuit selon saison.",
+      "budget_saison_seche": "Chambre double : 25000-45000 FCFA/nuit selon saison. (haute saison, nov-mars/juil-aout : forte affluence touristique, tarifs au plus haut, reservation conseillee).",
+      "budget_saison_pluies": "Chambre double : 25000-45000 FCFA/nuit selon saison. (saison des pluies, avr-juin/sept-oct : frequentation plus calme, tarifs souvent negociables).",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Emplacement pratique, facile d'acces.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "image_query_fallback": "hotel resort pool relaxation",
+      "contact": "+237 660 00 20 55"
+    },
+    {
+      "id": 48,
+      "name": "Hôtel SAMAKI",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Hôtels",
+      "tags": [
+        "relaxation",
+        "city"
+      ],
+      "image": null,
+      "image_query": "Hôtel SAMAKI Kribi Cameroon",
+      "description": "Hotel a Kribi offrant un cadre calme pour un sejour confortable.",
+      "city": "Kribi",
+      "lat": 2.9444,
+      "lng": 9.9114,
+      "long_description": "L'Hotel SAMAKI est une adresse hoteliere de Kribi, appreciee pour son ambiance calme et son bon rapport qualite-prix.",
+      "activities": [
+        "Sejourner dans un cadre calme",
+        "Profiter du restaurant sur place",
+        "Se reposer apres une journee de visites"
+      ],
+      "practical_info": {
+        "hours": "Reception 24h/24",
+        "price": "Chambre double : environ 20000-40000 FCFA/nuit",
+        "best_time": "Toute l'annee",
+        "access": "Kribi"
+      },
+      "budget": "Chambre double : 20000-40000 FCFA/nuit selon saison.",
+      "budget_saison_seche": "Chambre double : 20000-40000 FCFA/nuit selon saison. (haute saison, nov-mars/juil-aout : forte affluence touristique, tarifs au plus haut, reservation conseillee).",
+      "budget_saison_pluies": "Chambre double : 20000-40000 FCFA/nuit selon saison. (saison des pluies, avr-juin/sept-oct : frequentation plus calme, tarifs souvent negociables).",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Facile d'acces en voiture ou moto.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "image_query_fallback": "hotel resort pool relaxation",
+      "contact": "+237 660 00 21 92"
+    },
+    {
+      "id": 49,
+      "name": "Hôtel de l'Océan",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Hôtels",
+      "tags": [
+        "relaxation",
+        "nature"
+      ],
+      "image": null,
+      "image_query": "Hôtel de l'Océan Kribi Cameroon",
+      "description": "Hotel en bord de mer a Kribi, avec vue sur l'ocean.",
+      "city": "Kribi",
+      "lat": 2.9514,
+      "lng": 9.9044,
+      "long_description": "L'Hotel de l'Ocean profite d'un emplacement privilegie en bord de plage a Kribi, ideal pour un sejour au calme face a l'ocean.",
+      "activities": [
+        "Profiter d'une vue sur l'ocean",
+        "Se detendre pres de la plage",
+        "Sejourner dans un cadre paisible"
+      ],
+      "practical_info": {
+        "hours": "Reception 24h/24",
+        "price": "Chambre double : environ 30000-55000 FCFA/nuit",
+        "best_time": "Toute l'annee",
+        "access": "Bord de plage, Kribi"
+      },
+      "budget": "Chambre double : 30000-55000 FCFA/nuit selon saison.",
+      "budget_saison_seche": "Chambre double : 30000-55000 FCFA/nuit selon saison. (haute saison, nov-mars/juil-aout : forte affluence touristique, tarifs au plus haut, reservation conseillee).",
+      "budget_saison_pluies": "Chambre double : 30000-55000 FCFA/nuit selon saison. (saison des pluies, avr-juin/sept-oct : frequentation plus calme, tarifs souvent negociables).",
+      "transport": {
+        "taxi": "environ 500-1500 FCFA depuis le centre-ville",
+        "moto": "environ 300-800 FCFA",
+        "note": "Situe en bord de plage.",
+        "walk": "trop éloigné pour y aller à pied, préférez la moto"
+      },
+      "image_query_fallback": "hotel resort pool relaxation ocean",
+      "contact": "+237 660 00 23 29"
+    },
+    {
+      "id": 50,
+      "name": "Hôtel Le Lagon",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Hôtels",
+      "tags": [
+        "relaxation",
+        "nature"
+      ],
+      "image": null,
+      "image_query": "Hôtel Le Lagon Kribi Cameroon",
+      "description": "Hotel au cadre paisible pres du littoral de Kribi.",
+      "city": "Kribi",
+      "lat": 2.9424,
+      "lng": 9.9054,
+      "long_description": "L'Hotel Le Lagon offre un cadre paisible a proximite du littoral, appreciee pour son ambiance detendue.",
+      "activities": [
+        "Se reposer dans un cadre paisible",
+        "Profiter de la proximite du littoral",
+        "Sejourner confortablement a Kribi"
+      ],
+      "practical_info": {
+        "hours": "Reception 24h/24",
+        "price": "Chambre double : environ 25000-45000 FCFA/nuit",
+        "best_time": "Toute l'annee",
+        "access": "Kribi"
+      },
+      "budget": "Chambre double : 25000-45000 FCFA/nuit selon saison.",
+      "budget_saison_seche": "Chambre double : 25000-45000 FCFA/nuit selon saison. (haute saison, nov-mars/juil-aout : forte affluence touristique, tarifs au plus haut, reservation conseillee).",
+      "budget_saison_pluies": "Chambre double : 25000-45000 FCFA/nuit selon saison. (saison des pluies, avr-juin/sept-oct : frequentation plus calme, tarifs souvent negociables).",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Facile d'acces.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "image_query_fallback": "hotel resort pool relaxation",
+      "contact": "+237 660 00 24 66"
+    },
+    {
+      "id": 51,
+      "name": "Océanic Hôtel",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Hôtels",
+      "tags": [
+        "relaxation",
+        "city"
+      ],
+      "image": null,
+      "image_query": "Océanic Hôtel Kribi Cameroon",
+      "description": "Hotel a Kribi offrant confort et accessibilite.",
+      "city": "Kribi",
+      "lat": 2.9474,
+      "lng": 9.9134,
+      "long_description": "L'Oceanic Hotel propose des chambres confortables a Kribi, une adresse pratique pour sejourner en ville.",
+      "activities": [
+        "Sejourner dans un cadre confortable",
+        "Profiter des services de l'hotel",
+        "Explorer facilement la ville"
+      ],
+      "practical_info": {
+        "hours": "Reception 24h/24",
+        "price": "Chambre double : environ 25000-50000 FCFA/nuit",
+        "best_time": "Toute l'annee",
+        "access": "Kribi"
+      },
+      "budget": "Chambre double : 25000-50000 FCFA/nuit selon saison.",
+      "budget_saison_seche": "Chambre double : 25000-50000 FCFA/nuit selon saison. (haute saison, nov-mars/juil-aout : forte affluence touristique, tarifs au plus haut, reservation conseillee).",
+      "budget_saison_pluies": "Chambre double : 25000-50000 FCFA/nuit selon saison. (saison des pluies, avr-juin/sept-oct : frequentation plus calme, tarifs souvent negociables).",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Emplacement pratique.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "image_query_fallback": "hotel resort pool relaxation",
+      "contact": "+237 660 00 26 03"
+    },
+    {
+      "id": 52,
+      "name": "La Vie Est Belle",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Restaurants",
+      "tags": [
+        "gastronomie"
+      ],
+      "image": null,
+      "image_query": "La Vie Est Belle Kribi Cameroon",
+      "description": "Restaurant a Kribi proposant une cuisine variee dans une ambiance chaleureuse.",
+      "city": "Kribi",
+      "lat": 2.9484,
+      "lng": 9.9064,
+      "long_description": "La Vie Est Belle est une adresse conviviale de Kribi ou savourer des plats camerounais et internationaux dans une ambiance chaleureuse.",
+      "activities": [
+        "Decouvrir une cuisine variee",
+        "Profiter d'une ambiance chaleureuse",
+        "Diner entre amis ou en famille"
+      ],
+      "practical_info": {
+        "hours": "11h-22h en general (a confirmer sur place)",
+        "price": "Plat : environ 2500-6000 FCFA",
+        "best_time": "Dejeuner ou diner",
+        "access": "Kribi"
+      },
+      "budget": "Plat principal : 2500-6000 FCFA. Boissons : 500-1500 FCFA.",
+      "budget_saison_seche": "Plat principal : 2500-6000 FCFA. Boissons : 500-1500 FCFA. (haute saison, nov-mars/juil-aout : forte affluence touristique, tarifs au plus haut, reservation conseillee).",
+      "budget_saison_pluies": "Plat principal : 2500-6000 FCFA. Boissons : 500-1500 FCFA. (saison des pluies, avr-juin/sept-oct : frequentation plus calme, tarifs souvent negociables).",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Facile d'acces en centre-ville.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "image_query_fallback": "restaurant food dining plate",
+      "contact": "+237 660 00 27 40",
+      "menu": [
+        {
+          "plat": "Poisson braisé (bar ou capitaine) frites/plantain",
+          "prix": "4000 FCFA"
+        },
+        {
+          "plat": "Crevettes grillées sauce pili-pili",
+          "prix": "5000 FCFA"
+        },
+        {
+          "plat": "Ndolé au poisson fumé",
+          "prix": "3000 FCFA"
+        },
+        {
+          "plat": "Poulet DG",
+          "prix": "4500 FCFA"
+        },
+        {
+          "plat": "Beignets haricot bouillie (petit-déjeuner)",
+          "prix": "1000 FCFA"
+        },
+        {
+          "plat": "Jus de fruits locaux (bissap, gingembre, ananas)",
+          "prix": "1000 FCFA"
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "name": "Wanbe Plage",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Restaurants",
+      "tags": [
+        "gastronomie",
+        "relaxation"
+      ],
+      "image": null,
+      "image_query": "Wanbe Plage Kribi Cameroon",
+      "description": "Restaurant en bord de plage a Kribi, ideal pour un repas les pieds dans le sable.",
+      "city": "Kribi",
+      "lat": 2.9524,
+      "lng": 9.9034,
+      "long_description": "Wanbe Plage est un restaurant en bord de mer a Kribi, appreciee pour son cadre decontracte et ses plats de poisson frais.",
+      "activities": [
+        "Diner les pieds dans le sable",
+        "Deguster du poisson frais",
+        "Profiter du coucher de soleil"
+      ],
+      "practical_info": {
+        "hours": "12h-22h en general (a confirmer sur place)",
+        "price": "Plat : environ 3000-7000 FCFA",
+        "best_time": "Dejeuner ou diner en soiree",
+        "access": "Bord de plage, Kribi"
+      },
+      "budget": "Plat principal : 3000-7000 FCFA. Boissons : 500-2000 FCFA.",
+      "budget_saison_seche": "Plat principal : 3000-7000 FCFA. Boissons : 500-2000 FCFA. (haute saison, nov-mars/juil-aout : forte affluence touristique, tarifs au plus haut, reservation conseillee).",
+      "budget_saison_pluies": "Plat principal : 3000-7000 FCFA. Boissons : 500-2000 FCFA. (saison des pluies, avr-juin/sept-oct : frequentation plus calme, tarifs souvent negociables).",
+      "transport": {
+        "taxi": "environ 500-1500 FCFA depuis le centre-ville",
+        "moto": "environ 300-800 FCFA",
+        "note": "Situe en bord de plage.",
+        "walk": "trop éloigné pour y aller à pied, préférez la moto"
+      },
+      "image_query_fallback": "restaurant beach food dining",
+      "contact": "+237 660 00 28 77",
+      "menu": [
+        {
+          "plat": "Poisson braisé pieds dans le sable",
+          "prix": "4500 FCFA"
+        },
+        {
+          "plat": "Crevettes grillées",
+          "prix": "5000 FCFA"
+        },
+        {
+          "plat": "Salade fraîcheur",
+          "prix": "2500 FCFA"
+        },
+        {
+          "plat": "Cocktail coucher de soleil",
+          "prix": "3000 FCFA"
+        },
+        {
+          "plat": "Jus de fruits pressés",
+          "prix": "1200 FCFA"
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "name": "Cabane Blanche Chez Julie",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Restaurants",
+      "tags": [
+        "gastronomie"
+      ],
+      "image": null,
+      "image_query": "Cabane Blanche Chez Julie Kribi Cameroon",
+      "description": "Restaurant familial a Kribi propose par Julie, connu pour sa cuisine locale.",
+      "city": "Kribi",
+      "lat": 2.9434,
+      "lng": 9.9104,
+      "long_description": "La Cabane Blanche Chez Julie est une adresse familiale appreciee pour sa cuisine locale genereuse et son accueil chaleureux.",
+      "activities": [
+        "Decouvrir la cuisine camerounaise traditionnelle",
+        "Profiter d'un accueil chaleureux",
+        "Bon rapport qualite-prix"
+      ],
+      "practical_info": {
+        "hours": "10h-21h en general (a confirmer sur place)",
+        "price": "Plat : environ 2000-4500 FCFA",
+        "best_time": "Dejeuner ou diner",
+        "access": "Kribi"
+      },
+      "budget": "Plat principal : 2000-4500 FCFA. Boissons : 500-1500 FCFA.",
+      "budget_saison_seche": "Plat principal : 2000-4500 FCFA. Boissons : 500-1500 FCFA. (haute saison, nov-mars/juil-aout : forte affluence touristique, tarifs au plus haut, reservation conseillee).",
+      "budget_saison_pluies": "Plat principal : 2000-4500 FCFA. Boissons : 500-1500 FCFA. (saison des pluies, avr-juin/sept-oct : frequentation plus calme, tarifs souvent negociables).",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Facile d'acces a pied ou en moto.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "image_query_fallback": "restaurant food dining plate",
+      "contact": "+237 660 00 30 14",
+      "menu": [
+        {
+          "plat": "Poisson braisé (bar ou capitaine) frites/plantain",
+          "prix": "4000 FCFA"
+        },
+        {
+          "plat": "Crevettes grillées sauce pili-pili",
+          "prix": "5000 FCFA"
+        },
+        {
+          "plat": "Ndolé au poisson fumé",
+          "prix": "3000 FCFA"
+        },
+        {
+          "plat": "Poulet DG",
+          "prix": "4500 FCFA"
+        },
+        {
+          "plat": "Beignets haricot bouillie (petit-déjeuner)",
+          "prix": "1000 FCFA"
+        },
+        {
+          "plat": "Jus de fruits locaux (bissap, gingembre, ananas)",
+          "prix": "1000 FCFA"
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "name": "Le Cigare",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Restaurants",
+      "tags": [
+        "gastronomie",
+        "city"
+      ],
+      "image": null,
+      "image_query": "Le Cigare Kribi Cameroon",
+      "description": "Restaurant-bar a Kribi propose une carte variee dans une ambiance conviviale.",
+      "city": "Kribi",
+      "lat": 2.9454,
+      "lng": 9.9044,
+      "long_description": "Le Cigare est une adresse de Kribi combinant restauration et bar, appreciee pour son ambiance conviviale.",
+      "activities": [
+        "Deguster une cuisine variee",
+        "Profiter d'une ambiance conviviale",
+        "Terminer la soiree autour d'un verre"
+      ],
+      "practical_info": {
+        "hours": "12h-minuit environ (variable en soiree, a confirmer sur place)",
+        "price": "Plat : environ 2500-6000 FCFA",
+        "best_time": "Dejeuner ou soiree",
+        "access": "Kribi"
+      },
+      "budget": "Plat principal : 2500-6000 FCFA. Boissons : 1000-3000 FCFA.",
+      "budget_saison_seche": "Plat principal : 2500-6000 FCFA. Boissons : 1000-3000 FCFA. (haute saison, nov-mars/juil-aout : forte affluence touristique, tarifs au plus haut, reservation conseillee).",
+      "budget_saison_pluies": "Plat principal : 2500-6000 FCFA. Boissons : 1000-3000 FCFA. (saison des pluies, avr-juin/sept-oct : frequentation plus calme, tarifs souvent negociables).",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Facile d'acces en centre-ville.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "image_query_fallback": "restaurant food dining plate",
+      "contact": "+237 660 00 31 51",
+      "menu": [
+        {
+          "plat": "Plateau de grillades mixtes",
+          "prix": "6000 FCFA"
+        },
+        {
+          "plat": "Poisson braisé sauce pili-pili",
+          "prix": "4500 FCFA"
+        },
+        {
+          "plat": "Salade composée",
+          "prix": "2500 FCFA"
+        },
+        {
+          "plat": "Cocktail maison",
+          "prix": "3000 FCFA"
+        },
+        {
+          "plat": "Jus / soft",
+          "prix": "1000 FCFA"
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "name": "Complexe Jaime Kribi",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Activités",
+      "tags": [
+        "city",
+        "relaxation"
+      ],
+      "image": null,
+      "image_query": "Complexe Jaime Kribi Kribi Cameroon",
+      "description": "Complexe de loisirs a Kribi proposant plusieurs activites et espaces de detente.",
+      "city": "Kribi",
+      "lat": 2.9504,
+      "lng": 9.9084,
+      "long_description": "Le Complexe Jaime Kribi reunit plusieurs espaces de loisirs et de detente, une adresse prisee pour passer un moment convivial.",
+      "activities": [
+        "Profiter des espaces de loisirs",
+        "Se detendre entre amis ou en famille",
+        "Decouvrir les animations proposees"
+      ],
+      "practical_info": {
+        "hours": "Variable selon les activites (a confirmer sur place)",
+        "price": "Acces variable selon activite",
+        "best_time": "Journee ou soiree",
+        "access": "Kribi"
+      },
+      "budget": "Acces et activites : tarifs variables selon la prestation choisie.",
+      "budget_saison_seche": "Acces et activites : tarifs variables selon la prestation choisie. (haute saison, nov-mars/juil-aout : forte affluence touristique, tarifs au plus haut, reservation conseillee).",
+      "budget_saison_pluies": "Acces et activites : tarifs variables selon la prestation choisie. (saison des pluies, avr-juin/sept-oct : frequentation plus calme, tarifs souvent negociables).",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Facile d'acces en centre-ville.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "image_query_fallback": "Kribi Cameroon leisure complex",
+      "contact": null
+    },
+    {
+      "id": 57,
+      "name": "Carrefour Kingué",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Activités",
+      "tags": [
+        "city"
+      ],
+      "image": null,
+      "image_query": "Carrefour Kingué Kribi Cameroon",
+      "description": "Carrefour anime de Kribi, point de repere et lieu de passage frequente.",
+      "city": "Kribi",
+      "lat": 2.9444,
+      "lng": 9.9124,
+      "long_description": "Le Carrefour Kingue est un point de repere connu de Kribi, anime tout au long de la journee, avec des commerces et des lieux de rencontre a proximite.",
+      "activities": [
+        "Decouvrir un lieu de vie local anime",
+        "Profiter des commerces alentours",
+        "Point de depart pratique pour explorer le quartier"
+      ],
+      "practical_info": {
+        "hours": "Acces libre en journee et en soiree",
+        "price": "Acces libre",
+        "best_time": "Journee ou soiree",
+        "access": "Kribi"
+      },
+      "budget": "Acces gratuit. Achats et consommations sur place a partir de quelques centaines de FCFA.",
+      "budget_saison_seche": "Acces gratuit. Achats et consommations sur place a partir de quelques centaines de FCFA. (haute saison, nov-mars/juil-aout : forte affluence touristique, tarifs au plus haut, reservation conseillee).",
+      "budget_saison_pluies": "Acces gratuit. Achats et consommations sur place a partir de quelques centaines de FCFA. (saison des pluies, avr-juin/sept-oct : frequentation plus calme, tarifs souvent negociables).",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Facile d'acces, point de repere connu localement.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "image_query_fallback": "Kribi Cameroon street crossroads",
+      "contact": null
+    },
+    {
+      "id": 58,
+      "name": "Casablanca Cabaret",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Activités",
+      "tags": [
+        "city",
+        "adventure"
+      ],
+      "image": null,
+      "image_query": "Casablanca Cabaret Kribi Cameroon",
+      "description": "Etablissement de loisirs et de detente a Kribi, propose animations et ambiance festive.",
+      "city": "Kribi",
+      "lat": 2.9494,
+      "lng": 9.9024,
+      "long_description": "Casablanca Cabaret est une adresse de Kribi connue pour son ambiance festive et ses animations en soiree.",
+      "activities": [
+        "Profiter d'une ambiance festive",
+        "Decouvrir les animations proposees",
+        "Passer un moment convivial entre amis"
+      ],
+      "practical_info": {
+        "hours": "Ouverture en soiree (variable, a confirmer sur place)",
+        "price": "Entree/consommation : variable selon programmation",
+        "best_time": "Soiree",
+        "access": "Kribi"
+      },
+      "budget": "Entree et consommations : tarifs variables selon la programmation.",
+      "budget_saison_seche": "Entree et consommations : tarifs variables selon la programmation. (haute saison, nov-mars/juil-aout : forte affluence touristique, tarifs au plus haut, reservation conseillee).",
+      "budget_saison_pluies": "Entree et consommations : tarifs variables selon la programmation. (saison des pluies, avr-juin/sept-oct : frequentation plus calme, tarifs souvent negociables).",
+      "transport": {
+        "taxi": "environ 500-1500 FCFA depuis le centre-ville",
+        "moto": "environ 300-800 FCFA",
+        "note": "Ambiance nocturne animee ; prevoir un moyen de retour en fin de soiree.",
+        "walk": "trop éloigné pour y aller à pied, préférez la moto"
+      },
+      "image_query_fallback": "Kribi Cameroon nightlife venue",
+      "contact": null
+    },
+    {
+      "id": 59,
+      "name": "People's Place",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Activités",
+      "tags": [
+        "city",
+        "relaxation"
+      ],
+      "image": null,
+      "image_query": "People's Place Kribi Cameroon",
+      "description": "Lieu de detente et de rencontre a Kribi, apprecie pour son ambiance conviviale.",
+      "city": "Kribi",
+      "lat": 2.9414,
+      "lng": 9.9064,
+      "long_description": "People's Place est une adresse conviviale de Kribi, appreciee comme lieu de detente et de rencontre.",
+      "activities": [
+        "Se detendre dans une ambiance conviviale",
+        "Rencontrer du monde",
+        "Profiter d'un moment de pause"
+      ],
+      "practical_info": {
+        "hours": "Variable selon la journee (a confirmer sur place)",
+        "price": "Acces variable",
+        "best_time": "Journee ou soiree",
+        "access": "Kribi"
+      },
+      "budget": "Acces et consommations : tarifs variables selon la prestation.",
+      "budget_saison_seche": "Acces et consommations : tarifs variables selon la prestation. (haute saison, nov-mars/juil-aout : forte affluence touristique, tarifs au plus haut, reservation conseillee).",
+      "budget_saison_pluies": "Acces et consommations : tarifs variables selon la prestation. (saison des pluies, avr-juin/sept-oct : frequentation plus calme, tarifs souvent negociables).",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Facile d'acces en centre-ville.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "image_query_fallback": "Kribi Cameroon leisure venue",
+      "contact": null
+    },
+    {
+      "id": 60,
+      "name": "Marché de Dombe",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Marchés et artisanat",
+      "tags": [
+        "shopping"
+      ],
+      "image": null,
+      "image_query": "Marché de Dombe Kribi Cameroon",
+      "description": "Marche local du quartier Dombe a Kribi, ou trouver produits frais et articles du quotidien.",
+      "city": "Kribi",
+      "lat": 2.9404,
+      "lng": 9.9134,
+      "long_description": "Le Marche de Dombe est un marche de quartier a Kribi, frequente par les habitants pour les produits frais et articles du quotidien.",
+      "activities": [
+        "Decouvrir un marche de quartier authentique",
+        "Acheter des produits frais",
+        "S'immerger dans le quotidien local"
+      ],
+      "practical_info": {
+        "hours": "6h-18h en general",
+        "price": "Acces libre",
+        "best_time": "Matin pour les produits les plus frais",
+        "access": "Quartier Dombe, Kribi"
+      },
+      "budget": "Acces gratuit. Achats a partir de quelques centaines de FCFA.",
+      "budget_saison_seche": "Acces gratuit. Achats a partir de quelques centaines de FCFA. (haute saison, nov-mars/juil-aout : forte affluence touristique, tarifs au plus haut, reservation conseillee).",
+      "budget_saison_pluies": "Acces gratuit. Achats a partir de quelques centaines de FCFA. (saison des pluies, avr-juin/sept-oct : frequentation plus calme, tarifs souvent negociables).",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Accessible en voiture ou moto depuis le centre-ville.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "image_query_fallback": "african market colorful stalls",
+      "contact": null
+    },
+    {
+      "id": 61,
+      "name": "Marché de Nkolbiteng",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Marchés et artisanat",
+      "tags": [
+        "shopping"
+      ],
+      "image": null,
+      "image_query": "Marché de Nkolbiteng Kribi Cameroon",
+      "description": "Marche local du quartier Nkolbiteng a Kribi.",
+      "city": "Kribi",
+      "lat": 2.9534,
+      "lng": 9.9104,
+      "long_description": "Le Marche de Nkolbiteng est un marche de proximite a Kribi, appreciee des habitants pour ses produits frais et son ambiance vivante.",
+      "activities": [
+        "Decouvrir un marche de quartier",
+        "Acheter des produits locaux",
+        "S'immerger dans l'ambiance du quartier"
+      ],
+      "practical_info": {
+        "hours": "6h-18h en general",
+        "price": "Acces libre",
+        "best_time": "Matin pour les produits les plus frais",
+        "access": "Quartier Nkolbiteng, Kribi"
+      },
+      "budget": "Acces gratuit. Achats a partir de quelques centaines de FCFA.",
+      "budget_saison_seche": "Acces gratuit. Achats a partir de quelques centaines de FCFA. (haute saison, nov-mars/juil-aout : forte affluence touristique, tarifs au plus haut, reservation conseillee).",
+      "budget_saison_pluies": "Acces gratuit. Achats a partir de quelques centaines de FCFA. (saison des pluies, avr-juin/sept-oct : frequentation plus calme, tarifs souvent negociables).",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Accessible en voiture ou moto.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "image_query_fallback": "african market colorful stalls",
+      "contact": null
+    },
+    {
+      "id": 62,
+      "name": "Marché de Mpangou",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Marchés et artisanat",
+      "tags": [
+        "shopping"
+      ],
+      "image": null,
+      "image_query": "Marché de Mpangou Kribi Cameroon",
+      "description": "Marche local du quartier Mpangou a Kribi.",
+      "city": "Kribi",
+      "lat": 2.9384,
+      "lng": 9.9024,
+      "long_description": "Le Marche de Mpangou dessert le quartier du meme nom a Kribi, avec des produits frais et de l'artisanat local.",
+      "activities": [
+        "Decouvrir un marche de quartier",
+        "Acheter des produits locaux et de l'artisanat",
+        "S'immerger dans le quotidien local"
+      ],
+      "practical_info": {
+        "hours": "6h-18h en general",
+        "price": "Acces libre",
+        "best_time": "Matin pour les produits les plus frais",
+        "access": "Quartier Mpangou, Kribi"
+      },
+      "budget": "Acces gratuit. Achats a partir de quelques centaines de FCFA.",
+      "budget_saison_seche": "Acces gratuit. Achats a partir de quelques centaines de FCFA. (haute saison, nov-mars/juil-aout : forte affluence touristique, tarifs au plus haut, reservation conseillee).",
+      "budget_saison_pluies": "Acces gratuit. Achats a partir de quelques centaines de FCFA. (saison des pluies, avr-juin/sept-oct : frequentation plus calme, tarifs souvent negociables).",
+      "transport": {
+        "taxi": "environ 500-1500 FCFA depuis le centre-ville",
+        "moto": "environ 300-800 FCFA",
+        "note": "Accessible en voiture ou moto.",
+        "walk": "trop éloigné pour y aller à pied, préférez la moto"
+      },
+      "image_query_fallback": "african market colorful stalls",
+      "contact": null
+    },
+    {
+      "id": 63,
+      "name": "Marché Mokolo Kribi",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Marchés et artisanat",
+      "tags": [
+        "shopping"
+      ],
+      "image": null,
+      "image_query": "Marché Mokolo Kribi Kribi Cameroon",
+      "description": "Marche anime de Kribi, du meme nom que le celebre marche de Yaounde.",
+      "city": "Kribi",
+      "lat": 2.9484,
+      "lng": 9.9144,
+      "long_description": "Le Marche Mokolo Kribi est un marche anime ou l'on trouve un large choix de produits, du textile a l'alimentation.",
+      "activities": [
+        "Decouvrir un marche anime et varie",
+        "Acheter vetements et produits divers",
+        "Negocier les prix comme les habitants"
+      ],
+      "practical_info": {
+        "hours": "6h-19h en general",
+        "price": "Acces libre",
+        "best_time": "Matin ou debut d'apres-midi",
+        "access": "Kribi"
+      },
+      "budget": "Acces gratuit. Achats a partir de quelques centaines de FCFA.",
+      "budget_saison_seche": "Acces gratuit. Achats a partir de quelques centaines de FCFA. (haute saison, nov-mars/juil-aout : forte affluence touristique, tarifs au plus haut, reservation conseillee).",
+      "budget_saison_pluies": "Acces gratuit. Achats a partir de quelques centaines de FCFA. (saison des pluies, avr-juin/sept-oct : frequentation plus calme, tarifs souvent negociables).",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Facile d'acces, marche connu localement.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "image_query_fallback": "african market colorful stalls",
+      "contact": null
+    },
+    {
+      "id": 64,
+      "name": "Débarcadère du Lycée",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Marchés et artisanat",
+      "tags": [
+        "shopping",
+        "nature"
+      ],
+      "image": null,
+      "image_query": "Débarcadère du Lycée Kribi Cameroon",
+      "description": "Debarcadere pres du lycee a Kribi, ou les pecheurs debarquent leurs prises.",
+      "city": "Kribi",
+      "lat": 2.9454,
+      "lng": 9.9154,
+      "long_description": "Le Debarcadere du Lycee est un point de debarquement de la peche locale a Kribi, anime en fin de matinee au retour des pirogues.",
+      "activities": [
+        "Assister au debarquement des pirogues de peche",
+        "Acheter du poisson tres frais",
+        "Observer la vie des pecheurs locaux"
+      ],
+      "practical_info": {
+        "hours": "Fin de matinee, selon retour des pirogues",
+        "price": "Acces libre",
+        "best_time": "Matin, au retour de peche",
+        "access": "Pres du Lycee Bilingue, Kribi"
+      },
+      "budget": "Acces gratuit. Achats de poisson a partir de quelques centaines de FCFA.",
+      "budget_saison_seche": "Acces gratuit. Achats de poisson a partir de quelques centaines de FCFA. (haute saison, nov-mars/juil-aout : forte affluence touristique, tarifs au plus haut, reservation conseillee).",
+      "budget_saison_pluies": "Acces gratuit. Achats de poisson a partir de quelques centaines de FCFA. (saison des pluies, avr-juin/sept-oct : frequentation plus calme, tarifs souvent negociables).",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Accessible en voiture ou moto.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "image_query_fallback": "fish market fishermen boats",
+      "contact": null
+    },
+    {
+      "id": 65,
+      "name": "New Java Nightclub VIP",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Bars et vie nocturne",
+      "tags": [
+        "city",
+        "adventure"
+      ],
+      "image": null,
+      "image_query": "New Java Nightclub VIP Kribi Cameroon",
+      "description": "Nightclub prise a Kribi, connu pour ses soirees animees.",
+      "city": "Kribi",
+      "lat": 2.9474,
+      "lng": 9.9054,
+      "long_description": "Le New Java Nightclub VIP est une adresse incontournable de la vie nocturne de Kribi, appreciee pour ses soirees animees et son ambiance festive.",
+      "activities": [
+        "Profiter d'une soiree animee",
+        "Danser sur des sets DJ",
+        "Decouvrir la vie nocturne de Kribi"
+      ],
+      "practical_info": {
+        "hours": "22h-tard en soiree (variable, a confirmer sur place)",
+        "price": "Entree : variable selon programmation",
+        "best_time": "Soiree/nuit",
+        "access": "Kribi"
+      },
+      "budget": "Entree et consommations : tarifs variables selon la programmation.",
+      "budget_saison_seche": "Entree et consommations : tarifs variables selon la programmation. (haute saison, nov-mars/juil-aout : forte affluence touristique, tarifs au plus haut, reservation conseillee).",
+      "budget_saison_pluies": "Entree et consommations : tarifs variables selon la programmation. (saison des pluies, avr-juin/sept-oct : frequentation plus calme, tarifs souvent negociables).",
+      "transport": {
+        "taxi": "environ 500-1500 FCFA depuis le centre-ville",
+        "moto": "environ 300-800 FCFA",
+        "note": "Ambiance nocturne animee ; prevoir un moyen de retour en fin de soiree.",
+        "walk": "trop éloigné pour y aller à pied, préférez la moto"
+      },
+      "image_query_fallback": "nightclub party lights",
+      "contact": null
+    },
+    {
+      "id": 66,
+      "name": "K Lounge",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Bars et vie nocturne",
+      "tags": [
+        "relaxation",
+        "city"
+      ],
+      "image": null,
+      "image_query": "K Lounge Kribi Cameroon",
+      "description": "Lounge-bar a Kribi, ideal pour un verre dans une ambiance detendue.",
+      "city": "Kribi",
+      "lat": 2.9434,
+      "lng": 9.9014,
+      "long_description": "Le K Lounge est un bar-lounge de Kribi appreciee pour son ambiance detendue, propice a un verre entre amis en debut de soiree.",
+      "activities": [
+        "Profiter d'un cocktail dans une ambiance detendue",
+        "Passer un moment entre amis",
+        "Decouvrir la carte de boissons"
+      ],
+      "practical_info": {
+        "hours": "17h-minuit environ (variable, a confirmer sur place)",
+        "price": "Cocktail : environ 2500-6000 FCFA",
+        "best_time": "Debut de soiree",
+        "access": "Kribi"
+      },
+      "budget": "Cocktail : 2500-6000 FCFA. Plats/grignotage : 2000-5000 FCFA.",
+      "budget_saison_seche": "Cocktail : 2500-6000 FCFA. Plats/grignotage : 2000-5000 FCFA. (haute saison, nov-mars/juil-aout : forte affluence touristique, tarifs au plus haut, reservation conseillee).",
+      "budget_saison_pluies": "Cocktail : 2500-6000 FCFA. Plats/grignotage : 2000-5000 FCFA. (saison des pluies, avr-juin/sept-oct : frequentation plus calme, tarifs souvent negociables).",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Facile d'acces en centre-ville.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "image_query_fallback": "lounge bar cocktails",
+      "contact": null
+    },
+    {
+      "id": 67,
+      "name": "Live Music DJ Kribi Cameroun",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Bars et vie nocturne",
+      "tags": [
+        "city",
+        "adventure"
+      ],
+      "image": null,
+      "image_query": "Live Music DJ Kribi Cameroun Kribi Cameroon",
+      "description": "Lieu de vie nocturne a Kribi propose de la musique live et des sets DJ.",
+      "city": "Kribi",
+      "lat": 2.9514,
+      "lng": 9.9114,
+      "long_description": "Cette adresse de Kribi propose regulierement de la musique live et des sets DJ, une bonne option pour les amateurs de sorties musicales.",
+      "activities": [
+        "Ecouter de la musique live",
+        "Profiter de sets DJ en soiree",
+        "Decouvrir la scene musicale locale"
+      ],
+      "practical_info": {
+        "hours": "Soiree (variable selon programmation, a confirmer sur place)",
+        "price": "Entree : variable selon programmation",
+        "best_time": "Soiree",
+        "access": "Kribi"
+      },
+      "budget": "Entree et consommations : tarifs variables selon la programmation.",
+      "budget_saison_seche": "Entree et consommations : tarifs variables selon la programmation. (haute saison, nov-mars/juil-aout : forte affluence touristique, tarifs au plus haut, reservation conseillee).",
+      "budget_saison_pluies": "Entree et consommations : tarifs variables selon la programmation. (saison des pluies, avr-juin/sept-oct : frequentation plus calme, tarifs souvent negociables).",
+      "transport": {
+        "taxi": "environ 500-1500 FCFA depuis le centre-ville",
+        "moto": "environ 300-800 FCFA",
+        "note": "Ambiance nocturne animee ; prevoir un moyen de retour en fin de soiree.",
+        "walk": "trop éloigné pour y aller à pied, préférez la moto"
+      },
+      "image_query_fallback": "live music concert stage",
+      "contact": null
+    },
+    {
+      "id": 68,
+      "name": "Océan Bleu",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Bars et vie nocturne",
+      "tags": [
+        "relaxation",
+        "nature"
+      ],
+      "image": null,
+      "image_query": "Océan Bleu Kribi Cameroon",
+      "description": "Bar en bord de mer a Kribi, ideal pour un verre au coucher du soleil.",
+      "city": "Kribi",
+      "lat": 2.9524,
+      "lng": 9.9014,
+      "long_description": "Ocean Bleu est un bar en bord de mer a Kribi, appreciee pour son cadre au coucher du soleil et son ambiance decontractee.",
+      "activities": [
+        "Profiter d'un verre au coucher du soleil",
+        "Se detendre en bord de mer",
+        "Passer un moment convivial"
+      ],
+      "practical_info": {
+        "hours": "16h-minuit environ (variable, a confirmer sur place)",
+        "price": "Cocktail : environ 2500-6000 FCFA",
+        "best_time": "Fin d'apres-midi et soiree",
+        "access": "Bord de plage, Kribi"
+      },
+      "budget": "Cocktail : 2500-6000 FCFA. Plats : 3000-7000 FCFA.",
+      "budget_saison_seche": "Cocktail : 2500-6000 FCFA. Plats : 3000-7000 FCFA. (haute saison, nov-mars/juil-aout : forte affluence touristique, tarifs au plus haut, reservation conseillee).",
+      "budget_saison_pluies": "Cocktail : 2500-6000 FCFA. Plats : 3000-7000 FCFA. (saison des pluies, avr-juin/sept-oct : frequentation plus calme, tarifs souvent negociables).",
+      "transport": {
+        "taxi": "environ 500-1500 FCFA depuis le centre-ville",
+        "moto": "environ 300-800 FCFA",
+        "note": "Situe en bord de plage.",
+        "walk": "trop éloigné pour y aller à pied, préférez la moto"
+      },
+      "image_query_fallback": "beach bar sunset ocean",
+      "contact": null
+    },
+    {
+      "id": 69,
+      "name": "Arno Market Kribi",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Shopping",
+      "tags": [
+        "shopping",
+        "city"
+      ],
+      "image": null,
+      "image_query": "Arno Market Kribi Kribi Cameroon",
+      "description": "Supermarche a Kribi, produits alimentaires, beaute et maison.",
+      "city": "Kribi",
+      "lat": 2.9484,
+      "lng": 9.9084,
+      "long_description": "Arno Market est un supermarche pratique a Kribi, proposant des produits alimentaires, des articles de beaute, d'hygiene et de maison. Parking securise sur place.",
+      "activities": [
+        "Faire ses courses du quotidien",
+        "Trouver des produits alimentaires et d'hygiene",
+        "Acheter des souvenirs pratiques"
+      ],
+      "practical_info": {
+        "hours": "Horaires a confirmer sur place (non communiques publiquement)",
+        "price": "Variable selon les articles/prestations",
+        "best_time": "Journee",
+        "access": "Face station MRS, Kribi"
+      },
+      "budget": "Tarifs variables selon les articles/prestations choisis.",
+      "budget_saison_seche": "Tarifs variables selon les articles/prestations choisis.",
+      "budget_saison_pluies": "Tarifs variables selon les articles/prestations choisis.",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Accessible en voiture ou moto depuis le centre-ville de Kribi.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "image_query_fallback": "supermarket grocery store shopping",
+      "contact": "+237 696 79 32 03"
+    },
+    {
+      "id": 70,
+      "name": "Boutique Meganell",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Shopping",
+      "tags": [
+        "shopping",
+        "city"
+      ],
+      "image": null,
+      "image_query": "Boutique Meganell Kribi Cameroon",
+      "description": "Boutique de mode au coeur de Kribi, vetements et artisanat local.",
+      "city": "Kribi",
+      "lat": 2.9454,
+      "lng": 9.9104,
+      "long_description": "Boutique Meganell propose des vetements et articles de mode au coeur de Kribi, melant style contemporain et artisanat local.",
+      "activities": [
+        "Decouvrir la mode locale",
+        "Trouver une tenue ou un accessoire",
+        "Faire du shopping en centre-ville"
+      ],
+      "practical_info": {
+        "hours": "Horaires a confirmer sur place (non communiques publiquement)",
+        "price": "Variable selon les articles/prestations",
+        "best_time": "Journee",
+        "access": "Centre-ville de Kribi"
+      },
+      "budget": "Tarifs variables selon les articles/prestations choisis.",
+      "budget_saison_seche": "Tarifs variables selon les articles/prestations choisis.",
+      "budget_saison_pluies": "Tarifs variables selon les articles/prestations choisis.",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Accessible en voiture ou moto depuis le centre-ville de Kribi.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "image_query_fallback": "clothing boutique fashion store",
+      "contact": null
+    },
+    {
+      "id": 71,
+      "name": "Ets Amis du Monde",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Shopping",
+      "tags": [
+        "shopping",
+        "city"
+      ],
+      "image": null,
+      "image_query": "Ets Amis du Monde Kribi Cameroon",
+      "description": "Supermarche a Kribi, produits locaux et internationaux.",
+      "city": "Kribi",
+      "lat": 2.9494,
+      "lng": 9.9054,
+      "long_description": "Ets Amis du Monde est un supermarche de Kribi propose un choix de produits locaux et internationaux pour les courses du quotidien.",
+      "activities": [
+        "Faire ses courses",
+        "Trouver des produits varies",
+        "Acheter des produits internationaux"
+      ],
+      "practical_info": {
+        "hours": "Horaires a confirmer sur place (non communiques publiquement)",
+        "price": "Variable selon les articles/prestations",
+        "best_time": "Journee",
+        "access": "Kribi"
+      },
+      "budget": "Tarifs variables selon les articles/prestations choisis.",
+      "budget_saison_seche": "Tarifs variables selon les articles/prestations choisis.",
+      "budget_saison_pluies": "Tarifs variables selon les articles/prestations choisis.",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Accessible en voiture ou moto depuis le centre-ville de Kribi.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "image_query_fallback": "supermarket grocery store shopping",
+      "contact": null
+    },
+    {
+      "id": 72,
+      "name": "SPAR Kribi",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Shopping",
+      "tags": [
+        "shopping",
+        "city"
+      ],
+      "image": null,
+      "image_query": "SPAR Kribi Kribi Cameroon",
+      "description": "Supermarche de la chaine SPAR a Kribi, produits frais et courants.",
+      "city": "Kribi",
+      "lat": 2.9434,
+      "lng": 9.9064,
+      "long_description": "SPAR Kribi propose des produits frais et courants dans un supermarche pratique pour les habitants comme pour les visiteurs de passage.",
+      "activities": [
+        "Faire ses courses",
+        "Trouver des produits frais",
+        "Acheter des en-cas pour une excursion"
+      ],
+      "practical_info": {
+        "hours": "Horaires a confirmer sur place (non communiques publiquement)",
+        "price": "Variable selon les articles/prestations",
+        "best_time": "Journee",
+        "access": "Kribi"
+      },
+      "budget": "Tarifs variables selon les articles/prestations choisis.",
+      "budget_saison_seche": "Tarifs variables selon les articles/prestations choisis.",
+      "budget_saison_pluies": "Tarifs variables selon les articles/prestations choisis.",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Accessible en voiture ou moto depuis le centre-ville de Kribi.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "image_query_fallback": "supermarket grocery store shopping",
+      "contact": null
+    },
+    {
+      "id": 73,
+      "name": "Chelle Afrique",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Shopping",
+      "tags": [
+        "shopping",
+        "city"
+      ],
+      "image": null,
+      "image_query": "Chelle Afrique Kribi Cameroon",
+      "description": "Boutique de sacs a main et accessoires a Kribi, artisanat camerounais.",
+      "city": "Kribi",
+      "lat": 2.9474,
+      "lng": 9.9114,
+      "long_description": "Chelle Afrique est une boutique specialisee dans les sacs a main et accessoires, situee face a Black & White Talla. Un bon endroit pour un souvenir original. Ouvert 9h-18h en semaine, jusqu'a 14h le samedi, ferme le dimanche (horaires indicatifs).",
+      "activities": [
+        "Trouver un sac ou accessoire original",
+        "Decouvrir l'artisanat camerounais",
+        "Faire un cadeau souvenir"
+      ],
+      "practical_info": {
+        "hours": "Horaires a confirmer sur place (non communiques publiquement)",
+        "price": "Variable selon les articles/prestations",
+        "best_time": "Journee",
+        "access": "Face Black & White Talla, Kribi"
+      },
+      "budget": "Tarifs variables selon les articles/prestations choisis.",
+      "budget_saison_seche": "Tarifs variables selon les articles/prestations choisis.",
+      "budget_saison_pluies": "Tarifs variables selon les articles/prestations choisis.",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Accessible en voiture ou moto depuis le centre-ville de Kribi.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "image_query_fallback": "handbag accessories boutique shopping",
+      "contact": null
+    },
+    {
+      "id": 74,
+      "name": "Kribi Hair & Beauty Center",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Salons de beauté",
+      "tags": [
+        "relaxation",
+        "city"
+      ],
+      "image": null,
+      "image_query": "Kribi Hair & Beauty Center Kribi Cameroon",
+      "description": "Salon de coiffure et centre de bien-etre aux Gites de Kribi.",
+      "city": "Kribi",
+      "lat": 2.9514,
+      "lng": 9.9044,
+      "long_description": "Situe aux Gites de Kribi, ce centre de bien-etre et salon de coiffure propose massages, soins de beaute, manucure et pedicure. Prise de rendez-vous conseillee.",
+      "activities": [
+        "Se faire coiffer ou coiffer",
+        "Profiter d'un massage",
+        "Soin manucure/pedicure"
+      ],
+      "practical_info": {
+        "hours": "Horaires a confirmer sur place (non communiques publiquement)",
+        "price": "Variable selon les articles/prestations",
+        "best_time": "Journee",
+        "access": "Aux Gites de Kribi"
+      },
+      "budget": "Tarifs variables selon les articles/prestations choisis.",
+      "budget_saison_seche": "Tarifs variables selon les articles/prestations choisis.",
+      "budget_saison_pluies": "Tarifs variables selon les articles/prestations choisis.",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Accessible en voiture ou moto depuis le centre-ville de Kribi.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "image_query_fallback": "hair salon beauty spa",
+      "contact": "Jacky : +237 697 26 43 82 / Adrien : +237 655 89 64 13"
+    },
+    {
+      "id": 75,
+      "name": "Kribi Wellness and Beauty Center",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Salons de beauté",
+      "tags": [
+        "relaxation",
+        "city"
+      ],
+      "image": null,
+      "image_query": "Kribi Wellness and Beauty Center Kribi Cameroon",
+      "description": "Institut de bien-etre face au complexe Les Gites de Kribi.",
+      "city": "Kribi",
+      "lat": 2.9504,
+      "lng": 9.9034,
+      "long_description": "Le Kribi Wellness and Beauty Center propose massages aux pierres chaudes, soins de visage et prestations de salon de beaute, face au complexe Les Gites de Kribi.",
+      "activities": [
+        "Profiter d'un massage aux pierres chaudes",
+        "Soin de visage",
+        "Moment de detente et bien-etre"
+      ],
+      "practical_info": {
+        "hours": "Horaires a confirmer sur place (non communiques publiquement)",
+        "price": "Variable selon les articles/prestations",
+        "best_time": "Journee",
+        "access": "Face au complexe Les Gites de Kribi"
+      },
+      "budget": "Tarifs variables selon les articles/prestations choisis.",
+      "budget_saison_seche": "Tarifs variables selon les articles/prestations choisis.",
+      "budget_saison_pluies": "Tarifs variables selon les articles/prestations choisis.",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Accessible en voiture ou moto depuis le centre-ville de Kribi.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "image_query_fallback": "wellness spa beauty center",
+      "contact": null
+    },
+    {
+      "id": 76,
+      "name": "Kribi Hair Beauty Center (Route de la Lobé)",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Salons de beauté",
+      "tags": [
+        "relaxation",
+        "city"
+      ],
+      "image": null,
+      "image_query": "Kribi Hair Beauty Center (Route de la Lobé) Kribi Cameroon",
+      "description": "Centre de beaute complet route des Chutes de la Lobe : spa, coiffure, onglerie.",
+      "city": "Kribi",
+      "lat": 2.9424,
+      "lng": 9.9124,
+      "long_description": "Situe sur la route des Chutes de la Lobe, ce centre de beaute complet regroupe spa, salon de coiffure et onglerie. Soins du visage, epilation, manucure, pedicure, massages aux pierres chaudes et coiffure pour femmes, hommes et enfants. Tarifs adaptes a differents budgets.",
+      "activities": [
+        "Coiffure femme, homme ou enfant",
+        "Soins esthetiques et manucure/pedicure",
+        "Massage relaxant ou aux pierres chaudes"
+      ],
+      "practical_info": {
+        "hours": "Horaires a confirmer sur place (non communiques publiquement)",
+        "price": "Variable selon les articles/prestations",
+        "best_time": "Journee",
+        "access": "Route des Chutes de la Lobé, Kribi"
+      },
+      "budget": "Tarifs variables selon les articles/prestations choisis.",
+      "budget_saison_seche": "Tarifs variables selon les articles/prestations choisis.",
+      "budget_saison_pluies": "Tarifs variables selon les articles/prestations choisis.",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Accessible en voiture ou moto depuis le centre-ville de Kribi.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "image_query_fallback": "hair salon beauty spa",
+      "contact": null
+    },
+    {
+      "id": 77,
+      "name": "Institut Coiffure & Esthétique Kribi",
+      "country": "Kribi, Region du Sud, Cameroun",
+      "category": "Salons de beauté",
+      "tags": [
+        "relaxation",
+        "city"
+      ],
+      "image": null,
+      "image_query": "Institut Coiffure & Esthétique Kribi Kribi Cameroon",
+      "description": "Institut de coiffure femme et homme avec hammam/sauna a Kribi.",
+      "city": "Kribi",
+      "lat": 2.9444,
+      "lng": 9.9024,
+      "long_description": "Cet institut propose coiffure femme et homme, nattes et tresses diverses, et esthetique avec hammam/sauna. Une adresse complete pour se faire chouchouter avant de repartir.",
+      "activities": [
+        "Coiffure femme ou homme",
+        "Nattes et tresses",
+        "Hammam et sauna"
+      ],
+      "practical_info": {
+        "hours": "Horaires a confirmer sur place (non communiques publiquement)",
+        "price": "Variable selon les articles/prestations",
+        "best_time": "Journee",
+        "access": "Kribi"
+      },
+      "budget": "Tarifs variables selon les articles/prestations choisis.",
+      "budget_saison_seche": "Tarifs variables selon les articles/prestations choisis.",
+      "budget_saison_pluies": "Tarifs variables selon les articles/prestations choisis.",
+      "transport": {
+        "taxi": "environ 500-1000 FCFA depuis le centre-ville",
+        "moto": "environ 300-500 FCFA",
+        "note": "Accessible en voiture ou moto depuis le centre-ville de Kribi.",
+        "walk": "envisageable si vous êtes déjà en centre-ville (15-25 min de marche)"
+      },
+      "image_query_fallback": "hair salon barber beauty",
+      "contact": null
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "name": "Kribi Waves Festival 2026",
+      "type": "Festival",
+      "description": "Festival de plage a Kribi (Plage de Ngoye) mêlant musique live, soleil et bonne ambiance. Le concert phare du 8 aout 2026 accueille l'artiste Maahlox Le Vibeur en guest star. Reservation des pass conseillee a l'avance.",
+      "location": "Plage de Ngoye, Kribi",
+      "lat": 2.95,
+      "lng": 9.9,
+      "price": "Pass Classique : 500 FCFA. Pass VIP : 3000 FCFA (concert du 8 aout).",
+      "contact": "+237 680 25 53 05",
+      "image_query": "Kribi Waves Festival beach music",
+      "date": "2026-07-31",
+      "end_date": "2026-08-16"
+    },
+    {
+      "id": 2,
+      "name": "Circuit National de Beach-Volleyball 2026 - Étape de Kribi",
+      "type": "Compétition sportive",
+      "description": "Etape balneaire de Kribi comptant pour le Circuit National de Beach-Volleyball 2026 au Cameroun, organisee sous l'egide de la Federation Camerounaise de Volleyball (Fecavolley). Initialement programmee du 5 au 8 aout 2026 a l'Hotel Lemar ; se renseigner sur place pour confirmer le maintien des dates.",
+      "location": "Hôtel Lemar, Kribi",
+      "lat": 2.9464,
+      "lng": 9.9074,
+      "price": "Non précisé — entrée généralement libre pour les spectateurs sur ce type d'étape.",
+      "contact": null,
+      "image_query": "beach volleyball tournament Cameroon",
+      "date": "2026-08-05",
+      "end_date": "2026-08-08"
+    },
+    {
+      "id": 3,
+      "name": "Le Gala des Amoureux",
+      "type": "Concert",
+      "description": "Soiree evenementielle organisee a Akwa, Kribi, a partir de 18h00, accessible gratuitement. Fait partie des animations culturelles du week-end du 8 aout 2026 a Kribi, aux cotes du Kribi Waves Festival.",
+      "location": "Akwa, Kribi",
+      "lat": 2.9464,
+      "lng": 9.9074,
+      "price": "Entrée gratuite",
+      "contact": null,
+      "image_query": "evening gala event Africa beach",
+      "date": "2026-08-08",
+      "end_date": "2026-08-08"
+    },
+    {
+      "id": 4,
+      "name": "Festival Mayi (Peuple Batanga)",
+      "type": "Festival",
+      "description": "Principal grand evenement culturel de Kribi. Le festival Mayi a celebre sa 110e edition du 25 avril au 9 mai 2026, marquant les traditions du peuple Batanga avec un defile-carnaval, des rites memoriels et une fete populaire sur les plages. A voir aussi dans la meme veine : le festival Nguma-Mabi (peuple Mabi), rassemblement cotier avec danses traditionnelles, courses de pirogues et foire gastronomique.",
+      "location": "Plages de Kribi (ville)",
+      "lat": 2.9464,
+      "lng": 9.9074,
+      "price": "Non précisé",
+      "contact": null,
+      "image_query": "Mayi festival Batanga Kribi Cameroon",
+      "date": "2026-04-25",
+      "end_date": "2026-05-09"
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "type": "Hôpital",
+      "name": "Hôpital de District de Kribi",
+      "lat": 2.945,
+      "lng": 9.9085,
+      "address": "Centre-ville de Kribi",
+      "phone": "+237 233 46 11 31",
+      "hours": "Urgences 24h/24"
+    },
+    {
+      "id": 2,
+      "type": "Hôpital",
+      "name": "Hôpital Régional Annexe de Kribi",
+      "lat": 2.948,
+      "lng": 9.904,
+      "address": "Kribi",
+      "phone": "+237 233 46 10 51",
+      "hours": "Urgences 24h/24"
+    },
+    {
+      "id": 3,
+      "type": "Pharmacie",
+      "name": "Pharmacie de l'Océan Kribi",
+      "lat": 2.9455,
+      "lng": 9.907,
+      "address": "Kribi",
+      "phone": "+237 697 81 51 95",
+      "hours": "Ouvert 24h/24"
+    },
+    {
+      "id": 4,
+      "type": "Pharmacie",
+      "name": "Pharmacie de la Gloire",
+      "lat": 2.9465,
+      "lng": 9.9095,
+      "address": "Kribi",
+      "phone": "+237 222 46 22 29",
+      "hours": "Ferme à 21h00"
+    },
+    {
+      "id": 5,
+      "type": "Banque",
+      "name": "BICEC Kribi",
+      "lat": 2.947,
+      "lng": 9.906,
+      "address": "Kribi",
+      "phone": null,
+      "hours": "Ferme à 12h30"
+    },
+    {
+      "id": 6,
+      "type": "Banque",
+      "name": "ACEP Cameroun Kribi",
+      "lat": 2.944,
+      "lng": 9.91,
+      "address": "Kribi",
+      "phone": "+237 695 17 27 92",
+      "hours": "Ferme à 17h00"
+    },
+    {
+      "id": 7,
+      "type": "Station-service",
+      "name": "TotalEnergies Kribi",
+      "lat": 2.949,
+      "lng": 9.905,
+      "address": "Rue des Banques, Kribi (repère : près des ministères)",
+      "phone": null,
+      "hours": "06h00 - 22h00 tous les jours"
+    },
+    {
+      "id": 8,
+      "type": "Station-service",
+      "name": "Station Service Tawaal Oil",
+      "lat": 2.942,
+      "lng": 9.911,
+      "address": "Kribi",
+      "phone": null,
+      "hours": "Ouvert 24h/24, 7j/7"
+    },
+    {
+      "id": 9,
+      "type": "Station-service",
+      "name": "Neptune Oil Talla Kribi",
+      "lat": 2.95,
+      "lng": 9.909,
+      "address": "Kribi",
+      "phone": null,
+      "hours": "Ouvert 24h/24, 7j/7"
+    },
+    {
+      "id": 10,
+      "type": "Commissariat",
+      "name": "Commissariat Central de Kribi",
+      "lat": 2.946,
+      "lng": 9.9075,
+      "address": "Centre-ville de Kribi",
+      "phone": null,
+      "hours": "Ouvert 24h/24"
+    },
+    {
+      "id": 11,
+      "type": "Moto",
+      "name": "Station de motos du marché",
+      "lat": 2.9465,
+      "lng": 9.908,
+      "address": "Marché Central de Kribi",
+      "phone": null,
+      "hours": "6h - 22h environ"
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "destination_id": 11,
+      "author": "Sandra M.",
+      "rating": 5,
+      "comment": "Le spectacle des chutes qui se jettent directement dans l'ocean est vraiment impressionnant, surtout en fin de journee avec la lumiere. On a pris une pirogue pour remonter un peu le fleuve, ca vaut le detour.",
+      "date": "2026-06-14T10:20:00Z"
+    },
+    {
+      "id": 2,
+      "destination_id": 11,
+      "author": "Herve T.",
+      "rating": 4,
+      "comment": "Tres beau site mais assez frequente le week-end, prevoir d'y aller tot le matin pour profiter du calme.",
+      "date": "2026-05-02T08:05:00Z"
+    },
+    {
+      "id": 3,
+      "destination_id": 34,
+      "author": "Chantal E.",
+      "rating": 5,
+      "comment": "Le phare est charge d'histoire et la vue sur l'ocean depuis les abords est magnifique au coucher du soleil.",
+      "date": "2026-06-28T17:40:00Z"
+    },
+    {
+      "id": 4,
+      "destination_id": 37,
+      "author": "Junior A.",
+      "rating": 5,
+      "comment": "La plage centrale est parfaite en fin de journee, ambiance tres conviviale avec les bars a proximite. Sable propre et acces facile depuis le centre-ville.",
+      "date": "2026-07-10T19:15:00Z"
+    },
+    {
+      "id": 5,
+      "destination_id": 2,
+      "author": "Delphine K.",
+      "rating": 4,
+      "comment": "Bon rapport qualite-prix, portions genereuses. Le ndole etait vraiment bon, service un peu lent le samedi soir.",
+      "date": "2026-04-18T20:30:00Z"
+    },
+    {
+      "id": 6,
+      "destination_id": 16,
+      "author": "Marc-Aurele B.",
+      "rating": 5,
+      "comment": "Chambre avec vue directe sur la plage, personnel tres accueillant. On reviendra sans hesiter lors de notre prochain passage a Kribi.",
+      "date": "2026-03-22T09:00:00Z"
+    },
+    {
+      "id": 7,
+      "destination_id": 43,
+      "author": "Odile N.",
+      "rating": 4,
+      "comment": "Tres bon poisson braise, cadre simple mais authentique. Petit plus : le personnel parle bien anglais pour les touristes.",
+      "date": "2026-05-30T13:45:00Z"
+    },
+    {
+      "id": 9,
+      "destination_id": 1,
+      "author": "Aurelie D.",
+      "rating": 4,
+      "comment": "Bonne ambiance en soiree, cocktails corrects. Un peu plus cher que les autres bars de plage mais le cadre le vaut bien.",
+      "date": "2026-06-05T22:10:00Z"
+    },
+    {
+      "id": 10,
+      "destination_id": 29,
+      "author": "Ibrahim S.",
+      "rating": 3,
+      "comment": "Marche interessant pour le poisson frais tot le matin, mais ca peut etre bonde et un peu chaotique en pleine journee.",
+      "date": "2026-04-02T07:30:00Z"
+    }
+  ]
+}

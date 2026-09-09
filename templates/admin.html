@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tableau de bord - Kribi Tour</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  {% include '_navbar.html' %}
+
+  <section class="text-white py-5" style="background: linear-gradient(135deg, rgba(30,20,50,.55) 0%, rgba(40,20,10,.55) 100%), url('{{ url_for('static', filename='images/hero-admin.png') }}') center/cover no-repeat;">
+    <div class="container py-3">
+      <h1 class="display-6 fw-bold mb-2">📊 Tableau de bord</h1>
+      <p class="mb-0" style="opacity:.9;">Vue d'ensemble de l'activité de Kribi Tour</p>
+    </div>
+  </section>
+
+  <main class="container my-4">
+    <div id="admin-content">
+      <p class="hint">Chargement du tableau de bord...</p>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <script>
+    const contentEl = document.getElementById("admin-content");
+
+    function statCard(icon, label, value) {
+      return `
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="card border-0 shadow-sm h-100 text-center py-3">
+            <div class="h3 mb-1">${icon}</div>
+            <div class="h4 fw-bold mb-0">${value}</div>
+            <div class="small text-muted">${label}</div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderStats(stats) {
+      const t = stats.totals;
+
+      const totalsHTML = `
+        <div class="row g-3 mb-4">
+          ${statCard("👥", "Utilisateurs", t.users)}
+          ${statCard("📍", "Lieux", t.destinations)}
+          ${statCard("👁️", "Vues totales", t.total_views)}
+          ${statCard("⭐", "Avis", t.reviews)}
+          ${statCard("📅", "Réservations", t.reservations)}
+          ${statCard("🗓️", "Événements", t.events)}
+          ${statCard("🧭", "Itinéraires", t.itineraries)}
+        </div>
+      `;
+
+      const avgRatingHTML = stats.average_rating !== null
+        ? `<p class="mb-4">Note moyenne globale des destinations : <strong>${stats.average_rating} / 5</strong> ⭐ (sur ${t.reviews} avis)</p>`
+        : `<p class="hint mb-4">Aucun avis pour le moment.</p>`;
+
+      const mostViewedHTML = stats.most_viewed_destinations.length
+        ? `
+          <ul class="list-group list-group-flush">
+            ${stats.most_viewed_destinations.map((d, i) => `
+              <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                <span>${i + 1}. <a href="/destination/${d.id}">${d.name}</a> <span class="badge bg-light text-dark border ms-1">${d.category || ""}</span></span>
+                <span class="fw-semibold">${d.views} vues</span>
+              </li>
+            `).join("")}
+          </ul>
+        `
+        : `<p class="hint mb-0">Aucune consultation enregistrée pour le moment.</p>`;
+
+      const recentReviewsHTML = stats.recent_reviews.length
+        ? `
+          <ul class="list-group list-group-flush">
+            ${stats.recent_reviews.map((r) => `
+              <li class="list-group-item px-0">
+                <div class="d-flex justify-content-between align-items-start">
+                  <strong>${r.author}</strong>
+                  <span class="text-nowrap">${"⭐".repeat(r.rating)}</span>
+                </div>
+                <div class="small text-muted mb-1">${r.destination_name} — ${new Date(r.date).toLocaleDateString("fr-FR")}</div>
+                <p class="mb-0 small">${r.comment}</p>
+              </li>
+            `).join("")}
+          </ul>
+        `
+        : `<p class="hint mb-0">Aucun avis pour le moment.</p>`;
+
+      const categoryEntries = Object.entries(stats.destinations_by_category).sort((a, b) => b[1] - a[1]);
+      const categoryHTML = categoryEntries.map(([cat, count]) => `
+        <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+          <span>${cat}</span>
+          <span class="badge bg-light text-dark border">${count}</span>
+        </li>
+      `).join("");
+
+      const reservationsHTML = stats.recent_reservations.length
+        ? `
+          <div class="table-responsive">
+            <table class="table table-sm align-middle mb-0">
+              <thead>
+                <tr class="small text-muted">
+                  <th>Lieu</th>
+                  <th>Client</th>
+                  <th>Date</th>
+                  <th>Heure</th>
+                  <th>Pers.</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${stats.recent_reservations.map((r) => `
+                  <tr>
+                    <td><a href="/destination/${r.destination_id}">${r.destination_name}</a></td>
+                    <td>${r.guest_name}</td>
+                    <td>${r.date}</td>
+                    <td>${r.time}</td>
+                    <td>${r.party_size}</td>
+                  </tr>
+                `).join("")}
+              </tbody>
+            </table>
+          </div>
+        `
+        : `<p class="hint mb-0">Aucune réservation pour le moment.</p>`;
+
+      contentEl.innerHTML = `
+        ${totalsHTML}
+        ${avgRatingHTML}
+
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body p-4">
+                <h2 class="h5 mb-3">🔥 Endroits les plus consultés</h2>
+                ${mostViewedHTML}
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body p-4">
+                <h2 class="h5 mb-3">💬 Avis récents</h2>
+                ${recentReviewsHTML}
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4">
+                <h2 class="h5 mb-3">📅 Réservations récentes (hôtels &amp; restaurants)</h2>
+                ${reservationsHTML}
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4">
+                <h2 class="h5 mb-3">📂 Lieux par catégorie</h2>
+                <ul class="list-group list-group-flush">${categoryHTML}</ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    async function loadAdminStats() {
+      if (!isLoggedIn()) {
+        window.location.href = "/login-page";
+        return;
+      }
+
+      const { ok, status, data } = await apiRequest("/admin/stats", { auth: true });
+
+      if (status === 401) {
+        window.location.href = "/login-page";
+        return;
+      }
+
+      if (status === 403) {
+        contentEl.innerHTML = `
+          <div class="alert alert-warning">
+            Cette page est réservée à l'administrateur de Kribi Tour.
+          </div>
+        `;
+        return;
+      }
+
+      if (!ok) {
+        contentEl.innerHTML = `<div class="alert alert-danger">Impossible de charger le tableau de bord pour le moment.</div>`;
+        return;
+      }
+
+      renderStats(data);
+    }
+
+    loadAdminStats();
+  </script>
+</body>
+</html>
