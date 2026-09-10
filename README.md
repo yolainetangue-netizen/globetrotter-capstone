@@ -1,91 +1,75 @@
-# GlobeTrotter — Phase 2 mise à jour
+# GlobeTrotter — Phase 2 Microservices
 
-Cette version conserve l'architecture microservices de la Phase 2 et
-réintègre les évolutions fonctionnelles et visuelles présentes dans la
-Phase 1, **à l'exception de l'espace Discussion et des messages privés**.
-
-## Ce qui a été reporté depuis la Phase 1
-
-- interface Kribi Tour complète : accueil, lieux/destinations, détail d'un lieu,
-  catégories, carte, événements, services utiles, favoris, profil,
-  réservations et itinéraires ;
-- nouvelle navigation/navbar, responsive mobile, bouton urgence et raccourci carte ;
-- thème et styles actuels de la Phase 1 ;
-- bascule FR/EN de l'interface ;
-- recherche/filtres et recommandations ;
-- descriptions enrichies et données actuelles des destinations (77 lieux) ;
-- images et médias locaux de la Phase 1 ;
-- avis sur les destinations ;
-- événements et services utiles ;
-- réservations ;
-- itinéraires, partage public, téléchargement PDF et activité du profil ;
-- authentification JWT et rôle administrateur.
-
-### Explicitement non reporté
-
-Les pages et fonctionnalités **Discussion**, **Messages privés** et leur logique
-Socket.IO ne sont pas incluses dans cette version.
+Cette version conserve les modifications et le frontend de la Phase 1 tout en séparant le backend en microservices.
 
 ## Architecture
+- Gateway : `5000` — frontend + point d'entrée unique REST + Socket.IO
+- User Service : `5001` — utilisateurs, authentification, messagerie, groupes, stories
+- Itinerary Service : `5002` — itinéraires, partage public, PDF, activité
+- Destination Service : `5003` — destinations, avis, événements, services, réservations
+- Recommendation Service : `5004` — recommandations personnalisées
 
-```text
-Navigateur
-    │
-    ▼
-Frontend (8080) ──► API Gateway (5000)
-                         │
-             ┌───────────┼──────────────┐
-             ▼           ▼              ▼
-        User Service  Itinerary    Recommendation
-          (5001)       (5002)          (5003)
-             │           │              │
-             │           └── RabbitMQ ──┘
-             │                │
-             │                ▼
-             │          Event Consumer
-```
-
-Le frontend ne contient pas de logique métier : il sert l'interface de la
-Phase 1 et relaie les appels API vers l'API Gateway. Les données métier restent
-dans les microservices.
+Les trois bases JSON principales sont séparées : `users.json`, `itinerary_data.json`, `destination_data.json`; les données sociales sont dans `user_data.json`. Les 77 destinations et les données Phase 1 sont conservées.
 
 ## Lancer
-
-Prérequis : Docker Desktop.
+1. `python -m venv venv` puis activation.
+2. `pip install -r requirements.txt`
+3. Copier `.env.example` vers `.env` et renseigner les secrets si nécessaire.
+4. Ouvrir cinq terminaux et lancer :
 
 ```bash
-cd globetrotter-phase2-updated
-docker-compose up --build
+python user-service/app.py
+python itinerary-service/app.py
+python destination-service/app.py
+python recommendation-service/app.py
+python gateway/app.py
 ```
 
-- Interface web : http://localhost:8080
-- API Gateway : http://localhost:5000
-- RabbitMQ : http://localhost:15672 (guest / guest)
+5. Ouvrir `http://127.0.0.1:5000`.
 
-Pour les photos dynamiques, définir `PEXELS_API_KEY` dans l'environnement.
-La météo utilise Open-Meteo sans clé.
+## Correspondance avec le cours
+Client → API Gateway → User / Itinerary / Recommendation. Le Destination Service fournit le catalogue et est utilisé par Itinerary et Recommendation. Les communications inter-services sont REST/HTTP. Docker/Kubernetes restent pour la Phase 3.
 
-## Compte de démonstration
 
-- utilisateur : `demo`
-- mot de passe : `demo123`
+## Lancer la Phase 2 avec Docker
 
-Un second compte administrateur est conservé dans les données de la Phase 1.
+Cette version conserve les fonctionnalités de la Phase 1 et sépare l'application en 5 services :
+Gateway, User, Itinerary, Destination et Recommendation.
 
-## Vérification rapide
+### 1. Prérequis
+Installer Docker Desktop.
 
-1. Ouvrir `http://localhost:8080`.
-2. Se connecter avec `demo / demo123`.
-3. Tester Lieux, Carte, Événements, Services utiles, Profil et Itinéraires.
-4. Créer un itinéraire : la vérification de destination passe par le
-   Recommendation Service et l'événement `itinerary.created` est publié via RabbitMQ.
-5. Pour vérifier le consommateur :
+### 2. Démarrer le projet
+Ouvrir un terminal dans le dossier contenant `docker-compose.yml`, puis lancer :
+
 ```bash
-docker-compose exec event-consumer cat events.log
+docker compose build
+docker compose up
 ```
 
-## Chat
+Ensuite ouvrir dans le navigateur :
 
-The project now includes only the chat module from the reference project: a public Community room and private 1-to-1 messages, with Socket.IO realtime updates. Chat data is isolated in `chat-service/data.json` and user lookup/search remains owned by `user-service`.
+`http://localhost:5000`
 
-For local Docker, open `http://localhost:8080/chat-page`; Socket.IO connects to `http://localhost:5004`.
+### 3. Arrêter le projet
+Dans le terminal : `Ctrl + C`
+
+Ou :
+
+```bash
+docker compose down
+```
+
+### 4. GitHub
+Après avoir vérifié que le projet fonctionne :
+
+```bash
+git init
+git add .
+git commit -m "Phase 2 microservices Docker"
+git branch -M main
+git remote add origin https://github.com/TON-UTILISATEUR/TON-REPO.git
+git push -u origin main
+```
+
+Ne jamais envoyer le fichier `.env` sur GitHub. Le fichier `.env.example` peut être partagé.
