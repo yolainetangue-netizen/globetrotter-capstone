@@ -1,0 +1,21 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "demo",
+      "password": "demo123",
+      "preferences": [
+        "beach",
+        "culture"
+      ],
+      "role": "user"
+    },
+    {
+      "id": 2,
+      "username": "hozane",
+      "password": "daina123",
+      "preferences": [],
+      "role": "admin"
+    }
+  ]
+}
