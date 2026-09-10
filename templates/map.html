@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carte - Kribi Tour</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <style>
+    #map {
+      width: 100%;
+      height: 65vh;
+      min-height: 420px;
+      border-radius: 12px;
+      border: 1px solid var(--bs-border-color);
+    }
+  </style>
+</head>
+<body>
+  {% include '_navbar.html' %}
+
+  <main class="container my-4">
+    <div class="card shadow-sm border-0">
+      <div class="card-body p-4">
+        <h2 class="h4 mb-1">Carte des destinations à Kribi</h2>
+        <p class="hint" id="map-places-count">Explorez les lieux à Kribi.</p>
+
+        <div id="map-legend" class="d-flex flex-wrap gap-3 mb-3 map-legend"></div>
+
+        <div class="row g-3 mb-3">
+          <div class="col-md-6">
+            <label for="departure-city" class="form-label small fw-semibold">📍 Point de référence (arrivée à Kribi)</label>
+            <div class="d-flex flex-wrap gap-2">
+              <select id="departure-city" class="form-select" style="max-width: 260px;">
+                <option value="">-- Choisir un hôtel ou un lieu de référence --</option>
+              </select>
+              <button type="button" id="gps-btn" class="btn btn-primary btn-sm">🛰️ Utiliser ma position GPS</button>
+            </div>
+            <div class="mt-2" id="custom-departure-wrap" style="display:none;">
+              <div class="input-group input-group-sm" style="max-width: 320px;">
+                <input type="text" id="custom-departure-input" class="form-control" placeholder="Nom de votre point de départ (ex: chez un ami, autre hôtel...)" />
+                <button type="button" id="custom-departure-btn" class="btn btn-outline-primary">Valider</button>
+              </div>
+              <p class="hint mt-1">Ce point sera positionné approximativement au centre de Kribi (nous n'avons pas ses coordonnées exactes) ; utilisez plutôt le bouton GPS pour une position précise.</p>
+            </div>
+            <div id="departure-status" class="hint mt-1"></div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="destination-search" class="form-label small fw-semibold">🔎 Aller à une destination</label>
+            <select id="destination-search" class="form-select">
+              <option value="">-- Choisir une destination (A → Z) --</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="destination-preview" class="mb-3" style="display:none;"></div>
+
+        <div id="distance-panel" class="distance-panel mb-3" style="display:none;"></div>
+
+        <div class="d-flex justify-content-end mb-2">
+          <button type="button" id="satellite-toggle-btn" class="btn btn-sm btn-outline-secondary rounded-pill">
+            🛰️ Vue satellite
+          </button>
+        </div>
+
+        <div id="map"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <script>
+    const CATEGORY_COLOR = {
+      "Plages": "#0ea5c4",
+      "Sites naturels": "#2f6b4f",
+      "Restaurants": "#c2410c",
+      "Hôtels": "#6d4aa8",
+      "Activités": "#2f9e44",
+      "Loisirs": "#f2751a",
+      "Monuments": "#1e3a6e",
+      "Marchés et artisanat": "#c2410c",
+      "Bars et vie nocturne": "#7c3aed",
+      "Excursions": "#0d9488",
+      "Autres": "#64748b",
+    };
+
+    // Legende generee dynamiquement (pas de classes CSS a maintenir par categorie)
+    const legendEl = document.getElementById("map-legend");
+    legendEl.innerHTML = Object.entries(CATEGORY_COLOR)
+      .map(([name, color]) => `
+        <span class="d-flex align-items-center gap-2">
+          <i class="dot" style="background:${color};width:10px;height:10px;border-radius:50%;display:inline-block;"></i> ${name}
+        </span>
+      `).join("");
+
+    // Point de reference par defaut : centre-ville de Kribi (utilise pour le GPS
+    // et tant que les hotels ne sont pas encore charges)
+    const KRIBI_CENTER = [2.9464, 9.9074];
+
+    // L'initialisation de la carte visuelle est isolee dans un try/catch :
+    // si Leaflet (charge depuis un CDN externe) echoue a se charger chez
+    // l'utilisateur, le reste de la page (recherche, selection, calcul de
+    // distance) continue quand meme de fonctionner normalement.
+    let map = null;
+    let leafletAvailable = typeof L !== "undefined";
+    let standardLayer = null;
+    let satelliteLayer = null;
+
+    // Restreint la carte a Kribi et ses environs (couvre toutes les
+    // destinations du catalogue, y compris les excursions un peu plus
+    // eloignees comme Campo), pour une navigation plus lisible qu'une
+    // carte du pays entier.
+    const KRIBI_BOUNDS = L.latLngBounds([2.15, 9.6], [3.35, 10.3]);
+
+    if (leafletAvailable) {
+      try {
+        map = L.map('map', {
+          maxBounds: KRIBI_BOUNDS.pad(0.15),
+          maxBoundsViscosity: 0.8,
+          minZoom: 9,
+        }).setView([2.95, 9.91], 12);
+
+        standardLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; OpenStreetMap contributors',
+          maxZoom: 18,
+        });
+
+        satelliteLayer = L.tileLayer(
+          'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+          {
+            attribution: 'Tiles &copy; Esri &mdash; Source: Esri, Maxar, Earthstar Geographics',
+            maxZoom: 18,
+          }
+        ).addTo(map);
+
+        const satBtn = document.getElementById("satellite-toggle-btn");
+        let satelliteOn = true;
+        satBtn.innerHTML = "🗺️ Vue standard";
+        satBtn.addEventListener("click", () => {
+          satelliteOn = !satelliteOn;
+          if (satelliteOn) {
+            map.removeLayer(standardLayer);
+            satelliteLayer.addTo(map);
+            satBtn.innerHTML = "🗺️ Vue standard";
+          } else {
+            map.removeLayer(satelliteLayer);
+            standardLayer.addTo(map);
+            satBtn.innerHTML = "🛰️ Vue satellite";
+          }
+        });
+      } catch (err) {
+        console.error("Carte indisponible :", err);
+        leafletAvailable = false;
+        const mapEl = document.getElementById("map");
+        if (mapEl) mapEl.innerHTML = '<p class="hint p-3">🗺️ La carte visuelle n\'a pas pu se charger (connexion au fournisseur de carte impossible), mais la recherche et le calcul de distance restent disponibles ci-dessus.</p>';
+      }
+    } else {
+      const mapEl = document.getElementById("map");
+      if (mapEl) mapEl.innerHTML = '<p class="hint p-3">🗺️ La carte visuelle n\'a pas pu se charger (connexion au fournisseur de carte impossible), mais la recherche et le calcul de distance restent disponibles ci-dessus.</p>';
+    }
+
+    let allDestinations = [];
+    const markersById = {};
+    let departureCoords = null;
+    let departureLabel = null;
+    let departureMarker = null;
+    let routeLine = null;
+
+    const departureSelect = document.getElementById("departure-city");
+    const destinationSelect = document.getElementById("destination-search");
+    const departureStatus = document.getElementById("departure-status");
+    const distancePanel = document.getElementById("distance-panel");
+    const gpsBtn = document.getElementById("gps-btn");
+
+    function haversineKm(lat1, lon1, lat2, lon2) {
+      const R = 6371;
+      const toRad = (v) => (v * Math.PI) / 180;
+      const dLat = toRad(lat2 - lat1);
+      const dLon = toRad(lon2 - lon1);
+      const a =
+        Math.sin(dLat / 2) ** 2 +
+        Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
+      return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    }
+
+    function estimateTransportCost(straightKm, roadKm) {
+      // Si aucune distance routiere reelle n'est fournie, on retombe sur
+      // l'approximation route reelle ~ 1,3x la distance a vol d'oiseau
+      if (typeof roadKm !== "number") roadKm = straightKm * 1.3;
+      // Prix bornes : moto 150 F - 1000 F, voiture 150 F - 3000 F, selon le nombre de km
+      const clampRound = (value, min, max) => Math.min(max, Math.max(min, Math.round(value / 50) * 50));
+      const voiture = clampRound(150 + roadKm * 130, 150, 3000);
+      const moto = clampRound(150 + roadKm * 100, 150, 1000);
+      // Marche a pied : ~5 km/h de moyenne, arrondi a la minute la plus proche
+      const walkMinutes = Math.max(1, Math.round((roadKm / 5) * 60));
+      return { roadKm, voiture, moto, walkMinutes };
+    }
+
+    function destinationPreviewHTML(destination) {
+      const query = (destination.image_query || `${destination.name} Kribi Cameroun`).replace(/"/g, "");
+      const fallbackQuery = (destination.image_query_fallback || "").replace(/"/g, "");
+      const media = destination.local_image
+        ? `<img src="${destination.local_image}" alt="${destination.name}" class="w-100 h-100" style="object-fit:cover;" />`
+        : `<div class="placeholder-media photo-slot h-100" data-photo-query="${query}" data-photo-fallback="${fallbackQuery}"><span>📍</span></div>`;
+      return `
+        <div class="card border-0 shadow-sm overflow-hidden">
+          <div class="row g-0">
+            <div class="col-4 col-md-3" style="min-height:120px;">${media}</div>
+            <div class="col-8 col-md-9">
+              <div class="card-body py-2">
+                <h3 class="h6 mb-1">${destination.name}</h3>
+                <p class="small text-muted mb-0">${destination.description || ""}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Recupere un itineraire routier reel via OSRM (service public gratuit,
+    // sans cle API). Retourne { coords, roadKm } avec coords = liste de
+    // [lat, lng] a tracer sur la carte, ou null si le service est indisponible.
+    async function fetchRoadRoute(from, to) {
+      try {
+        const url = `https://router.project-osrm.org/route/v1/driving/${from[1]},${from[0]};${to[1]},${to[0]}?overview=full&geometries=geojson`;
+        const res = await fetch(url);
+        if (!res.ok) return null;
+        const data = await res.json();
+        const route = data.routes && data.routes[0];
+        if (!route) return null;
+        const coords = route.geometry.coordinates.map(([lng, lat]) => [lat, lng]);
+        return { coords, roadKm: route.distance / 1000 };
+      } catch (err) {
+        console.error("Itinéraire routier indisponible :", err);
+        return null;
+      }
+    }
+
+    async function updateDistancePanel(destination) {
+      const previewEl = document.getElementById("destination-preview");
+      if (!destination) {
+        distancePanel.style.display = "none";
+        previewEl.style.display = "none";
+        return;
+      }
+
+      // Affiche toujours l'image + description du lieu choisi
+      previewEl.style.display = "block";
+      previewEl.innerHTML = destinationPreviewHTML(destination);
+      hydratePhotos(previewEl);
+
+      if (!departureCoords) {
+        distancePanel.style.display = "none";
+        return;
+      }
+
+      const straightKm = haversineKm(departureCoords[0], departureCoords[1], destination.lat, destination.lng);
+
+      // Requete a l'appel courant pour eviter qu'une reponse OSRM en retard
+      // (ex: ancien clic) n'ecrase l'affichage d'une selection plus recente.
+      const requestToken = Symbol();
+      updateDistancePanel._token = requestToken;
+
+      const routeResult = await fetchRoadRoute(departureCoords, [destination.lat, destination.lng]);
+      if (updateDistancePanel._token !== requestToken) return;
+
+      const roadKm = routeResult ? routeResult.roadKm : straightKm * 1.3;
+      const { voiture, moto, walkMinutes } = estimateTransportCost(straightKm, roadKm);
+      const roadKmLabel = routeResult
+        ? `<strong>${roadKm.toFixed(1)} km</strong> par la route`
+        : `≈ <strong>${roadKm.toFixed(1)} km</strong> par la route (estimation, itinéraire indisponible)`;
+
+      distancePanel.style.display = "block";
+      distancePanel.innerHTML = `
+        <p class="distance-headline">📏 <strong>${straightKm.toFixed(1)} km</strong> à vol d'oiseau depuis ${departureLabel}
+        (${roadKmLabel})</p>
+        <div class="distance-prices">
+          <span class="price-line price-walk">🚶 Marche à pied <strong>≈ ${walkMinutes} min</strong></span>
+          <span class="price-line price-moto">🏍️ Moto <strong>≈ ${moto.toLocaleString("fr-FR")} FCFA</strong></span>
+          <span class="price-line price-car">🚗 Voiture <strong>≈ ${voiture.toLocaleString("fr-FR")} FCFA</strong></span>
+        </div>
+        <p class="hint">⚠️ Estimation basée sur la distance depuis votre point de référence, sans tenir compte du trafic réel.</p>
+        <button type="button" id="continue-from-here-btn" class="btn btn-sm btn-gt-teal rounded-pill">
+          📍 Continuer mon exploration depuis ${destination.name}
+        </button>
+      `;
+
+      document.getElementById("continue-from-here-btn").addEventListener("click", () => {
+        setDeparture([destination.lat, destination.lng], destination.name);
+        departureSelect.value = "";
+      });
+
+      if (map) {
+        if (routeLine) map.removeLayer(routeLine);
+        if (routeResult) {
+          routeLine = L.polyline(routeResult.coords, {
+            color: "#f2751a",
+            weight: 4,
+          }).addTo(map);
+          map.fitBounds(routeLine.getBounds(), { padding: [30, 30] });
+        } else {
+          routeLine = L.polyline([departureCoords, [destination.lat, destination.lng]], {
+            color: "#f2751a",
+            weight: 3,
+            dashArray: "6,8",
+          }).addTo(map);
+        }
+      }
+    }
+
+    function setDeparture(coords, label) {
+      departureCoords = coords;
+      departureLabel = label;
+      departureStatus.textContent = `Point de référence : ${label}`;
+
+      if (map) {
+        if (departureMarker) map.removeLayer(departureMarker);
+        departureMarker = L.marker(coords, {
+          icon: L.divIcon({ className: "departure-pin", html: "🚩", iconSize: [24, 24] }),
+        }).addTo(map).bindPopup(`Point de référence : ${label}`);
+      }
+
+      const selectedId = destinationSelect.value;
+      if (selectedId) {
+        const dest = allDestinations.find((d) => String(d.id) === selectedId);
+        updateDistancePanel(dest);
+      }
+    }
+
+    departureSelect.addEventListener("change", () => {
+      const id = departureSelect.value;
+      customWrap.style.display = id === "custom" ? "block" : "none";
+      if (!id || id === "custom") return;
+      if (id === "kribi-center") {
+        setDeparture(KRIBI_CENTER, "le centre-ville de Kribi");
+        return;
+      }
+      const hotel = allDestinations.find((d) => String(d.id) === id);
+      if (hotel) setDeparture([hotel.lat, hotel.lng], hotel.name);
+    });
+
+    gpsBtn.addEventListener("click", () => {
+      if (!navigator.geolocation) {
+        departureStatus.textContent = "La géolocalisation n'est pas disponible sur ce navigateur.";
+        return;
+      }
+      departureStatus.textContent = "Localisation en cours...";
+      navigator.geolocation.getCurrentPosition(
+        (pos) => {
+          departureSelect.value = "";
+          setDeparture([pos.coords.latitude, pos.coords.longitude], "ma position actuelle");
+        },
+        () => {
+          departureStatus.textContent = "Impossible d'obtenir votre position. Choisissez un hôtel de référence.";
+        }
+      );
+    });
+
+    destinationSelect.addEventListener("change", () => {
+      const id = destinationSelect.value;
+      if (!id) {
+        distancePanel.style.display = "none";
+        return;
+      }
+      const dest = allDestinations.find((d) => String(d.id) === id);
+      if (!dest) return;
+
+      if (map) map.setView([dest.lat, dest.lng], 14);
+      const marker = markersById[dest.id];
+      if (marker) marker.openPopup();
+
+      updateDistancePanel(dest);
+    });
+
+    async function loadMapPoints() {
+      const { ok, data } = await apiRequest('/destinations');
+      if (!ok) return;
+
+      allDestinations = data.filter((d) => typeof d.lat === "number" && typeof d.lng === "number");
+      document.getElementById("map-places-count").textContent = `Explorez ${allDestinations.length} lieux à Kribi.`;
+      const bounds = [];
+
+      if (map) {
+        allDestinations.forEach((d) => {
+          const color = CATEGORY_COLOR[d.category] || "#1e3a6e";
+          const marker = L.circleMarker([d.lat, d.lng], {
+            radius: 8,
+            fillColor: color,
+            color: "#ffffff",
+            weight: 2,
+            fillOpacity: 0.9,
+          }).addTo(map);
+
+          marker.bindPopup(`
+            <strong>${d.name}</strong><br/>
+            <span style="color:#6b7280;font-size:0.85em;">${d.city || d.country}</span><br/>
+            <span style="font-size:0.85em;">${d.description}</span><br/>
+            <a href="/destination/${d.id}" style="font-size:0.85em;">Voir la fiche &rarr;</a>
+          `);
+
+          markersById[d.id] = marker;
+          bounds.push([d.lat, d.lng]);
+        });
+
+        if (bounds.length > 0) {
+          map.fitBounds(bounds, { padding: [30, 30] });
+        }
+      }
+
+      const sorted = [...allDestinations].sort((a, b) => a.name.localeCompare(b.name, "fr"));
+      sorted.forEach((d) => {
+        const opt = document.createElement("option");
+        opt.value = d.id;
+        opt.textContent = `${d.name} (${d.city})`;
+        destinationSelect.appendChild(opt);
+      });
+
+      // Points de reference selectionnables : les hotels de Kribi, plus une option
+      // "centre-ville" generique pour ceux qui n'ont pas encore choisi d'hebergement.
+      const centerOpt = document.createElement("option");
+      centerOpt.value = "kribi-center";
+      centerOpt.textContent = "Centre-ville de Kribi (générique)";
+      departureSelect.appendChild(centerOpt);
+
+      const hotels = sorted.filter((d) => d.category === "Hôtels");
+      hotels.forEach((h) => {
+        const opt = document.createElement("option");
+        opt.value = h.id;
+        opt.textContent = `🏨 ${h.name}`;
+        departureSelect.appendChild(opt);
+      });
+
+      const otherOpt = document.createElement("option");
+      otherOpt.value = "custom";
+      otherOpt.textContent = "✏️ Autre (préciser)";
+      departureSelect.appendChild(otherOpt);
+    }
+
+    // Gestion du point de reference personnalise ("Autre")
+    const customWrap = document.getElementById("custom-departure-wrap");
+    const customInput = document.getElementById("custom-departure-input");
+    const customBtn = document.getElementById("custom-departure-btn");
+
+    customBtn.addEventListener("click", () => {
+      const label = customInput.value.trim();
+      if (!label) {
+        customInput.focus();
+        return;
+      }
+      setDeparture(KRIBI_CENTER, label);
+    });
+
+    customInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        customBtn.click();
+      }
+    });
+
+    loadMapPoints();
+  </script>
+</body>
+</html>
