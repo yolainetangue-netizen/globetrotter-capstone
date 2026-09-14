@@ -7,5 +7,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . /app/user-service
 
+WORKDIR /app/user-service
+
 EXPOSE 5001
 CMD ["python", "app.py"]
