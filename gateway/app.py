@@ -4,7 +4,7 @@ from flask_socketio import SocketIO, join_room, emit
 from flask_jwt_extended import JWTManager, decode_token
 from dotenv import load_dotenv
 load_dotenv()
-app=Flask(__name__,template_folder='../templates',static_folder='../static')
+app=Flask(__name__,template_folder='templates',static_folder='static')
 app.config['SECRET_KEY']=os.environ.get('FLASK_SECRET_KEY','kribi-tour-dev-secret')
 app.config['JWT_SECRET_KEY']=os.environ.get('JWT_SECRET_KEY','globetrotter-dev-secret')
 JWTManager(app); socketio=SocketIO(app,cors_allowed_origins='*',async_mode='threading')
