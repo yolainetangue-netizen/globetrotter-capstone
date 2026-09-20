@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Messages - Kribi Tour</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <style>
+    #dm-conversations-list { max-height: 65vh; overflow-y: auto; }
+    .dm-conv-item {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 0.6rem 0.75rem;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.12s ease;
+    }
+    .dm-conv-item:hover { background: rgba(14, 165, 196, 0.08); }
+    .dm-conv-item.active-conversation {
+      background: var(--turquoise, #0ea5c4);
+      color: #fff;
+    }
+    .dm-conv-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      flex-shrink: 0;
+      color: #fff;
+      background: linear-gradient(135deg, var(--navy, #0f3d5e) 0%, var(--turquoise, #0ea5c4) 100%);
+    }
+    .dm-conv-avatar.group-avatar { background: linear-gradient(135deg, #f2a71a 0%, #e67e22 100%); }
+    .dm-conv-name { font-weight: 600; font-size: 0.92rem; }
+    .dm-conv-sub { font-size: 0.75rem; opacity: 0.7; }
+
+    #dm-messages {
+      height: 52vh;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      padding: 0.75rem;
+      background: #f7f9fb;
+      border-radius: 12px;
+    }
+    .dm-bubble {
+      max-width: 78%;
+      padding: 0.5rem 0.85rem;
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+    }
+    .dm-bubble.own {
+      align-self: flex-end;
+      background: var(--turquoise, #0ea5c4);
+      color: #fff;
+    }
+    .dm-bubble .dm-author {
+      font-size: 0.72rem;
+      font-weight: 700;
+      opacity: 0.75;
+      margin-bottom: 0.15rem;
+    }
+    .dm-bubble .dm-time {
+      font-size: 0.68rem;
+      opacity: 0.6;
+      margin-top: 0.2rem;
+    }
+  </style>
+</head>
+<body>
+  {% include '_navbar.html' %}
+
+  <main class="container my-4">
+    <div id="dm-guard"></div>
+
+    <!-- Bandeau de stories : cercles avec avatar, cliquables pour voir en
+         plein ecran. Visible uniquement une fois connecte (comme le reste
+         de la messagerie). -->
+    <div id="stories-bar" class="d-flex gap-3 mb-4 pb-2" style="overflow-x:auto; display:none;"></div>
+
+    <div id="dm-panel" class="row g-3" style="display:none;">
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0">
+          <div class="card-body p-3">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h2 class="h6 mb-0">Messages</h2>
+              <button type="button" id="new-group-btn" class="btn btn-sm btn-outline-primary rounded-pill">+ Groupe</button>
+            </div>
+            <div id="dm-conversations-list"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="card shadow-sm border-0">
+          <div class="card-body p-3">
+            <h2 class="h6 mb-3" id="dm-conversation-title">Sélectionnez une conversation</h2>
+            <div id="dm-messages" class="mb-3"></div>
+            <form id="dm-form" class="d-flex gap-2" style="display:none;">
+              <input type="text" id="dm-input" class="form-control" placeholder="Écrire un message..." maxlength="2000" autocomplete="off" />
+              <button type="submit" class="btn btn-gt-teal rounded-pill px-4">Envoyer</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Visionneuse de story plein écran -->
+  <div class="modal fade" id="storyViewerModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h6 class="modal-title text-white" id="story-viewer-username"></h6>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
+        </div>
+        <div class="modal-body p-0 d-flex align-items-center justify-content-center" style="min-height:60vh; background:#000;">
+          <img id="story-viewer-image" src="" alt="" class="w-100" style="display:none; max-height:70vh; object-fit:contain;" />
+          <video id="story-viewer-video" controls autoplay class="w-100" style="display:none; max-height:70vh;"></video>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Input caché pour choisir le fichier d'une nouvelle story -->
+  <input type="file" id="story-file-input" accept="image/jpeg,image/png,image/webp,video/mp4,video/quicktime" style="display:none;" />
+
+  <!-- Fenêtre de création d'un groupe -->
+  <div class="modal fade" id="newGroupModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">➕ Nouveau groupe</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+        </div>
+        <div class="modal-body">
+          <label for="group-name-input" class="form-label small">Nom du groupe</label>
+          <input type="text" id="group-name-input" class="form-control mb-3" placeholder="Ex : Vacances à Kribi" maxlength="60" />
+          <label class="form-label small">Membres</label>
+          <div id="group-members-list" class="border rounded-3 p-2" style="max-height:200px; overflow-y:auto;"></div>
+          <div id="group-form-message" class="mt-2"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+          <button type="button" id="create-group-submit-btn" class="btn btn-gt-teal">Créer le groupe</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <script>
+    const guard = document.getElementById("dm-guard");
+    const panel = document.getElementById("dm-panel");
+    const convList = document.getElementById("dm-conversations-list");
+    const messagesEl = document.getElementById("dm-messages");
+    const form = document.getElementById("dm-form");
+    const input = document.getElementById("dm-input");
+    const conversationTitle = document.getElementById("dm-conversation-title");
+
+    let socket = null;
+    let currentUserId = null;
+    let allUsers = [];
+    // active = { type: "dm"|"group", id: <user_id ou group_id> }
+    let active = null;
+
+    function formatTime(isoString) {
+      const d = new Date(isoString);
+      return d.toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" });
+    }
+
+    function initials(name) {
+      return (name || "?").trim().charAt(0).toUpperCase();
+    }
+
+    function appendMessage(msg, showAuthor) {
+      const isOwn = msg.from_user_id === currentUserId;
+      const bubble = document.createElement("div");
+      bubble.className = `dm-bubble ${isOwn ? "own" : ""}`;
+      bubble.innerHTML = `
+        ${showAuthor && !isOwn ? `<div class="dm-author"></div>` : ""}
+        <div class="dm-text"></div>
+        <div class="dm-time">${formatTime(msg.created_at)}</div>
+      `;
+      if (showAuthor && !isOwn) bubble.querySelector(".dm-author").textContent = msg.from_username;
+      bubble.querySelector(".dm-text").textContent = msg.text; // textContent = pas d'injection HTML
+      messagesEl.appendChild(bubble);
+      messagesEl.scrollTop = messagesEl.scrollHeight;
+    }
+
+    async function openDirectConversation(otherUser, itemEl) {
+      active = { type: "dm", id: otherUser.id };
+      conversationTitle.textContent = otherUser.username;
+      form.style.display = "flex";
+      messagesEl.innerHTML = "";
+
+      document.querySelectorAll(".dm-conv-item").forEach((el) => el.classList.remove("active-conversation"));
+      itemEl.classList.add("active-conversation");
+
+      const history = await apiRequest(`/messages/private/${otherUser.id}`, { auth: true });
+      if (history.ok) history.data.forEach((m) => appendMessage(m, false));
+
+      socket.emit("join_private_conversation", { other_user_id: otherUser.id });
+    }
+
+    async function openGroupConversation(group, itemEl) {
+      active = { type: "group", id: group.id };
+      conversationTitle.textContent = `👥 ${group.name}`;
+      form.style.display = "flex";
+      messagesEl.innerHTML = "";
+
+      document.querySelectorAll(".dm-conv-item").forEach((el) => el.classList.remove("active-conversation"));
+      itemEl.classList.add("active-conversation");
+
+      const history = await apiRequest(`/messages/group/${group.id}`, { auth: true });
+      if (history.ok) history.data.forEach((m) => appendMessage(m, true));
+
+      socket.emit("join_group_room", { group_id: group.id });
+    }
+
+    function renderConversationsList(groups) {
+      convList.innerHTML = "";
+
+      groups.forEach((group) => {
+        const item = document.createElement("div");
+        item.className = "dm-conv-item";
+        item.innerHTML = `
+          <div class="dm-conv-avatar group-avatar">👥</div>
+          <div>
+            <div class="dm-conv-name"></div>
+            <div class="dm-conv-sub">${group.member_ids.length} membres</div>
+          </div>
+        `;
+        item.querySelector(".dm-conv-name").textContent = group.name;
+        item.addEventListener("click", () => openGroupConversation(group, item));
+        convList.appendChild(item);
+      });
+
+      allUsers.forEach((user) => {
+        const item = document.createElement("div");
+        item.className = "dm-conv-item";
+        item.innerHTML = `
+          <div class="dm-conv-avatar"></div>
+          <div>
+            <div class="dm-conv-name"></div>
+            <div class="dm-conv-sub">Conversation privée</div>
+          </div>
+        `;
+        item.querySelector(".dm-conv-avatar").textContent = initials(user.username);
+        item.querySelector(".dm-conv-name").textContent = user.username;
+        item.addEventListener("click", () => openDirectConversation(user, item));
+        convList.appendChild(item);
+      });
+    }
+
+    function openNewGroupModal() {
+      const listEl = document.getElementById("group-members-list");
+      listEl.innerHTML = allUsers.map((u) => `
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="${u.id}" id="member-${u.id}">
+          <label class="form-check-label" for="member-${u.id}"></label>
+        </div>
+      `).join("");
+      allUsers.forEach((u) => {
+        document.querySelector(`label[for="member-${u.id}"]`).textContent = u.username;
+      });
+      document.getElementById("group-name-input").value = "";
+      document.getElementById("group-form-message").innerHTML = "";
+      new bootstrap.Modal(document.getElementById("newGroupModal")).show();
+    }
+
+    async function submitNewGroup() {
+      const name = document.getElementById("group-name-input").value.trim();
+      const checked = Array.from(document.querySelectorAll("#group-members-list input:checked")).map((c) => parseInt(c.value, 10));
+      const msgEl = document.getElementById("group-form-message");
+
+      if (!name) {
+        msgEl.innerHTML = `<div class="alert alert-danger py-2 small mb-0">Merci de donner un nom au groupe.</div>`;
+        return;
+      }
+      if (checked.length === 0) {
+        msgEl.innerHTML = `<div class="alert alert-danger py-2 small mb-0">Sélectionnez au moins un membre.</div>`;
+        return;
+      }
+
+      const { ok, data } = await apiRequest("/groups", { method: "POST", auth: true, body: { name, member_ids: checked } });
+      if (ok) {
+        bootstrap.Modal.getInstance(document.getElementById("newGroupModal")).hide();
+        await loadConversations();
+      } else {
+        msgEl.innerHTML = `<div class="alert alert-danger py-2 small mb-0">${data.error || "Une erreur est survenue."}</div>`;
+      }
+    }
+
+    async function loadConversations() {
+      const groupsRes = await apiRequest("/groups", { auth: true });
+      const groups = groupsRes.ok ? groupsRes.data : [];
+      renderConversationsList(groups);
+    }
+
+    // --- Stories ---------------------------------------------------------
+    const storiesBar = document.getElementById("stories-bar");
+    let storyGroupsByAuthor = [];
+
+    function storyCircleHTML(label, isAddButton) {
+      return `
+        <div class="text-center" style="flex-shrink:0; width:66px; cursor:pointer;">
+          <div class="rounded-circle d-flex align-items-center justify-content-center mx-auto mb-1"
+               style="width:56px; height:56px; font-weight:700; color:#fff;
+               background:${isAddButton ? "#adb5bd" : "linear-gradient(135deg, var(--turquoise, #0ea5c4), var(--navy, #0f3d5e))"};
+               border:${isAddButton ? "none" : "2.5px solid var(--orange, #f2a71a)"};">
+            ${isAddButton ? "+" : initials(label)}
+          </div>
+          <div class="small text-truncate" style="max-width:66px;"></div>
+        </div>
+      `;
+    }
+
+    async function loadStories() {
+      const res = await apiRequest("/stories", { auth: true });
+      storyGroupsByAuthor = res.ok ? res.data : [];
+
+      storiesBar.style.display = "flex";
+      storiesBar.innerHTML = "";
+
+      // Bouton "Ajouter une story" en premier, toujours visible
+      const addItem = document.createElement("div");
+      addItem.innerHTML = storyCircleHTML("+", true);
+      addItem.querySelector("div").lastElementChild.textContent = "Ajouter";
+      addItem.addEventListener("click", () => document.getElementById("story-file-input").click());
+      storiesBar.appendChild(addItem);
+
+      storyGroupsByAuthor.forEach((authorGroup) => {
+        const item = document.createElement("div");
+        item.innerHTML = storyCircleHTML(authorGroup.username, false);
+        item.querySelector("div").lastElementChild.textContent = authorGroup.username;
+        item.addEventListener("click", () => viewStories(authorGroup));
+        storiesBar.appendChild(item);
+      });
+    }
+
+    function viewStories(authorGroup) {
+      const modalEl = document.getElementById("storyViewerModal");
+      const usernameEl = document.getElementById("story-viewer-username");
+      const imgEl = document.getElementById("story-viewer-image");
+      const videoEl = document.getElementById("story-viewer-video");
+
+      let index = 0;
+      const showCurrent = () => {
+        const story = authorGroup.stories[index];
+        usernameEl.textContent = authorGroup.username;
+        if (story.media_type === "video") {
+          imgEl.style.display = "none";
+          videoEl.style.display = "block";
+          videoEl.src = story.media_url;
+        } else {
+          videoEl.style.display = "none";
+          videoEl.pause();
+          imgEl.style.display = "block";
+          imgEl.src = story.media_url;
+        }
+      };
+
+      showCurrent();
+      new bootstrap.Modal(modalEl).show();
+
+      // Passe a la story suivante de la meme personne (s'il y en a) au clic
+      // sur l'image, comme sur WhatsApp/Instagram.
+      imgEl.onclick = () => {
+        if (index < authorGroup.stories.length - 1) {
+          index += 1;
+          showCurrent();
+        }
+      };
+    }
+
+    document.getElementById("story-file-input").addEventListener("change", async (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const formData = new FormData();
+      formData.append("media", file);
+
+      const res = await fetch("/stories", {
+        method: "POST",
+        headers: { Authorization: `Bearer ${getToken()}` },
+        body: formData,
+      });
+
+      if (res.ok) {
+        await loadStories();
+      } else {
+        const data = await res.json().catch(() => ({}));
+        alert(data.error || "Impossible de publier la story.");
+      }
+      e.target.value = "";
+    });
+
+    async function initMessages() {
+      const messagesBadge = document.getElementById("messages-badge");
+      if (messagesBadge) messagesBadge.style.display = "none";
+
+      if (!isLoggedIn()) {
+        guard.innerHTML = `<div class="alert alert-warning mb-0">Vous devez être <a href="/login-page">connecté</a> pour accéder à la messagerie.</div>`;
+        return;
+      }
+
+      const me = await apiRequest("/me", { auth: true });
+      if (!me.ok) {
+        guard.innerHTML = `<div class="alert alert-warning mb-0">Votre session a expiré, merci de vous <a href="/login-page">reconnecter</a>.</div>`;
+        return;
+      }
+      currentUserId = me.data.id;
+
+      const usersRes = await apiRequest("/users/list", { auth: true });
+      allUsers = usersRes.ok ? usersRes.data : [];
+      if (allUsers.length === 0) {
+        guard.innerHTML = `<div class="alert alert-info mb-0">Aucun autre utilisateur n'est encore inscrit sur Kribi Tour.</div>`;
+        return;
+      }
+
+      panel.style.display = "flex";
+      await loadConversations();
+      await loadStories();
+
+      document.getElementById("new-group-btn").addEventListener("click", openNewGroupModal);
+      document.getElementById("create-group-submit-btn").addEventListener("click", submitNewGroup);
+
+      socket = io({ auth: { token: getToken() } });
+
+      socket.on("new_private_message", (msg) => {
+        const isCurrentConversation = active && active.type === "dm"
+          && ((msg.from_user_id === active.id && msg.to_user_id === currentUserId)
+            || (msg.from_user_id === currentUserId && msg.to_user_id === active.id));
+        if (isCurrentConversation) appendMessage(msg, false);
+      });
+
+      socket.on("new_group_message", (msg) => {
+        if (active && active.type === "group" && active.id === msg.group_id) {
+          appendMessage(msg, true);
+        }
+      });
+
+      socket.on("connect_error", () => {
+        guard.innerHTML = `<div class="alert alert-danger mb-0">Connexion à la messagerie impossible pour le moment. Réessayez dans un instant.</div>`;
+      });
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const text = input.value.trim();
+        if (!text || !active) return;
+
+        if (active.type === "dm") {
+          socket.emit("send_private_message", { other_user_id: active.id, text });
+        } else {
+          socket.emit("send_group_message", { group_id: active.id, text });
+        }
+        input.value = "";
+      });
+    }
+
+    initMessages();
+  </script>
+</body>
+</html>

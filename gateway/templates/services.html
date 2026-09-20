@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services utiles - Kribi Tour</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  {% include '_navbar.html' %}
+
+  <section class="text-white py-5" style="background: linear-gradient(135deg, rgba(30,20,50,.55) 0%, rgba(40,20,10,.55) 100%), url('{{ url_for('static', filename='images/hero-services-utiles.jpg') }}') center/cover no-repeat;">
+    <div class="container py-3">
+      <a href="/kribi-page" class="text-white-50 text-decoration-none small">&larr; Toutes les catégories</a>
+      <h1 class="display-6 fw-bold mt-2 mb-2">🏥 Services utiles à Kribi</h1>
+      <p class="mb-0" style="opacity:.9;">Hôpitaux, pharmacies, banques, stations-service, commissariats et motos, triés par proximité du centre-ville.</p>
+    </div>
+  </section>
+
+  <main class="container my-4">
+    <a href="/events-page" class="card shadow-sm border-0 mb-4 text-decoration-none text-reset card-hover">
+      <div class="card-body p-4 d-flex justify-content-between align-items-center">
+        <div>
+          <h2 class="h5 mb-1">🎉 Événements à Kribi</h2>
+          <p class="hint mb-0">Festivals, concerts, compétitions sportives et animations locales.</p>
+        </div>
+        <span class="fs-4">→</span>
+      </div>
+    </a>
+
+    <div class="d-flex flex-wrap gap-2 mb-4" id="service-type-pills">
+      <button class="btn btn-sm rounded-pill btn-gt-orange border-0 pill active" data-type="">Tous</button>
+      <button class="btn btn-sm rounded-pill btn-outline-secondary pill" data-type="Hôpital">🏥 Hôpitaux</button>
+      <button class="btn btn-sm rounded-pill btn-outline-secondary pill" data-type="Pharmacie">💊 Pharmacies</button>
+      <button class="btn btn-sm rounded-pill btn-outline-secondary pill" data-type="Banque">🏦 Banques</button>
+      <button class="btn btn-sm rounded-pill btn-outline-secondary pill" data-type="Station-service">⛽ Stations-service</button>
+      <button class="btn btn-sm rounded-pill btn-outline-secondary pill" data-type="Commissariat">🚓 Commissariats</button>
+      <button class="btn btn-sm rounded-pill btn-outline-secondary pill" data-type="Moto">🏍️ Moto</button>
+    </div>
+
+    <p class="hint mb-3">📍 Distances calculées depuis le centre-ville de Kribi.</p>
+
+    <div id="services-list" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <p class="hint">Chargement des services...</p>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <script>
+    const listEl = document.getElementById("services-list");
+    const pills = document.querySelectorAll("#service-type-pills .pill");
+    let activeType = "";
+
+    const SERVICE_ICON = {
+      "Hôpital": "🏥",
+      "Pharmacie": "💊",
+      "Banque": "🏦",
+      "Station-service": "⛽",
+      "Commissariat": "🚓",
+      "Moto": "🏍️",
+    };
+
+    function serviceCardHTML(s) {
+      const icon = SERVICE_ICON[s.type] || "📍";
+      const distanceLabel = s.distance_km != null
+        ? (s.distance_km < 1 ? `${Math.round(s.distance_km * 1000)} m du centre-ville` : `${s.distance_km} km du centre-ville`)
+        : "Distance inconnue";
+
+      return `
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0 card-hover">
+            <div class="card-body">
+              <div class="d-flex flex-wrap gap-2 mb-2">
+                <span class="badge bg-light text-dark border">${icon} ${s.type}</span>
+                <span class="badge bg-success-subtle text-success-emphasis">📍 ${distanceLabel}</span>
+              </div>
+              <h3 class="h6 mb-1">${s.name}</h3>
+              <p class="small text-muted mb-1">${s.address || ""}</p>
+              ${s.hours ? `<p class="small mb-1"><strong>🕒</strong> ${s.hours}</p>` : ""}
+              ${s.phone ? `<p class="small mb-0"><strong>📞</strong> <a href="tel:${s.phone}">${s.phone}</a></p>` : `<p class="small text-muted mb-0">📞 Contact non renseigné</p>`}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    async function loadServices() {
+      const params = activeType ? `?type=${encodeURIComponent(activeType)}` : "";
+      try {
+        const res = await fetch(`/services${params}`);
+        const data = await res.json();
+        if (data.length === 0) {
+          listEl.innerHTML = "<p class='hint'>Aucun service enregistré pour le moment dans cette catégorie.</p>";
+          return;
+        }
+        listEl.innerHTML = data.map(serviceCardHTML).join("");
+      } catch {
+        listEl.innerHTML = "<p class='hint'>Impossible de charger les services.</p>";
+      }
+    }
+
+    pills.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        pills.forEach((p) => p.classList.remove("active", "btn-gt-orange", "border-0"));
+        pills.forEach((p) => p.classList.add("btn-outline-secondary"));
+        btn.classList.add("active", "btn-gt-orange", "border-0");
+        btn.classList.remove("btn-outline-secondary");
+        activeType = btn.dataset.type;
+        loadServices();
+      });
+    });
+
+    loadServices();
+  </script>
+</body>
+</html>

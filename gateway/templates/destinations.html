@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lieux - Kribi Tour</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  {% include '_navbar.html' %}
+
+  <main class="container my-4">
+    <div class="card shadow-sm border-0 mb-4">
+      <div class="card-body p-4">
+        <h2 class="h4 mb-1">Rechercher un lieu à Kribi</h2>
+        <p class="hint">Vous pouvez aussi <a href="/map-page">explorer la carte interactive</a> de tous les lieux.</p>
+
+        <div class="row g-2 mb-3">
+          <div class="col-md-6 position-relative">
+            <input type="text" id="search-q" class="form-control" placeholder="Rechercher par nom ou lieu..." autocomplete="off" />
+            <div id="search-suggestions" class="list-group position-absolute w-100 shadow-sm" style="z-index:20; display:none; top:100%;"></div>
+          </div>
+          <div class="col-md-4">
+            <select id="search-tag" class="form-select">
+              <option value="">Tous les tags</option>
+              <option value="culture">Culture</option>
+              <option value="histoire">Histoire</option>
+              <option value="history">Histoire</option>
+              <option value="shopping">Shopping</option>
+              <option value="city">Ville</option>
+              <option value="nature">Nature</option>
+              <option value="adventure">Aventure</option>
+              <option value="relaxation">Détente</option>
+              <option value="gastronomie">Gastronomie</option>
+              <option value="hebergement">Hébergement</option>
+            </select>
+          </div>
+          <div class="col-md-2 d-grid">
+            <button id="search-btn" class="btn btn-gt-orange">Rechercher</button>
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2 mb-4" id="category-pills">
+          <button class="btn btn-sm rounded-pill btn-gt-orange border-0 pill active" data-category="">Tout</button>
+          <button class="btn btn-sm rounded-pill btn-outline-secondary pill" data-category="Plages">🏖️ Plages</button>
+          <button class="btn btn-sm rounded-pill btn-outline-secondary pill" data-category="Sites naturels">🌿 Sites naturels</button>
+          <button class="btn btn-sm rounded-pill btn-outline-secondary pill" data-category="Restaurants">🍽️ Restaurants</button>
+          <button class="btn btn-sm rounded-pill btn-outline-secondary pill" data-category="Hôtels">🏨 Hôtels</button>
+          <button class="btn btn-sm rounded-pill btn-outline-secondary pill" data-category="Activités">🚴 Activités</button>
+          <button class="btn btn-sm rounded-pill btn-outline-secondary pill" data-category="Loisirs">🎉 Loisirs</button>
+          <button class="btn btn-sm rounded-pill btn-outline-secondary pill" data-category="Monuments">🏛️ Monuments</button>
+          <button class="btn btn-sm rounded-pill btn-outline-secondary pill" data-category="Marchés et artisanat">🛍️ Marchés &amp; artisanat</button>
+          <button class="btn btn-sm rounded-pill btn-outline-secondary pill" data-category="Bars et vie nocturne">🍹 Bars &amp; vie nocturne</button>
+          <button class="btn btn-sm rounded-pill btn-outline-secondary pill" data-category="Excursions">🧭 Excursions</button>
+          <button class="btn btn-sm rounded-pill btn-outline-secondary pill" data-category="Shopping">🛒 Shopping</button>
+          <button class="btn btn-sm rounded-pill btn-outline-secondary pill" data-category="Salons de beauté">💇 Salons de beauté</button>
+          <button class="btn btn-sm rounded-pill btn-outline-secondary pill" data-category="Autres">📍 Autres</button>
+        </div>
+
+        <div id="destinations" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4"></div>
+      </div>
+    </div>
+
+    <div class="card shadow-sm border-0 mb-4">
+      <div class="card-body p-4">
+        <h2 class="h4 mb-1">Recommandé pour vous <span class="badge bg-secondary">connexion requise</span></h2>
+        <p class="hint mb-3">Basé sur vos préférences renseignées à l'inscription.</p>
+        <div id="recommendations" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4"></div>
+        <div id="rec-msg" class="mt-2"></div>
+      </div>
+    </div>
+
+    <div class="card shadow-sm border-0" id="create-itinerary-card">
+      <div class="card-body p-4">
+        <h2 class="h4 mb-3">Créer un itinéraire</h2>
+        <div id="itinerary-login-required" class="alert alert-warning" style="display:none;">
+          Vous devez être <a href="/login-page">connecté</a> pour créer un itinéraire.
+        </div>
+        <form id="itinerary-form">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="it-title" class="form-label small fw-semibold">Titre</label>
+              <input type="text" id="it-title" class="form-control" required />
+            </div>
+            <div class="col-md-6">
+              <label for="it-destination" class="form-label small fw-semibold">Destination</label>
+              <select id="it-destination" class="form-select" required></select>
+            </div>
+            <div class="col-md-6">
+              <label for="it-start" class="form-label small fw-semibold">Date de début</label>
+              <input type="date" id="it-start" class="form-control" />
+            </div>
+            <div class="col-md-6">
+              <label for="it-end" class="form-label small fw-semibold">Date de fin</label>
+              <input type="date" id="it-end" class="form-control" />
+            </div>
+            <div class="col-12">
+              <label for="it-notes" class="form-label small fw-semibold">Notes</label>
+              <textarea id="it-notes" class="form-control" rows="3"></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-gt-orange rounded-pill px-4">Créer l'itinéraire</button>
+            </div>
+          </div>
+        </form>
+        <div id="it-msg" class="mt-3"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <script>
+    const grid = document.getElementById("destinations");
+    const recGrid = document.getElementById("recommendations");
+    const recMsg = document.getElementById("rec-msg");
+    const itSelect = document.getElementById("it-destination");
+    const pills = document.querySelectorAll(".pill");
+    let activeCategory = "";
+
+    const CATEGORY_CLASS = {
+      "Site historique": "cat-heritage",
+      "Nature": "cat-nature",
+      "Distraction": "cat-fun",
+      "Restaurant": "cat-food",
+      "Hôtel": "cat-hotel",
+    };
+
+    const CATEGORY_BADGE = {
+      "Site historique": "badge-cat-heritage",
+      "Nature": "badge-cat-nature",
+      "Distraction": "badge-cat-fun",
+      "Restaurant": "badge-cat-food",
+      "Hôtel": "badge-cat-hotel",
+    };
+
+    const CATEGORY_ICON = {
+      "Site historique": "🏛️",
+      "Nature": "🌿",
+      "Distraction": "🎉",
+      "Restaurant": "🍽️",
+      "Hôtel": "🏨",
+    };
+
+    function destinationCardHTML(d) {
+      const meta = categoryMeta(d.category);
+      let media;
+      if (d.local_image) {
+        media = `<img src="${d.local_image}" alt="${d.name}" loading="lazy" />`;
+      } else {
+        const query = (d.image_query || `${d.name} ${d.city} Cameroun`).replace(/"/g, "");
+        const fallbackQuery = (d.image_query_fallback || "").replace(/"/g, "");
+        media = `<div class="placeholder-media photo-slot ${meta.cls}" data-photo-query="${query}" data-photo-fallback="${fallbackQuery}"><span>${meta.icon}</span></div>`;
+      }
+      const favActive = isFavorite(d.id) ? "active" : "";
+
+      return `
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0 card-hover position-relative">
+            <button class="btn-favorite ${favActive}" data-fav-id="${d.id}" aria-label="Ajouter aux favoris" onclick="event.preventDefault(); handleFavoriteClick(this, ${d.id});">♥</button>
+            <a href="/destination/${d.id}" class="text-decoration-none text-reset">
+              <div class="gt-media">${media}</div>
+              <div class="card-body">
+                <div class="d-flex flex-wrap gap-2 mb-2">
+                  <span class="badge ${meta.badge}">${meta.icon} ${d.category || ""}</span>
+                  <span class="badge bg-light text-dark border">📍 ${d.city || ""}</span>
+                </div>
+                <h3 class="h6 mb-1">${d.name}</h3>
+                <p class="small text-muted mb-1">${d.country}</p>
+                <p class="small mb-2">${d.description}</p>
+                <div>${d.tags.map((t) => `<span class="badge bg-light text-dark border me-1">${t}</span>`).join("")}</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      `;
+    }
+
+    function handleFavoriteClick(btn, id) {
+      const nowFav = toggleFavorite(id);
+      btn.classList.toggle("active", nowFav);
+    }
+
+    function renderCards(container, destinations) {
+      if (destinations.length === 0) {
+        container.innerHTML = "<p class='hint'>Aucun lieu trouvé.</p>";
+        return;
+      }
+      const sorted = [...destinations].sort((a, b) => a.name.localeCompare(b.name, "fr"));
+      container.innerHTML = sorted.map(destinationCardHTML).join("");
+      hydratePhotos(container);
+    }
+
+    function populateSelect(destinations) {
+      itSelect.innerHTML = destinations
+        .map((d) => `<option value="${d.id}">${d.name}</option>`)
+        .join("");
+    }
+
+    async function loadDestinations() {
+      const q = document.getElementById("search-q").value.trim();
+      const tag = document.getElementById("search-tag").value;
+      const params = new URLSearchParams();
+      if (q) params.append("q", q);
+      if (tag) params.append("tag", tag);
+      if (activeCategory) params.append("category", activeCategory);
+
+      const { ok, data } = await apiRequest(`/destinations?${params.toString()}`);
+      if (ok) {
+        renderCards(grid, data);
+        populateSelect(data);
+      }
+    }
+
+    async function loadRecommendations() {
+      const loginNotice = document.getElementById("itinerary-login-required");
+      if (!isLoggedIn()) {
+        recMsg.innerHTML = `<div class="alert alert-warning py-2 small mb-0">Connectez-vous pour voir vos recommandations personnalisées.</div>`;
+        document.getElementById("itinerary-form").style.display = "none";
+        loginNotice.style.display = "block";
+        return;
+      }
+      document.getElementById("itinerary-form").style.display = "block";
+      loginNotice.style.display = "none";
+      const { ok, data } = await apiRequest("/recommendations", { auth: true });
+      if (ok) {
+        renderCards(recGrid, data);
+      } else {
+        recMsg.innerHTML = `<div class="alert alert-danger py-2 small mb-0">${data.error || "Impossible de charger les recommandations."}</div>`;
+      }
+    }
+
+    pills.forEach((pill) => {
+      pill.addEventListener("click", () => {
+        pills.forEach((p) => {
+          p.classList.remove("btn-gt-orange", "border-0", "active");
+          p.classList.add("btn-outline-secondary");
+        });
+        pill.classList.remove("btn-outline-secondary");
+        pill.classList.add("btn-gt-orange", "border-0", "active");
+        activeCategory = pill.dataset.category;
+        loadDestinations();
+      });
+    });
+
+    document.getElementById("search-btn").addEventListener("click", loadDestinations);
+
+    // Suggestions en direct : des qu'on tape, propose les lieux correspondants
+    // sous le champ, cliquables, sans devoir taper le nom complet ni appuyer
+    // sur "Rechercher".
+    const searchInput = document.getElementById("search-q");
+    const suggestionsBox = document.getElementById("search-suggestions");
+    let suggestionsTimer = null;
+
+    function hideSuggestions() {
+      suggestionsBox.style.display = "none";
+      suggestionsBox.innerHTML = "";
+    }
+
+    function selectSuggestion(destination) {
+      searchInput.value = destination.name;
+      hideSuggestions();
+      loadDestinations();
+    }
+
+    searchInput.addEventListener("input", () => {
+      clearTimeout(suggestionsTimer);
+      const q = searchInput.value.trim();
+
+      if (q.length === 0) {
+        hideSuggestions();
+        return;
+      }
+
+      // Petit delai (debounce) pour eviter une requete a chaque frappe.
+      suggestionsTimer = setTimeout(async () => {
+        const { ok, data } = await apiRequest(`/destinations?q=${encodeURIComponent(q)}`);
+        if (!ok || data.length === 0) {
+          hideSuggestions();
+          return;
+        }
+
+        suggestionsBox.innerHTML = data.slice(0, 6).map((d) => `
+          <button type="button" class="list-group-item list-group-item-action text-start suggestion-item" data-id="${d.id}">
+            <span class="fw-semibold"></span>
+            <span class="small text-muted d-block"></span>
+          </button>
+        `).join("");
+
+        // textContent (pas innerHTML) pour le nom/categorie : evite toute
+        // injection si jamais un nom de lieu contenait des caracteres HTML.
+        suggestionsBox.querySelectorAll(".suggestion-item").forEach((btn, i) => {
+          const d = data[i];
+          btn.querySelector(".fw-semibold").textContent = d.name;
+          btn.querySelector(".small").textContent = d.category || "";
+          btn.addEventListener("click", () => selectSuggestion(d));
+        });
+
+        suggestionsBox.style.display = "block";
+      }, 200);
+    });
+
+    // Ferme les suggestions si on clique ailleurs sur la page.
+    document.addEventListener("click", (e) => {
+      if (!searchInput.contains(e.target) && !suggestionsBox.contains(e.target)) {
+        hideSuggestions();
+      }
+    });
+
+    // Entree = lance la recherche classique et ferme les suggestions.
+    searchInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        hideSuggestions();
+        loadDestinations();
+      }
+    });
+
+    document.getElementById("itinerary-form").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const itMsg = document.getElementById("it-msg");
+      const body = {
+        title: document.getElementById("it-title").value.trim(),
+        destination_id: parseInt(itSelect.value, 10),
+        start_date: document.getElementById("it-start").value,
+        end_date: document.getElementById("it-end").value,
+        notes: document.getElementById("it-notes").value.trim(),
+      };
+      const { ok, data } = await apiRequest("/itineraries", {
+        method: "POST",
+        auth: true,
+        body,
+      });
+      if (ok) {
+        itMsg.innerHTML = `<div class="alert alert-success py-2 small mb-0">Itinéraire créé ! Consultez 'Mes itinéraires'.</div>`;
+        e.target.reset();
+      } else {
+        itMsg.innerHTML = `<div class="alert alert-danger py-2 small mb-0">${data.error || "Impossible de créer l'itinéraire."}</div>`;
+      }
+    });
+
+    loadDestinations();
+    loadRecommendations();
+
+    // Si on arrive depuis "Voir l'itinéraire" sur une fiche destination,
+    // on présélectionne le lieu et on scroll jusqu'au formulaire.
+    const addToItineraryId = new URLSearchParams(window.location.search).get("add_to_itinerary");
+    if (addToItineraryId) {
+      setTimeout(() => {
+        itSelect.value = addToItineraryId;
+        document.getElementById("create-itinerary-card").scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 500);
+    }
+  </script>
+</body>
+</html>

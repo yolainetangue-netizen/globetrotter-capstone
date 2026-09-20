@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kribi Tour — Kribi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <!-- Écran de bienvenue, affiché une fois par session au premier chargement -->
+  <div id="welcome-overlay" class="welcome-overlay">
+    <div class="welcome-overlay-content">
+      <div class="welcome-emoji mb-3">🌊</div>
+      <h1 id="welcome-title" class="welcome-title mb-3">Hello !</h1>
+      <p id="welcome-subtitle" class="welcome-subtitle mb-4">Bienvenue sur Kribi Tour</p>
+      <button id="welcome-close-btn" class="btn btn-light btn-lg rounded-pill px-5 fw-semibold">
+        Découvrir Kribi →
+      </button>
+    </div>
+  </div>
+
+  {% include '_navbar.html' %}
+
+  <section class="text-white py-5" style="background: linear-gradient(135deg, rgba(30,20,50,.55) 0%, rgba(40,20,10,.55) 100%), url('{{ url_for('static', filename='images/hero-kribi-port.jpg') }}') center/cover no-repeat;">
+    <div class="container py-4">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <p class="text-uppercase fw-semibold small mb-2" style="letter-spacing:2px; opacity:.85;">Kribi Tour</p>
+          <h1 class="display-5 fw-bold mb-3">Explorez Kribi comme un local 🌊</h1>
+          <p class="lead mb-4" style="opacity:.92;">
+            Kribi Tour transforme vos envies en itinéraire à Kribi : recherchez
+            des lieux dans la ville, comparez les prix selon la saison et le moyen de
+            transport (moto, voiture ou marche à pied), recevez des recommandations adaptées à vos goûts,
+            et organisez vos sorties.
+          </p>
+          <div class="d-flex gap-3 flex-wrap">
+            <a href="/register-page" class="btn btn-light btn-lg rounded-pill fw-semibold px-4">Créer un compte</a>
+            <a href="/destinations-page" class="btn btn-outline-light btn-lg rounded-pill px-4">Explorer les destinations</a>
+          </div>
+        </div>
+        <div class="col-lg-5 d-none d-lg-block">
+          <div id="hero-carousel" class="hero-carousel">
+            <div class="hero-carousel-slide active" data-photo-query="Kribi Cameroon beach ocean"></div>
+            <div class="hero-carousel-slide" data-photo-query="Chutes de la Lobe Kribi waterfall"></div>
+            <div class="hero-carousel-slide" data-photo-query="Kribi fishing pirogue sunset"></div>
+            <div class="hero-carousel-slide" data-photo-query="Kribi seafood restaurant beach"></div>
+            <div class="hero-carousel-slide" data-photo-query="Ebodjé Kribi coast palm trees"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container my-5">
+    <div class="card shadow-sm border-0 mb-4">
+      <div class="card-body p-4">
+        <h2 class="h4 mb-3">Bienvenue sur Kribi Tour</h2>
+        <p class="mb-3">Kribi Tour transforme vos envies en itinéraire à Kribi : recherchez des lieux et des
+          adresses dans la ville, comparez les prix selon la saison et le moyen de transport (moto, voiture ou marche à pied), recevez
+          des recommandations adaptées à vos goûts, et organisez vos sorties.</p>
+        <video controls preload="metadata" class="w-100 rounded-3" style="max-height:420px; background:#000;">
+          <source src="{{ url_for('static', filename='images/kribi-presentation.mp4') }}" type="video/mp4" />
+          Votre navigateur ne supporte pas la lecture vidéo.
+        </video>
+      </div>
+    </div>
+
+    <div class="card shadow-sm border-0 mb-4">
+      <div class="card-body p-4">
+        <h2 class="h4 mb-4">Pour commencer</h2>
+        <div class="row g-3">
+          <div class="col-6 col-md-4">
+            <a href="/register-page" class="btn btn-gt-violet w-100 py-3 rounded-3 d-flex flex-column align-items-center gap-1">
+              <span class="fs-3">📝</span><span class="small fw-semibold">Créer un compte</span>
+            </a>
+          </div>
+          <div class="col-6 col-md-4">
+            <a href="/login-page" class="btn btn-gt-orange w-100 py-3 rounded-3 d-flex flex-column align-items-center gap-1">
+              <span class="fs-3">🔑</span><span class="small fw-semibold">Se connecter</span>
+            </a>
+          </div>
+          <div class="col-6 col-md-4">
+            <a href="/destinations-page" class="btn btn-gt-teal w-100 py-3 rounded-3 d-flex flex-column align-items-center gap-1">
+              <span class="fs-3">🧭</span><span class="small fw-semibold">Parcourir les lieux</span>
+            </a>
+          </div>
+          <div class="col-6 col-md-4">
+            <a href="/map-page" class="btn btn-gt-coral w-100 py-3 rounded-3 d-flex flex-column align-items-center gap-1">
+              <span class="fs-3">🚖</span><span class="small fw-semibold">Comparer les prix trajet</span>
+            </a>
+          </div>
+          <div class="col-6 col-md-4">
+            <a href="/map-page" class="btn btn-gt-violet w-100 py-3 rounded-3 d-flex flex-column align-items-center gap-1">
+              <span class="fs-3">🗺️</span><span class="small fw-semibold">Explorer la carte</span>
+            </a>
+          </div>
+          <div class="col-6 col-md-4">
+            <a href="/itineraries-page" class="btn btn-gt-orange w-100 py-3 rounded-3 d-flex flex-column align-items-center gap-1">
+              <span class="fs-3">📅</span><span class="small fw-semibold">Mes itinéraires</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card shadow-sm border-0 mb-4" id="personalized-card" style="display:none;">
+      <div class="card-body p-4">
+        <h2 class="h4 mb-1">✨ Selon vos goûts</h2>
+        <p class="hint mb-4" id="personalized-subtitle">Des lieux sélectionnés d'après vos préférences.</p>
+        <div id="personalized-grid" class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4"></div>
+      </div>
+    </div>
+
+    <div class="card shadow-sm border-0 mb-4" id="recently-viewed-card" style="display:none;">
+      <div class="card-body p-4">
+        <h2 class="h4 mb-1">🕓 Récemment consultés</h2>
+        <p class="hint mb-4">Les lieux que vous avez regardés dernièrement.</p>
+        <div id="recently-viewed-grid" class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4"></div>
+      </div>
+    </div>
+
+    <div class="card shadow-sm border-0">
+      <div class="card-body p-4">
+        <h2 class="h4 mb-1">À la une</h2>
+        <p class="hint mb-4">Un aperçu de destinations et adresses populaires de Kribi.</p>
+        <div id="featured-grid" class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <script>
+    // Section "Selon vos goûts" : n'apparait que pour un utilisateur connecte
+    // ayant defini au moins une preference (le compte n'a alors aucun
+    // resultat plus pertinent qu'un autre, donc pas la peine de l'afficher).
+    async function loadPersonalized() {
+      if (!isLoggedIn()) return;
+
+      const me = await apiRequest("/me", { auth: true });
+      if (!me.ok || !me.data.preferences || me.data.preferences.length === 0) return;
+
+      const { ok, data } = await apiRequest("/recommendations", { auth: true });
+      if (!ok || data.length === 0) return;
+
+      const card = document.getElementById("personalized-card");
+      const grid = document.getElementById("personalized-grid");
+      const subtitle = document.getElementById("personalized-subtitle");
+
+      subtitle.textContent = `D'après vos préférences (${me.data.preferences.join(", ")}), voici des lieux qui devraient vous plaire.`;
+
+      grid.innerHTML = data.slice(0, 4).map(destinationCardHTML).join("");
+
+      hydratePhotos(grid);
+      card.style.display = "block";
+    }
+
+    // Rendu d'une carte de destination compacte, partagé entre "Selon vos
+    // goûts", "Récemment consultés" et "À la une" pour rester cohérent.
+    function destinationCardHTML(d) {
+      const meta = categoryMeta(d.category);
+      const media = d.local_image
+        ? `<img src="${d.local_image}" alt="${d.name}" loading="lazy" />`
+        : `<div class="placeholder-media photo-slot ${meta.cls}" data-photo-query="${(d.image_query || d.name).replace(/"/g, "")}" data-photo-fallback="${(d.image_query_fallback || "").replace(/"/g, "")}"><span>${meta.icon}</span></div>`;
+      return `
+        <div class="col">
+          <a href="/destination/${d.id}" class="text-decoration-none text-reset">
+            <div class="card h-100 shadow-sm border-0 card-hover">
+              <div class="gt-media">${media}</div>
+              <div class="card-body">
+                <span class="badge ${meta.badge} mb-2">${meta.icon} ${d.category || ""}</span>
+                <h3 class="h6 mb-1">${d.name}</h3>
+                <p class="small text-muted mb-0">${d.city || ""}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      `;
+    }
+
+    loadPersonalized();
+
+    // Section "Récemment consultés" : fonctionne sans compte (stockage
+    // local du navigateur), contrairement à "Selon vos goûts".
+    async function loadRecentlyViewed() {
+      const recentIds = getRecentlyViewed();
+      if (recentIds.length === 0) return;
+
+      const results = await Promise.all(recentIds.map((id) => apiRequest(`/destinations/${id}`)));
+      const destinations = results.filter((r) => r.ok).map((r) => r.data);
+      if (destinations.length === 0) return;
+
+      const card = document.getElementById("recently-viewed-card");
+      const grid = document.getElementById("recently-viewed-grid");
+
+      grid.innerHTML = destinations.slice(0, 4).map(destinationCardHTML).join("");
+
+      hydratePhotos(grid);
+      card.style.display = "block";
+    }
+
+    loadRecentlyViewed();
+
+    const FEATURED_IDS = [11, 34, 16, 46];
+
+    async function loadFeatured() {
+      const grid = document.getElementById("featured-grid");
+      const results = await Promise.all(FEATURED_IDS.map((id) => apiRequest(`/destinations/${id}`)));
+      const cards = results
+        .filter((r) => r.ok)
+        .map(({ data: d }) => {
+          const meta = categoryMeta(d.category);
+          let media;
+          if (d.local_image) {
+            media = `<img src="${d.local_image}" alt="${d.name}" loading="lazy" />`;
+          } else {
+            const query = (d.image_query || `${d.name} ${d.city} Cameroun`).replace(/"/g, "");
+            media = `<div class="placeholder-media photo-slot ${meta.cls}" data-photo-query="${query}"><span>${meta.icon}</span></div>`;
+          }
+          return `
+            <div class="col">
+              <a href="/destination/${d.id}" class="text-decoration-none text-reset">
+                <div class="card h-100 shadow-sm border-0 card-hover">
+                  <div class="gt-media">${media}</div>
+                  <div class="card-body">
+                    <span class="badge ${meta.badge} mb-2">${meta.icon} ${d.category || ""}</span>
+                    <h3 class="h6 mb-1">${d.name}</h3>
+                    <p class="small text-muted mb-0">${d.description}</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          `;
+        });
+      grid.innerHTML = cards.join("");
+      hydratePhotos(grid);
+    }
+
+    loadFeatured();
+
+    // --- Carrousel photo de la page d'accueil (change automatiquement) ---
+    async function initHeroCarousel() {
+      const slides = document.querySelectorAll("#hero-carousel .hero-carousel-slide");
+      if (!slides.length) return;
+
+      // Charge une photo pour chaque slide (Wikimedia -> Pexels, avec cache)
+      await Promise.all(
+        [...slides].map(async (slide) => {
+          const query = slide.dataset.photoQuery;
+          const url = await fetchPhoto(query);
+          if (url) slide.style.backgroundImage = `url('${url}')`;
+        })
+      );
+
+      if (slides.length < 2) return;
+      let current = 0;
+      setInterval(() => {
+        slides[current].classList.remove("active");
+        current = (current + 1) % slides.length;
+        slides[current].classList.add("active");
+      }, 4500);
+    }
+    initHeroCarousel();
+
+    // ---------------------------------------------------------------------
+    // Écran de bienvenue au démarrage
+    // Affiché une seule fois par session (sessionStorage), avec un message
+    // d'accroche tiré au hasard parmi plusieurs propositions.
+    // ---------------------------------------------------------------------
+    const WELCOME_MESSAGES = [
+      { title: "Hello 👋", subtitle: "Bienvenue sur Kribi Tour" },
+      { title: "Bienvenue !", subtitle: "Découvrez Kribi plus facilement" },
+      { title: "Karibu ! 🌴", subtitle: "Votre guide pour explorer Kribi comme un local" },
+      { title: "Prêt(e) à explorer ?", subtitle: "Plages, restaurants, marchés et sorties : tout Kribi dans votre poche" },
+      { title: "Bon retour parmi nous 😊", subtitle: "De nouvelles adresses vous attendent à Kribi" },
+    ];
+
+    function initWelcomeOverlay() {
+      const overlay = document.getElementById("welcome-overlay");
+      if (!overlay) return;
+
+      // Ne s'affiche qu'une fois par session (onglet/navigateur ouvert)
+      if (sessionStorage.getItem("gt_welcome_shown")) {
+        overlay.remove();
+        return;
+      }
+
+      const pick = WELCOME_MESSAGES[Math.floor(Math.random() * WELCOME_MESSAGES.length)];
+      document.getElementById("welcome-title").textContent = pick.title;
+      document.getElementById("welcome-subtitle").textContent = pick.subtitle;
+
+      function closeWelcome() {
+        overlay.classList.add("welcome-overlay-hidden");
+        sessionStorage.setItem("gt_welcome_shown", "1");
+        setTimeout(() => overlay.remove(), 500);
+      }
+
+      document.getElementById("welcome-close-btn").addEventListener("click", closeWelcome);
+      overlay.addEventListener("click", (e) => {
+        if (e.target === overlay) closeWelcome();
+      });
+
+      // Fermeture automatique apres quelques secondes si l'utilisateur n'interagit pas
+      setTimeout(closeWelcome, 4000);
+    }
+    initWelcomeOverlay();
+  </script>
+</body>
+</html>
